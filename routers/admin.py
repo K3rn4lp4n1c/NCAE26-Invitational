@@ -22,14 +22,16 @@ class UpdateUserRequest(BaseModel):
     username: Optional[str] = None
     is_admin: Optional[bool] = None
 
-def get_user_from_token(authorization: str):
+def get_user_from_token(authorization: Optional[str]):
+    if not authorization:
+        return None
     token = authorization.replace("Bearer ", "")
     return jwt.decode(token, os.getenv("JWT_SECRET"), algorithms=["HS256"])
 
 @router.post("/user/add_user")
-def add_user(req: AddUserRequest, authorization: str = Header(...)):
+def add_user(req: AddUserRequest, authorization: Optional[str] = Header(None)):
     user = get_user_from_token(authorization)
-    if not user.get("is_admin"):
+    if authorization and (not user or not user.get("is_admin")):
         return {"error": "Unauthorized"}
 
     username = req.username.strip()

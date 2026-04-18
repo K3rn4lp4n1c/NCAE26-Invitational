@@ -1,0 +1,23 @@
+>>> systemctl list-timers --all
+NEXT                            LEFT LAST                          PASSED UNIT                           ACTIVATES
+Sat 2026-04-18 15:59:05 UTC 2min 42s -                                  - systemd-tmpfiles-clean.timer   systemd-tmpfiles-clean.service
+Sat 2026-04-18 16:00:00 UTC 3min 36s Sat 2026-04-18 15:50:01 UTC 6min ago sysstat-collect.timer          sysstat-collect.service
+Sat 2026-04-18 16:59:43 UTC  1h 3min Sat 2026-04-18 15:12:41 UTC        - fwupd-refresh.timer            fwupd-refresh.service
+Sun 2026-04-19 00:00:00 UTC       8h Sat 2026-04-18 04:32:14 UTC        - dpkg-db-backup.timer           dpkg-db-backup.service
+Sun 2026-04-19 00:00:00 UTC       8h Sat 2026-04-18 04:32:14 UTC        - logrotate.timer                logrotate.service
+Sun 2026-04-19 00:07:00 UTC       8h -                                  - sysstat-summary.timer          sysstat-summary.service
+Sun 2026-04-19 01:25:34 UTC       9h Sat 2026-04-18 10:22:46 UTC        - apt-daily.timer                apt-daily.service
+Sun 2026-04-19 03:10:24 UTC      11h Sun 2026-04-12 23:55:59 UTC        - e2scrub_all.timer              e2scrub_all.service
+Sun 2026-04-19 05:38:30 UTC      13h Sat 2026-04-18 13:21:07 UTC        - man-db.timer                   man-db.service
+Sun 2026-04-19 06:05:59 UTC      14h Sat 2026-04-18 06:55:58 UTC        - apt-daily-upgrade.timer        apt-daily-upgrade.service
+Sun 2026-04-19 07:31:28 UTC      15h Sat 2026-04-18 13:22:35 UTC        - certbot.timer                  certbot.service
+Sun 2026-04-19 11:44:57 UTC      19h Sat 2026-04-18 12:49:14 UTC        - motd-news.timer                motd-news.service
+Sun 2026-04-19 15:49:08 UTC      23h Sat 2026-04-18 15:49:08 UTC 7min ago update-notifier-download.timer update-notifier-download.service
+Mon 2026-04-20 00:21:03 UTC 1 day 8h Mon 2026-04-13 00:20:54 UTC        - fstrim.timer                   fstrim.service
+Thu 2026-04-23 08:10:20 UTC   4 days Sat 2026-04-18 13:21:09 UTC        - update-notifier-motd.timer     update-notifier-motd.service
+-                                  - -                                  - apport-autoreport.timer        apport-autoreport.service
+-                                  - -                                  - snapd.snap-repair.timer        snapd.snap-repair.service
+-                                  - Sat 2026-04-18 15:56:12 UTC  10s ago systemd-update-system.timer    systemd-update-system.service
+-                                  - -                                  - ua-timer.timer                 ua-timer.service
+
+19 timers listed.

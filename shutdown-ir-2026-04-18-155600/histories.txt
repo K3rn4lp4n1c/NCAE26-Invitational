@@ -1,0 +1,202 @@
+>>> for f in /root/.bash_history /home/*/.bash_history /home/*/.zsh_history; do [ -f "$f" ] && echo '----' $f '----' && sed -n '1,200p' "$f"; done
+---- /root/.bash_history ----
+systemctl restart nginx
+exit
+clear
+passwd
+clear
+ls
+w
+systemctl --type=service --state=running
+clear
+/etc/apt/preferences.d 2>/dev/null
+apt-cache policy
+clear
+ping 8.8.8.8
+git
+apt install git
+kill 201071
+apt install git
+clear
+systemctl cat snb_frontent
+systemctl cat snb_frontend
+apt install ufw
+kill 202531
+apt install ufw
+s -tulnp
+ss -tulnp
+clear
+curl
+curl http://cl1p.net/ntva
+curl https://cl1p.net/ntva
+sudo systemctl stop inetutils-inetd knockd rpcbind rpc-statd nfs-blkmap nfs-idmapd nfs-mountd
+w
+ss -tulnp
+clear
+sudo systemctl stop inetutils-inetd
+sudo systemctl stop knockd
+sudo systemctl stop rpcbind
+sudo systemctl stop rpcbind.socket 
+sudo systemctl stop rpc-statd
+sudo systemctl stop nfs-blkmap
+sudo systemctl stop nfs-mountd
+sudo systemctl stop inetutils-inetd knockd rpcbind rpc-statd nfs-blkmap nfs-idmapd nfs-mountd
+sudo systemctl disable inetutils-inetd knockd rpcbind rpc-statd nfs-blkmap nfs-idmapd nfs-mountd
+ss -tulnp
+sudo systemctl stop nfsdcld
+sudo systemctl disable nfsdcld
+sudo systemctl stop redis
+sudo systemctl disable redis
+sudo systemctl stop vector
+ss -tulnp
+clear
+ls /opt
+zip -r here.zip /opt
+apt install zip
+kill 212687
+apt install zip
+clear
+zip -r here.zip /opt
+clear
+ls /opt
+cd /opt/backend/
+ls
+zip -r backend.zip -x __pycache__/ -x venv/
+zip -r backend.zip . -x __pycache__/ -x venv/
+clear
+zip -r backend.zip -x __pycache__/ -x venv/ .
+zip -r backend.zip . -x "__pycache__" -x "venv"
+lear
+clear
+zip -r backend.zip . -x "__pycache__/*" -x "venv/*"
+mv backend.zip ../backend.zip
+cd ../frontend
+ls
+zip -r frontend.zip . -x "node_modules/*" -x "package-lock.json" -x "lib/*" 
+mv frontend.zip ../frontend.zip
+cd ..
+ls
+git init .
+rm ,git
+rm .git*
+rm -rf .git*
+mkdir to_ai
+mv *zip to_ai/
+cd to_ai/
+ls
+git init .
+git add .
+git commit -m "initial commit"
+git config --global user.name  "ncae"
+git config --global user.email "noreply@ncae.com"
+git commit -m "initial commit"
+git branch -M main
+git remote add origin https://github.com/k3rn4lp4n1c/NCAE26-Invitational.git
+apt install gh
+kill 220206
+apt install gh
+gh auth login
+git push -u origin main
+clear
+which passwd
+nano /usr/sbin/passwd
+y
+clear
+ss -tunlp
+w
+last head
+ls /etc/sshd
+ls /etc/ssh
+cd /etc/ssh
+nano sshd_config
+clear
+zip -r ssh.zip /etc/ssh
+mv ssh.zip /opt/to_ai/
+ls
+cd ..
+ls
+clear
+ss -tunlp
+cd /opt/to_ai/
+ls
+git add ssh.zip 
+git commit -m "sshd"
+git push
+clear
+cd ../backend/
+nano routers/auth.py 
+clear
+nano routers/auth.py 
+clear
+
+systemctl status snb_backend.service 
+ss -tunlp
+cd /etc/ssh/
+ls
+nano ssh_config
+clear
+nano sshd_config
+clear
+systemctl restart sshd
+systemctl restart ssh
+ssh -t
+sshd -t
+passwd
+clear
+systemctl status snb_frontend.service 
+clear
+nmap
+clear
+nmap localhost
+systemctl nginx
+systemctl status nginx
+systemctl enable nginx
+systemctl start nginx
+who
+systemctl status snb_frontend.service 
+cd /opt/frontend/
+ls
+cd app
+ls
+cd ../public/
+ls
+ss -tulnp
+nmap localhost
+who
+last
+file sentinel_national_logo.png 
+curl http://127.0.0.1:3000/sentinel_national_png
+clear
+ls
+nano sentinel_national_logo.png 
+clear
+curl http://127.0.0.1:3000/sentinel_national.png
+clear
+curl http://127.0.0.1:3000/sentinel_national_logo.png
+curl http://127.0.0.1:3000/login
+clear
+curl http://localhost:3000/sentinel_national_logo.png
+cd /opt/to_ai/
+git pull
+ls
+cp components/ ../frontend/
+cp -r components/ ../frontend/
+cp -r routers/ ../backend/
+systemctl restart snb*
+systemctl restart snb_frontend.service 
+systemctl restart snb_backend.service 
+systemctl status snb_frontend.service 
+clear
+systemctl status snb_backend.service 
+cd ../backend/
+ls
+cd routers/
+ls
+nano admin.py 
+clear
+systemctl status snb_backend.service 
+nano admin.py 
+clear
+systemctl status snb_backend.service 
+nano admin.py 
+clear

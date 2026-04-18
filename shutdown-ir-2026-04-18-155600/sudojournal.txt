@@ -1,0 +1,301 @@
+>>> journalctl --no-pager | egrep -i 'sudo|COMMAND=|shutdown|reboot|poweroff|halt|systemctl' | tail -300
+Apr 18 15:34:33 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:34:33 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:34:38 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:34:38 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:34:48 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 60.
+Apr 18 15:34:48 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:34:48 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:34:53 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:34:53 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:35:03 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 61.
+Apr 18 15:35:03 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:35:03 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:35:17 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:35:17 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:35:27 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 62.
+Apr 18 15:35:27 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:35:27 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:35:30 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:35:30 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:35:35 chatham-www-t9 systemd[377737]: Reached target shutdown.target - Shutdown.
+Apr 18 15:35:35 chatham-www-t9 systemd[377810]: Reached target shutdown.target - Shutdown.
+Apr 18 15:35:35 chatham-www-t9 systemd[377873]: Reached target shutdown.target - Shutdown.
+Apr 18 15:35:35 chatham-www-t9 systemd[377936]: Reached target shutdown.target - Shutdown.
+Apr 18 15:35:36 chatham-www-t9 systemd[378050]: Reached target shutdown.target - Shutdown.
+Apr 18 15:35:40 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 63.
+Apr 18 15:35:40 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:35:40 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:35:47 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:35:47 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:35:57 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 64.
+Apr 18 15:35:57 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:35:57 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:36:10 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:36:10 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:36:20 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 65.
+Apr 18 15:36:20 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:36:20 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:36:25 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:36:25 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:36:35 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 66.
+Apr 18 15:36:35 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:36:35 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:36:38 chatham-www-t9 systemd[378809]: Reached target shutdown.target - Shutdown.
+Apr 18 15:36:38 chatham-www-t9 systemd[378884]: Reached target shutdown.target - Shutdown.
+Apr 18 15:36:38 chatham-www-t9 systemd[379145]: Reached target shutdown.target - Shutdown.
+Apr 18 15:36:39 chatham-www-t9 systemd[379306]: Reached target shutdown.target - Shutdown.
+Apr 18 15:36:39 chatham-www-t9 systemd[379467]: Reached target shutdown.target - Shutdown.
+Apr 18 15:36:42 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:36:42 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:36:52 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 67.
+Apr 18 15:36:52 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:36:52 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:37:04 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:37:04 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:37:14 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 68.
+Apr 18 15:37:14 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:37:14 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:37:19 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:37:19 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:37:29 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 69.
+Apr 18 15:37:29 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:37:29 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:37:38 chatham-www-t9 systemd[379809]: Reached target shutdown.target - Shutdown.
+Apr 18 15:37:38 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:37:38 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:37:38 chatham-www-t9 systemd[379872]: Reached target shutdown.target - Shutdown.
+Apr 18 15:37:39 chatham-www-t9 systemd[379936]: Reached target shutdown.target - Shutdown.
+Apr 18 15:37:39 chatham-www-t9 systemd[379999]: Reached target shutdown.target - Shutdown.
+Apr 18 15:37:39 chatham-www-t9 systemd[380063]: Reached target shutdown.target - Shutdown.
+Apr 18 15:37:48 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 70.
+Apr 18 15:37:48 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:37:48 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:38:01 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:38:01 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:38:11 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 71.
+Apr 18 15:38:11 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:38:11 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:38:23 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:38:23 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:38:34 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 72.
+Apr 18 15:38:34 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:38:34 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:38:34 chatham-www-t9 systemd[380852]: Reached target shutdown.target - Shutdown.
+Apr 18 15:38:34 chatham-www-t9 systemd[380966]: Reached target shutdown.target - Shutdown.
+Apr 18 15:38:34 chatham-www-t9 systemd[381078]: Reached target shutdown.target - Shutdown.
+Apr 18 15:38:34 chatham-www-t9 systemd[381190]: Reached target shutdown.target - Shutdown.
+Apr 18 15:38:35 chatham-www-t9 systemd[381302]: Reached target shutdown.target - Shutdown.
+Apr 18 15:38:48 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:38:48 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:38:58 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 73.
+Apr 18 15:38:58 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:38:58 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:39:03 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:39:03 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:39:13 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 74.
+Apr 18 15:39:13 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:39:13 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:39:26 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:39:26 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:39:36 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 75.
+Apr 18 15:39:36 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:39:36 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:39:37 chatham-www-t9 systemd[381879]: Reached target shutdown.target - Shutdown.
+Apr 18 15:39:37 chatham-www-t9 systemd[381958]: Reached target shutdown.target - Shutdown.
+Apr 18 15:39:37 chatham-www-t9 systemd[382119]: Reached target shutdown.target - Shutdown.
+Apr 18 15:39:37 chatham-www-t9 systemd[382231]: Reached target shutdown.target - Shutdown.
+Apr 18 15:39:38 chatham-www-t9 systemd[382343]: Reached target shutdown.target - Shutdown.
+Apr 18 15:39:45 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:39:45 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:39:55 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 76.
+Apr 18 15:39:55 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:39:55 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:39:59 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:39:59 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:40:09 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 77.
+Apr 18 15:40:09 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:40:09 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:40:17 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:40:17 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:40:26 chatham-www-t9 systemd[382921]: Reached target shutdown.target - Shutdown.
+Apr 18 15:40:26 chatham-www-t9 systemd[383035]: Reached target shutdown.target - Shutdown.
+Apr 18 15:40:27 chatham-www-t9 systemd[383147]: Reached target shutdown.target - Shutdown.
+Apr 18 15:40:27 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 78.
+Apr 18 15:40:27 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:40:27 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:40:27 chatham-www-t9 systemd[383259]: Reached target shutdown.target - Shutdown.
+Apr 18 15:40:27 chatham-www-t9 systemd[383372]: Reached target shutdown.target - Shutdown.
+Apr 18 15:40:37 chatham-www-t9 systemd[383509]: Reached target shutdown.target - Shutdown.
+Apr 18 15:40:37 chatham-www-t9 systemd[383596]: Reached target shutdown.target - Shutdown.
+Apr 18 15:40:38 chatham-www-t9 systemd[383671]: Reached target shutdown.target - Shutdown.
+Apr 18 15:40:38 chatham-www-t9 systemd[383741]: Reached target shutdown.target - Shutdown.
+Apr 18 15:40:38 chatham-www-t9 systemd[383804]: Reached target shutdown.target - Shutdown.
+Apr 18 15:40:40 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:40:40 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:40:50 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 79.
+Apr 18 15:40:50 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:40:50 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:40:58 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:40:58 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:41:08 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 80.
+Apr 18 15:41:08 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:41:08 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:41:16 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:41:16 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:41:26 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 81.
+Apr 18 15:41:26 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:41:26 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:41:33 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:41:33 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:41:38 chatham-www-t9 systemd[384060]: Reached target shutdown.target - Shutdown.
+Apr 18 15:41:38 chatham-www-t9 systemd[384134]: Reached target shutdown.target - Shutdown.
+Apr 18 15:41:38 chatham-www-t9 systemd[384197]: Reached target shutdown.target - Shutdown.
+Apr 18 15:41:39 chatham-www-t9 systemd[384311]: Reached target shutdown.target - Shutdown.
+Apr 18 15:41:39 chatham-www-t9 systemd[384472]: Reached target shutdown.target - Shutdown.
+Apr 18 15:41:44 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 82.
+Apr 18 15:41:44 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:41:44 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:41:53 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:41:53 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:42:03 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 83.
+Apr 18 15:42:03 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:42:03 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:42:07 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:42:07 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:42:17 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 84.
+Apr 18 15:42:17 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:42:17 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:42:24 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:42:24 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:42:32 chatham-www-t9 systemd[385085]: Reached target shutdown.target - Shutdown.
+Apr 18 15:42:32 chatham-www-t9 systemd[385149]: Reached target shutdown.target - Shutdown.
+Apr 18 15:42:32 chatham-www-t9 systemd[385212]: Reached target shutdown.target - Shutdown.
+Apr 18 15:42:32 chatham-www-t9 systemd[385276]: Reached target shutdown.target - Shutdown.
+Apr 18 15:42:32 chatham-www-t9 systemd[385344]: Reached target shutdown.target - Shutdown.
+Apr 18 15:42:34 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 85.
+Apr 18 15:42:34 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:42:34 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:42:39 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:42:39 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:42:41 chatham-www-t9 uvicorn[309524]: INFO:     Waiting for application shutdown.
+Apr 18 15:42:41 chatham-www-t9 uvicorn[309524]: INFO:     Application shutdown complete.
+Apr 18 15:42:49 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 86.
+Apr 18 15:42:49 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:42:49 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:43:00 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:43:00 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:43:10 chatham-www-t9 systemd[1]: securebootmgr.service: Scheduled restart job, restart counter is at 87.
+Apr 18 15:43:10 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:43:10 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:43:16 chatham-www-t9 systemd[1]: securebootmgr.service: Main process exited, code=exited, status=1/FAILURE
+Apr 18 15:43:16 chatham-www-t9 systemd[1]: securebootmgr.service: Failed with result 'exit-code'.
+Apr 18 15:43:19 chatham-www-t9 systemd[1]: Stopping finalrd.service - Create final runtime dir for shutdown pivot root...
+Apr 18 15:43:19 chatham-www-t9 systemd[1]: snapd.system-shutdown.service - Ubuntu core (all-snaps) system shutdown helper setup service was skipped because of an unmet condition check (ConditionPathExists=!/usr/bin/finalrd).
+Apr 18 15:43:19 chatham-www-t9 uvicorn[386008]: INFO:     Waiting for application shutdown.
+Apr 18 15:43:19 chatham-www-t9 uvicorn[386008]: INFO:     Application shutdown complete.
+Apr 18 15:43:19 chatham-www-t9 systemd[1]: plymouth-poweroff.service - Show Plymouth Power Off Screen was skipped because of an unmet condition check (ConditionKernelCommandLine=splash).
+Apr 18 15:43:19 chatham-www-t9 systemd[386271]: Reached target shutdown.target - Shutdown.
+Apr 18 15:43:19 chatham-www-t9 systemd[195118]: Reached target shutdown.target - Shutdown.
+Apr 18 15:43:19 chatham-www-t9 systemd[386193]: Reached target shutdown.target - Shutdown.
+Apr 18 15:43:20 chatham-www-t9 systemd[1]: Stopped securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:43:20 chatham-www-t9 systemd[1]: Stopping systemd-update-utmp.service - Record System Boot/Shutdown in UTMP...
+Apr 18 15:43:20 chatham-www-t9 systemd[1]: Stopped systemd-update-utmp.service - Record System Boot/Shutdown in UTMP.
+Apr 18 15:43:20 chatham-www-t9 systemd[1]: Stopped finalrd.service - Create final runtime dir for shutdown pivot root.
+Apr 18 15:43:20 chatham-www-t9 systemd[1]: Reached target shutdown.target - System Shutdown.
+Apr 18 15:43:20 chatham-www-t9 systemd[1]: Reached target final.target - Late Shutdown Services.
+Apr 18 15:43:20 chatham-www-t9 systemd[1]: systemd-poweroff.service: Deactivated successfully.
+Apr 18 15:43:20 chatham-www-t9 systemd[1]: Finished systemd-poweroff.service - System Power Off.
+Apr 18 15:43:20 chatham-www-t9 systemd[1]: Reached target poweroff.target - System Power Off.
+Apr 18 15:43:20 chatham-www-t9 systemd-shutdown[1]: Syncing filesystems and block devices.
+Apr 18 15:43:20 chatham-www-t9 systemd-shutdown[1]: Sending SIGTERM to remaining processes...
+Apr 18 15:44:07 chatham-www-t9 kernel: secureboot: Secure boot disabled
+Apr 18 15:44:07 chatham-www-t9 kernel: secureboot: Secure boot disabled
+Apr 18 15:44:08 chatham-www-t9 systemd[1]: Starting finalrd.service - Create final runtime dir for shutdown pivot root...
+Apr 18 15:44:08 chatham-www-t9 systemd[1]: Finished finalrd.service - Create final runtime dir for shutdown pivot root.
+Apr 18 15:44:08 chatham-www-t9 systemd[1]: Starting systemd-update-utmp.service - Record System Boot/Shutdown in UTMP...
+Apr 18 15:44:08 chatham-www-t9 systemd[1]: Finished systemd-update-utmp.service - Record System Boot/Shutdown in UTMP.
+Apr 18 15:44:09 chatham-www-t9 systemd[1]: secureboot-db.service - Secure Boot updates for DB and DBX was skipped because of an unmet condition check (ConditionPathExists=/sys/firmware/efi/efivars/db-d719b2cb-3d3a-4596-a3bc-dad00e67656f).
+Apr 18 15:44:09 chatham-www-t9 systemd[1]: Starting securebootmgr.service - Service Unit File - securebootmgr.service...
+Apr 18 15:44:09 chatham-www-t9 systemd[1]: ua-reboot-cmds.service - Ubuntu Pro reboot cmds was skipped because of an unmet condition check (ConditionPathExists=/var/lib/ubuntu-advantage/private/machine-token.json).
+Apr 18 15:44:10 chatham-www-t9 systemd[1]: Started securebootmgr.service - Service Unit File - securebootmgr.service.
+Apr 18 15:44:11 chatham-www-t9 systemd[1]: Reloading requested from client PID 890 ('systemctl') (unit NetworkManager.service)...
+Apr 18 15:44:11 chatham-www-t9 systemd[1]: Started unattended-upgrades.service - Unattended Upgrades Shutdown.
+Apr 18 15:44:11 chatham-www-t9 cron[959]: (CRON) INFO (Running @reboot jobs)
+Apr 18 15:44:31 chatham-www-t9 systemd[1147]: Reached target shutdown.target - Shutdown.
+Apr 18 15:44:31 chatham-www-t9 systemd[1257]: Reached target shutdown.target - Shutdown.
+Apr 18 15:44:32 chatham-www-t9 systemd[1319]: Reached target shutdown.target - Shutdown.
+Apr 18 15:44:32 chatham-www-t9 systemd[1381]: Reached target shutdown.target - Shutdown.
+Apr 18 15:44:32 chatham-www-t9 systemd[1446]: Reached target shutdown.target - Shutdown.
+Apr 18 15:45:33 chatham-www-t9 systemd[2507]: Reached target shutdown.target - Shutdown.
+Apr 18 15:45:33 chatham-www-t9 systemd[2569]: Reached target shutdown.target - Shutdown.
+Apr 18 15:45:33 chatham-www-t9 systemd[2631]: Reached target shutdown.target - Shutdown.
+Apr 18 15:45:33 chatham-www-t9 systemd[2694]: Reached target shutdown.target - Shutdown.
+Apr 18 15:45:33 chatham-www-t9 systemd[2756]: Reached target shutdown.target - Shutdown.
+Apr 18 15:46:35 chatham-www-t9 systemd[3441]: Reached target shutdown.target - Shutdown.
+Apr 18 15:46:35 chatham-www-t9 systemd[3508]: Reached target shutdown.target - Shutdown.
+Apr 18 15:46:35 chatham-www-t9 systemd[3570]: Reached target shutdown.target - Shutdown.
+Apr 18 15:46:35 chatham-www-t9 systemd[3632]: Reached target shutdown.target - Shutdown.
+Apr 18 15:46:35 chatham-www-t9 systemd[3694]: Reached target shutdown.target - Shutdown.
+Apr 18 15:47:39 chatham-www-t9 systemd[4377]: Reached target shutdown.target - Shutdown.
+Apr 18 15:47:39 chatham-www-t9 systemd[4449]: Reached target shutdown.target - Shutdown.
+Apr 18 15:47:39 chatham-www-t9 systemd[4624]: Reached target shutdown.target - Shutdown.
+Apr 18 15:47:39 chatham-www-t9 systemd[4511]: Reached target shutdown.target - Shutdown.
+Apr 18 15:47:39 chatham-www-t9 systemd[4767]: Reached target shutdown.target - Shutdown.
+Apr 18 15:48:38 chatham-www-t9 systemd[5288]: Reached target shutdown.target - Shutdown.
+Apr 18 15:48:39 chatham-www-t9 systemd[5352]: Reached target shutdown.target - Shutdown.
+Apr 18 15:48:39 chatham-www-t9 systemd[5414]: Reached target shutdown.target - Shutdown.
+Apr 18 15:48:39 chatham-www-t9 systemd[5544]: Reached target shutdown.target - Shutdown.
+Apr 18 15:48:39 chatham-www-t9 systemd[5476]: Reached target shutdown.target - Shutdown.
+Apr 18 15:49:15 chatham-www-t9 uvicorn[944]: INFO:     Waiting for application shutdown.
+Apr 18 15:49:15 chatham-www-t9 uvicorn[944]: INFO:     Application shutdown complete.
+Apr 18 15:49:37 chatham-www-t9 systemd[6279]: Reached target shutdown.target - Shutdown.
+Apr 18 15:49:37 chatham-www-t9 systemd[6343]: Reached target shutdown.target - Shutdown.
+Apr 18 15:49:37 chatham-www-t9 systemd[6405]: Reached target shutdown.target - Shutdown.
+Apr 18 15:49:38 chatham-www-t9 systemd[6467]: Reached target shutdown.target - Shutdown.
+Apr 18 15:49:38 chatham-www-t9 systemd[6529]: Reached target shutdown.target - Shutdown.
+Apr 18 15:50:30 chatham-www-t9 systemd[7223]: Reached target shutdown.target - Shutdown.
+Apr 18 15:50:30 chatham-www-t9 systemd[7352]: Reached target shutdown.target - Shutdown.
+Apr 18 15:50:30 chatham-www-t9 systemd[7462]: Reached target shutdown.target - Shutdown.
+Apr 18 15:50:30 chatham-www-t9 systemd[7573]: Reached target shutdown.target - Shutdown.
+Apr 18 15:50:30 chatham-www-t9 systemd[7683]: Reached target shutdown.target - Shutdown.
+Apr 18 15:51:30 chatham-www-t9 systemd[8168]: Reached target shutdown.target - Shutdown.
+Apr 18 15:51:30 chatham-www-t9 systemd[8241]: Reached target shutdown.target - Shutdown.
+Apr 18 15:51:30 chatham-www-t9 systemd[8305]: Reached target shutdown.target - Shutdown.
+Apr 18 15:51:30 chatham-www-t9 systemd[8463]: Reached target shutdown.target - Shutdown.
+Apr 18 15:51:30 chatham-www-t9 systemd[8617]: Reached target shutdown.target - Shutdown.
+Apr 18 15:52:35 chatham-www-t9 systemd[9111]: Reached target shutdown.target - Shutdown.
+Apr 18 15:52:35 chatham-www-t9 systemd[9182]: Reached target shutdown.target - Shutdown.
+Apr 18 15:52:35 chatham-www-t9 systemd[9244]: Reached target shutdown.target - Shutdown.
+Apr 18 15:52:35 chatham-www-t9 systemd[9306]: Reached target shutdown.target - Shutdown.
+Apr 18 15:52:35 chatham-www-t9 systemd[9368]: Reached target shutdown.target - Shutdown.
+Apr 18 15:53:29 chatham-www-t9 systemd[10018]: Reached target shutdown.target - Shutdown.
+Apr 18 15:53:29 chatham-www-t9 systemd[10128]: Reached target shutdown.target - Shutdown.
+Apr 18 15:53:30 chatham-www-t9 systemd[10240]: Reached target shutdown.target - Shutdown.
+Apr 18 15:53:30 chatham-www-t9 systemd[10355]: Reached target shutdown.target - Shutdown.
+Apr 18 15:53:30 chatham-www-t9 systemd[10516]: Reached target shutdown.target - Shutdown.
+Apr 18 15:54:37 chatham-www-t9 systemd[10934]: Reached target shutdown.target - Shutdown.
+Apr 18 15:54:37 chatham-www-t9 systemd[11006]: Reached target shutdown.target - Shutdown.
+Apr 18 15:54:37 chatham-www-t9 systemd[11069]: Reached target shutdown.target - Shutdown.
+Apr 18 15:54:38 chatham-www-t9 systemd[11131]: Reached target shutdown.target - Shutdown.
+Apr 18 15:54:38 chatham-www-t9 systemd[11195]: Reached target shutdown.target - Shutdown.
+Apr 18 15:55:02 chatham-www-t9 uvicorn[7091]: INFO:     Waiting for application shutdown.
+Apr 18 15:55:02 chatham-www-t9 uvicorn[7091]: INFO:     Application shutdown complete.
+Apr 18 15:55:31 chatham-www-t9 systemd[11904]: Reached target shutdown.target - Shutdown.
+Apr 18 15:55:31 chatham-www-t9 systemd[11966]: Reached target shutdown.target - Shutdown.
+Apr 18 15:55:31 chatham-www-t9 systemd[12028]: Reached target shutdown.target - Shutdown.
+Apr 18 15:55:31 chatham-www-t9 systemd[12097]: Reached target shutdown.target - Shutdown.
+Apr 18 15:55:32 chatham-www-t9 systemd[12255]: Reached target shutdown.target - Shutdown.
+Apr 18 15:55:42 chatham-www-t9 systemd[1]: Reloading requested from client PID 12836 ('systemctl') (unit session-21.scope)...
+Apr 18 15:55:43 chatham-www-t9 systemd[1]: Reloading requested from client PID 12895 ('systemctl') (unit session-21.scope)...
+Apr 18 15:55:43 chatham-www-t9 systemd[1]: Reloading requested from client PID 12962 ('systemctl') (unit session-21.scope)...
+Apr 18 15:55:44 chatham-www-t9 systemd[1]: Reloading requested from client PID 13022 ('systemctl') (unit session-21.scope)...
+Apr 18 15:55:44 chatham-www-t9 systemd[1]: Reloading requested from client PID 13100 ('systemctl') (unit session-21.scope)...
+Apr 18 15:55:45 chatham-www-t9 systemd[1]: Reloading requested from client PID 13172 ('systemctl') (unit session-21.scope)...
+Apr 18 15:55:45 chatham-www-t9 systemd[1]: Reloading requested from client PID 13244 ('systemctl') (unit session-21.scope)...
+Apr 18 15:55:46 chatham-www-t9 systemd[1]: Reloading requested from client PID 13316 ('systemctl') (unit session-21.scope)...
+Apr 18 15:55:46 chatham-www-t9 systemd[1]: Reloading requested from client PID 13388 ('systemctl') (unit session-21.scope)...
+Apr 18 15:55:46 chatham-www-t9 systemd[1]: Reloading requested from client PID 13449 ('systemctl') (unit session-21.scope)...
+Apr 18 15:55:47 chatham-www-t9 systemd[1]: Reloading requested from client PID 13517 ('systemctl') (unit session-21.scope)...
+Apr 18 15:55:47 chatham-www-t9 systemd[1]: Reloading requested from client PID 13588 ('systemctl') (unit session-21.scope)...
+Apr 18 15:55:48 chatham-www-t9 systemd[1]: Reloading requested from client PID 13647 ('systemctl') (unit session-21.scope)...

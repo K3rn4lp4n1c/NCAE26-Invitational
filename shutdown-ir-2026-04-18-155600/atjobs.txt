@@ -1,0 +1,3 @@
+>>> find /var/spool/cron/atjobs /var/spool/cron/atspool -type f -maxdepth 2 -exec ls -l {} \; -exec sed -n '1,200p' {} \; 2>/dev/null
+-rw------- 1 daemon daemon 6 Apr 18 15:09 /var/spool/cron/atjobs/.SEQ
+0013c

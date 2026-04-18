@@ -1,0 +1,301 @@
+>>> grep -iE 'sudo|session opened|session closed|COMMAND=|shutdown|reboot|poweroff|halt|systemctl' /var/log/auth.log /var/log/auth.log.1 2>/dev/null | tail -300
+/var/log/auth.log:2026-04-18T15:48:19.102267+00:00 chatham-www-t9 sshd[5410]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:48:19.125817+00:00 chatham-www-t9 sshd[5348]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:48:19.141288+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:48:19.472180+00:00 chatham-www-t9 sshd[5410]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:48:19.501175+00:00 chatham-www-t9 sshd[5472]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:48:19.556469+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:48:19.935751+00:00 chatham-www-t9 sshd[5540]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:48:19.965166+00:00 chatham-www-t9 sshd[5472]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:48:19.987201+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:48:20.228192+00:00 chatham-www-t9 sshd[5540]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:48:27.757597+00:00 chatham-www-t9 sshd[5605]: pam_unix(sshd:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:48:27.975627+00:00 chatham-www-t9 sshd[5624]: pam_unix(sshd:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:48:28.211067+00:00 chatham-www-t9 sshd[5681]: pam_unix(sshd:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:48:28.235284+00:00 chatham-www-t9 sshd[5605]: pam_unix(sshd:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:48:28.426468+00:00 chatham-www-t9 sshd[5681]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:48:28.521489+00:00 chatham-www-t9 sshd[5624]: pam_unix(sshd:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:48:28.555522+00:00 chatham-www-t9 sshd[5730]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:48:28.655911+00:00 chatham-www-t9 sshd[5769]: pam_unix(sshd:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:48:28.806958+00:00 chatham-www-t9 sshd[5730]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:48:28.828527+00:00 chatham-www-t9 sshd[5846]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:48:28.883800+00:00 chatham-www-t9 sshd[5769]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:48:28.906647+00:00 chatham-www-t9 sshd[5865]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:48:29.019037+00:00 chatham-www-t9 sshd[5943]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:48:29.050326+00:00 chatham-www-t9 sshd[5846]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:48:29.118900+00:00 chatham-www-t9 sshd[5865]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:48:29.123867+00:00 chatham-www-t9 sshd[5943]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:48:29.138237+00:00 chatham-www-t9 sshd[5961]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:48:29.316055+00:00 chatham-www-t9 sshd[6055]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:48:29.342535+00:00 chatham-www-t9 sshd[5961]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:48:29.431594+00:00 chatham-www-t9 sshd[6055]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:48:38.774989+00:00 chatham-www-t9 (sd-pam): pam_unix(systemd-user:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:48:39.013465+00:00 chatham-www-t9 (sd-pam): pam_unix(systemd-user:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:48:39.538425+00:00 chatham-www-t9 (sd-pam): pam_unix(systemd-user:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:49:20.985930+00:00 chatham-www-t9 sshd[6275]: pam_unix(sshd:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:49:21.019013+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:49:21.308209+00:00 chatham-www-t9 sshd[6339]: pam_unix(sshd:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:49:21.339947+00:00 chatham-www-t9 sshd[6275]: pam_unix(sshd:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:49:21.348836+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:49:21.672133+00:00 chatham-www-t9 sshd[6401]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:49:21.701716+00:00 chatham-www-t9 sshd[6339]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:49:21.722223+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:49:22.005572+00:00 chatham-www-t9 sshd[6463]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:49:22.036709+00:00 chatham-www-t9 sshd[6401]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:49:22.042939+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:49:22.319412+00:00 chatham-www-t9 sshd[6525]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:49:22.349686+00:00 chatham-www-t9 sshd[6463]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:49:22.357100+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:49:22.615570+00:00 chatham-www-t9 sshd[6525]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:49:23.059064+00:00 chatham-www-t9 sshd[6588]: pam_unix(sshd:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:49:23.227901+00:00 chatham-www-t9 sshd[6636]: pam_unix(sshd:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:49:23.258400+00:00 chatham-www-t9 sshd[6588]: pam_unix(sshd:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:49:23.393334+00:00 chatham-www-t9 sshd[6684]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:49:23.427253+00:00 chatham-www-t9 sshd[6636]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:49:23.567529+00:00 chatham-www-t9 sshd[6732]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:49:23.595024+00:00 chatham-www-t9 sshd[6684]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:49:23.765411+00:00 chatham-www-t9 sshd[6780]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:49:23.797028+00:00 chatham-www-t9 sshd[6732]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:49:23.875628+00:00 chatham-www-t9 sshd[6780]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:49:27.090735+00:00 chatham-www-t9 sshd[6829]: pam_unix(sshd:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:49:27.296945+00:00 chatham-www-t9 sshd[6829]: pam_unix(sshd:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:49:27.305898+00:00 chatham-www-t9 sshd[6882]: pam_unix(sshd:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:49:27.484159+00:00 chatham-www-t9 sshd[6930]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:49:27.513016+00:00 chatham-www-t9 sshd[6882]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:49:27.684573+00:00 chatham-www-t9 sshd[6979]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:49:27.703407+00:00 chatham-www-t9 sshd[6930]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:49:27.863630+00:00 chatham-www-t9 sshd[7027]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:49:27.895426+00:00 chatham-www-t9 sshd[6979]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:49:27.982331+00:00 chatham-www-t9 sshd[7027]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:49:38.057467+00:00 chatham-www-t9 (sd-pam): pam_unix(systemd-user:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:50:01.037059+00:00 chatham-www-t9 CRON[7165]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+/var/log/auth.log:2026-04-18T15:50:04.640027+00:00 chatham-www-t9 CRON[7165]: pam_unix(cron:session): session closed for user root
+/var/log/auth.log:2026-04-18T15:50:17.013743+00:00 chatham-www-t9 sshd[7217]: pam_unix(sshd:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:50:17.048664+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:50:17.080476+00:00 chatham-www-t9 sshd[7219]: pam_unix(sshd:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:50:17.647543+00:00 chatham-www-t9 sshd[7344]: pam_unix(sshd:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:50:17.671500+00:00 chatham-www-t9 sshd[7217]: pam_unix(sshd:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:50:17.689585+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:50:17.692982+00:00 chatham-www-t9 sshd[7219]: pam_unix(sshd:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:50:17.712182+00:00 chatham-www-t9 sshd[7348]: pam_unix(sshd:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:50:18.018987+00:00 chatham-www-t9 sshd[7456]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:50:18.020593+00:00 chatham-www-t9 sshd[7457]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:50:18.050481+00:00 chatham-www-t9 sshd[7348]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:50:18.053172+00:00 chatham-www-t9 sshd[7344]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:50:18.064954+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:50:18.380865+00:00 chatham-www-t9 sshd[7566]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:50:18.404125+00:00 chatham-www-t9 sshd[7457]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:50:18.405087+00:00 chatham-www-t9 sshd[7456]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:50:18.427188+00:00 chatham-www-t9 sshd[7567]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:50:18.433574+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:50:18.744381+00:00 chatham-www-t9 sshd[7676]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:50:18.750642+00:00 chatham-www-t9 sshd[7678]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:50:18.780340+00:00 chatham-www-t9 sshd[7567]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:50:18.783034+00:00 chatham-www-t9 sshd[7566]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:50:18.793680+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:50:19.030515+00:00 chatham-www-t9 sshd[7676]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:50:19.036676+00:00 chatham-www-t9 sshd[7678]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:50:19.729512+00:00 chatham-www-t9 sshd[7788]: pam_unix(sshd:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:50:19.916802+00:00 chatham-www-t9 sshd[7836]: pam_unix(sshd:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:50:19.945629+00:00 chatham-www-t9 sshd[7788]: pam_unix(sshd:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:50:20.093687+00:00 chatham-www-t9 sshd[7884]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:50:20.119998+00:00 chatham-www-t9 sshd[7836]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:50:20.268682+00:00 chatham-www-t9 sshd[7932]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:50:20.297016+00:00 chatham-www-t9 sshd[7884]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:50:20.447660+00:00 chatham-www-t9 sshd[7982]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:50:20.473913+00:00 chatham-www-t9 sshd[7932]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:50:20.557495+00:00 chatham-www-t9 sshd[7982]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:50:30.344528+00:00 chatham-www-t9 (sd-pam): pam_unix(systemd-user:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:50:30.768376+00:00 chatham-www-t9 (sd-pam): pam_unix(systemd-user:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:51:17.844141+00:00 chatham-www-t9 sshd[8164]: pam_unix(sshd:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:51:17.881702+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:51:18.512295+00:00 chatham-www-t9 sshd[8237]: pam_unix(sshd:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:51:18.539661+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:51:18.544839+00:00 chatham-www-t9 sshd[8164]: pam_unix(sshd:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:51:18.837769+00:00 chatham-www-t9 sshd[8299]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:51:18.868966+00:00 chatham-www-t9 sshd[8237]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:51:18.873400+00:00 chatham-www-t9 sshd[8301]: pam_unix(sshd:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:51:18.876322+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:51:19.049217+00:00 chatham-www-t9 sshd[8357]: pam_unix(sshd:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:51:19.076121+00:00 chatham-www-t9 sshd[8301]: pam_unix(sshd:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:51:19.165167+00:00 chatham-www-t9 sshd[8447]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:51:19.196154+00:00 chatham-www-t9 sshd[8299]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:51:19.205935+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:51:19.230830+00:00 chatham-www-t9 sshd[8459]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:51:19.255442+00:00 chatham-www-t9 sshd[8357]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:51:19.450029+00:00 chatham-www-t9 sshd[8459]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:51:19.464511+00:00 chatham-www-t9 sshd[8539]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:51:19.503106+00:00 chatham-www-t9 sshd[8569]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:51:19.533642+00:00 chatham-www-t9 sshd[8447]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:51:19.548157+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:51:19.662985+00:00 chatham-www-t9 sshd[8625]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:51:19.693803+00:00 chatham-www-t9 sshd[8539]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:51:19.816289+00:00 chatham-www-t9 sshd[8569]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:51:19.816667+00:00 chatham-www-t9 sshd[8625]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:51:19.826148+00:00 chatham-www-t9 sshd[8709]: pam_unix(sshd:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:51:20.005378+00:00 chatham-www-t9 sshd[8773]: pam_unix(sshd:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:51:20.038053+00:00 chatham-www-t9 sshd[8709]: pam_unix(sshd:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:51:20.174721+00:00 chatham-www-t9 sshd[8821]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:51:20.203256+00:00 chatham-www-t9 sshd[8773]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:51:20.356877+00:00 chatham-www-t9 sshd[8869]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:51:20.381553+00:00 chatham-www-t9 sshd[8821]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:51:20.587542+00:00 chatham-www-t9 sshd[8869]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:51:20.609425+00:00 chatham-www-t9 sshd[8917]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:51:20.729898+00:00 chatham-www-t9 sshd[8917]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:51:30.290459+00:00 chatham-www-t9 (sd-pam): pam_unix(systemd-user:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:51:30.507085+00:00 chatham-www-t9 (sd-pam): pam_unix(systemd-user:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:51:30.815652+00:00 chatham-www-t9 (sd-pam): pam_unix(systemd-user:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:52:20.209207+00:00 chatham-www-t9 sshd[9107]: pam_unix(sshd:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:52:20.243041+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:52:20.852614+00:00 chatham-www-t9 sshd[9178]: pam_unix(sshd:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:52:20.878063+00:00 chatham-www-t9 sshd[9107]: pam_unix(sshd:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:52:20.894719+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:52:21.209354+00:00 chatham-www-t9 sshd[9240]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:52:21.242670+00:00 chatham-www-t9 sshd[9178]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:52:21.251625+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:52:21.611319+00:00 chatham-www-t9 sshd[9240]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:52:21.624992+00:00 chatham-www-t9 sshd[9302]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:52:21.663349+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:52:21.966030+00:00 chatham-www-t9 sshd[9364]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:52:21.995946+00:00 chatham-www-t9 sshd[9302]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:52:22.004404+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:52:22.223222+00:00 chatham-www-t9 sshd[9364]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:52:23.823425+00:00 chatham-www-t9 sshd[9426]: pam_unix(sshd:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:52:23.991243+00:00 chatham-www-t9 sshd[9474]: pam_unix(sshd:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:52:24.022651+00:00 chatham-www-t9 sshd[9426]: pam_unix(sshd:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:52:24.166302+00:00 chatham-www-t9 sshd[9522]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:52:24.200880+00:00 chatham-www-t9 sshd[9474]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:52:24.353686+00:00 chatham-www-t9 sshd[9570]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:52:24.378848+00:00 chatham-www-t9 sshd[9522]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:52:24.534883+00:00 chatham-www-t9 sshd[9618]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:52:24.564906+00:00 chatham-www-t9 sshd[9570]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:52:24.640189+00:00 chatham-www-t9 sshd[9618]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:52:24.923711+00:00 chatham-www-t9 sshd[9671]: pam_unix(sshd:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:52:25.091362+00:00 chatham-www-t9 sshd[9719]: pam_unix(sshd:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:52:25.119950+00:00 chatham-www-t9 sshd[9671]: pam_unix(sshd:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:52:25.265051+00:00 chatham-www-t9 sshd[9772]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:52:25.295405+00:00 chatham-www-t9 sshd[9719]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:52:25.454615+00:00 chatham-www-t9 sshd[9820]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:52:25.477735+00:00 chatham-www-t9 sshd[9772]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:52:25.638892+00:00 chatham-www-t9 sshd[9868]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:52:25.667520+00:00 chatham-www-t9 sshd[9820]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:52:25.751114+00:00 chatham-www-t9 sshd[9868]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:52:35.510199+00:00 chatham-www-t9 (sd-pam): pam_unix(systemd-user:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:52:35.562755+00:00 chatham-www-t9 (sd-pam): pam_unix(systemd-user:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:53:17.747426+00:00 chatham-www-t9 sshd[10012]: pam_unix(sshd:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:53:17.779896+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:53:17.848506+00:00 chatham-www-t9 sshd[10014]: pam_unix(sshd:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:53:18.065872+00:00 chatham-www-t9 sshd[10122]: pam_unix(sshd:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:53:18.091197+00:00 chatham-www-t9 sshd[10014]: pam_unix(sshd:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:53:18.095444+00:00 chatham-www-t9 sshd[10012]: pam_unix(sshd:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:53:18.096786+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:53:18.114052+00:00 chatham-www-t9 sshd[10123]: pam_unix(sshd:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:53:18.490133+00:00 chatham-www-t9 sshd[10235]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:53:18.495824+00:00 chatham-www-t9 sshd[10122]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:53:18.506535+00:00 chatham-www-t9 sshd[10123]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:53:18.527923+00:00 chatham-www-t9 sshd[10233]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:53:18.542642+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:53:18.800338+00:00 chatham-www-t9 sshd[10235]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:53:18.889521+00:00 chatham-www-t9 sshd[10350]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:53:18.891845+00:00 chatham-www-t9 sshd[10233]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:53:18.891894+00:00 chatham-www-t9 sshd[10348]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:53:18.945404+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:53:19.161040+00:00 chatham-www-t9 sshd[10367]: pam_unix(sshd:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:53:19.257084+00:00 chatham-www-t9 sshd[10477]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:53:19.283830+00:00 chatham-www-t9 sshd[10350]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:53:19.296207+00:00 chatham-www-t9 sshd[10348]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:53:19.317099+00:00 chatham-www-t9 sshd[10473]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:53:19.328146+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:53:19.368417+00:00 chatham-www-t9 sshd[10367]: pam_unix(sshd:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:53:19.386980+00:00 chatham-www-t9 sshd[10513]: pam_unix(sshd:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:53:19.592619+00:00 chatham-www-t9 sshd[10594]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:53:19.617882+00:00 chatham-www-t9 sshd[10513]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:53:19.618412+00:00 chatham-www-t9 sshd[10473]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:53:19.639828+00:00 chatham-www-t9 sshd[10477]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:53:19.781353+00:00 chatham-www-t9 sshd[10714]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:53:19.808493+00:00 chatham-www-t9 sshd[10594]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:53:19.966716+00:00 chatham-www-t9 sshd[10762]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:53:19.990933+00:00 chatham-www-t9 sshd[10714]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:53:20.077255+00:00 chatham-www-t9 sshd[10762]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:53:30.011373+00:00 chatham-www-t9 (sd-pam): pam_unix(systemd-user:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:54:16.992175+00:00 chatham-www-t9 sshd[10930]: pam_unix(sshd:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:54:17.026196+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:54:17.664511+00:00 chatham-www-t9 sshd[11002]: pam_unix(sshd:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:54:17.692402+00:00 chatham-www-t9 sshd[10930]: pam_unix(sshd:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:54:17.694598+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:54:17.989820+00:00 chatham-www-t9 sshd[11065]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:54:18.022811+00:00 chatham-www-t9 sshd[11002]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:54:18.028805+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:54:18.320622+00:00 chatham-www-t9 sshd[11127]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:54:18.350973+00:00 chatham-www-t9 sshd[11065]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:54:18.360985+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:54:18.669346+00:00 chatham-www-t9 sshd[11191]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:54:18.693158+00:00 chatham-www-t9 sshd[11127]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:54:18.738074+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:54:18.988678+00:00 chatham-www-t9 sshd[11191]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:54:24.906387+00:00 chatham-www-t9 sshd[11260]: pam_unix(sshd:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:54:25.085128+00:00 chatham-www-t9 sshd[11308]: pam_unix(sshd:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:54:25.113130+00:00 chatham-www-t9 sshd[11260]: pam_unix(sshd:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:54:25.290336+00:00 chatham-www-t9 sshd[11308]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:54:25.300958+00:00 chatham-www-t9 sshd[11356]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:54:25.487322+00:00 chatham-www-t9 sshd[11404]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:54:25.509281+00:00 chatham-www-t9 sshd[11356]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:54:25.677755+00:00 chatham-www-t9 sshd[11452]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:54:25.709125+00:00 chatham-www-t9 sshd[11404]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:54:25.787816+00:00 chatham-www-t9 sshd[11452]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:54:26.974440+00:00 chatham-www-t9 sshd[11500]: pam_unix(sshd:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:54:27.155344+00:00 chatham-www-t9 sshd[11548]: pam_unix(sshd:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:54:27.186533+00:00 chatham-www-t9 sshd[11500]: pam_unix(sshd:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:54:27.332961+00:00 chatham-www-t9 sshd[11596]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:54:27.360370+00:00 chatham-www-t9 sshd[11548]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:54:27.538891+00:00 chatham-www-t9 sshd[11644]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:54:27.646669+00:00 chatham-www-t9 sshd[11596]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:54:27.936728+00:00 chatham-www-t9 sshd[11699]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:54:27.965431+00:00 chatham-www-t9 sshd[11644]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:54:28.087641+00:00 chatham-www-t9 sshd[11699]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:54:37.259046+00:00 chatham-www-t9 (sd-pam): pam_unix(systemd-user:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:54:37.762374+00:00 chatham-www-t9 (sd-pam): pam_unix(systemd-user:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:54:38.276323+00:00 chatham-www-t9 (sd-pam): pam_unix(systemd-user:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:54:38.276546+00:00 chatham-www-t9 (sd-pam): pam_unix(systemd-user:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:55:01.644618+00:00 chatham-www-t9 CRON[11856]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+/var/log/auth.log:2026-04-18T15:55:01.645424+00:00 chatham-www-t9 CRON[11855]: pam_unix(cron:session): session opened for user root(uid=0) by root(uid=0)
+/var/log/auth.log:2026-04-18T15:55:01.648678+00:00 chatham-www-t9 CRON[11856]: pam_unix(cron:session): session closed for user root
+/var/log/auth.log:2026-04-18T15:55:05.274002+00:00 chatham-www-t9 CRON[11855]: pam_unix(cron:session): session closed for user root
+/var/log/auth.log:2026-04-18T15:55:15.935249+00:00 chatham-www-t9 sshd[11900]: pam_unix(sshd:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:55:15.964959+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:55:16.257120+00:00 chatham-www-t9 sshd[11962]: pam_unix(sshd:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:55:16.289533+00:00 chatham-www-t9 sshd[11900]: pam_unix(sshd:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:55:16.295998+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:55:16.630625+00:00 chatham-www-t9 sshd[11962]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:55:16.646571+00:00 chatham-www-t9 sshd[12024]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:55:16.708552+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:55:17.032208+00:00 chatham-www-t9 sshd[12091]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:55:17.057814+00:00 chatham-www-t9 sshd[12024]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:55:17.072343+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:55:17.088673+00:00 chatham-www-t9 sshd[12093]: pam_unix(sshd:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:55:17.265458+00:00 chatham-www-t9 sshd[12154]: pam_unix(sshd:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:55:17.295707+00:00 chatham-www-t9 sshd[12093]: pam_unix(sshd:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:55:17.390194+00:00 chatham-www-t9 sshd[12233]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:55:17.412671+00:00 chatham-www-t9 sshd[12091]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:55:17.439920+00:00 chatham-www-t9 (systemd): pam_unix(systemd-user:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:55:17.480961+00:00 chatham-www-t9 sshd[12154]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:55:17.502128+00:00 chatham-www-t9 sshd[12251]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:55:18.002622+00:00 chatham-www-t9 sshd[12342]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:55:18.014322+00:00 chatham-www-t9 sshd[12233]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:55:18.032611+00:00 chatham-www-t9 sshd[12251]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:55:18.173057+00:00 chatham-www-t9 sshd[12426]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:55:18.205383+00:00 chatham-www-t9 sshd[12342]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:55:18.279001+00:00 chatham-www-t9 sshd[12426]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:55:20.974783+00:00 chatham-www-t9 sshd[12481]: pam_unix(sshd:session): session opened for user gloucester(uid=1004) by gloucester(uid=0)
+/var/log/auth.log:2026-04-18T15:55:21.155269+00:00 chatham-www-t9 sshd[12529]: pam_unix(sshd:session): session opened for user scituate(uid=1005) by scituate(uid=0)
+/var/log/auth.log:2026-04-18T15:55:21.185791+00:00 chatham-www-t9 sshd[12481]: pam_unix(sshd:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:55:21.324962+00:00 chatham-www-t9 sshd[12577]: pam_unix(sshd:session): session opened for user leicester(uid=1007) by leicester(uid=0)
+/var/log/auth.log:2026-04-18T15:55:21.358169+00:00 chatham-www-t9 sshd[12529]: pam_unix(sshd:session): session closed for user scituate
+/var/log/auth.log:2026-04-18T15:55:21.517529+00:00 chatham-www-t9 sshd[12625]: pam_unix(sshd:session): session opened for user leominster(uid=1009) by leominster(uid=0)
+/var/log/auth.log:2026-04-18T15:55:21.539830+00:00 chatham-www-t9 sshd[12577]: pam_unix(sshd:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:55:21.698008+00:00 chatham-www-t9 sshd[12673]: pam_unix(sshd:session): session opened for user tewksbury(uid=1011) by tewksbury(uid=0)
+/var/log/auth.log:2026-04-18T15:55:21.725445+00:00 chatham-www-t9 sshd[12625]: pam_unix(sshd:session): session closed for user leominster
+/var/log/auth.log:2026-04-18T15:55:21.807468+00:00 chatham-www-t9 sshd[12673]: pam_unix(sshd:session): session closed for user tewksbury
+/var/log/auth.log:2026-04-18T15:55:31.268435+00:00 chatham-www-t9 (sd-pam): pam_unix(systemd-user:session): session closed for user gloucester
+/var/log/auth.log:2026-04-18T15:55:31.759335+00:00 chatham-www-t9 (sd-pam): pam_unix(systemd-user:session): session closed for user leicester
+/var/log/auth.log:2026-04-18T15:55:31.780406+00:00 chatham-www-t9 (sd-pam): pam_unix(systemd-user:session): session closed for user leominster

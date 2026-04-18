@@ -1,0 +1,11 @@
+>>> lastb -a | head -80
+root     tty1         Sat Apr 18 13:04 - 13:04  (00:00)
+root     tty1         Sat Apr 18 13:04 - 13:04  (00:00)
+UNKNOWN  tty1         Sat Apr 18 13:04 - 13:04  (00:00)
+UNKNOWN  tty1         Sat Apr 18 13:02 - 13:02  (00:00)
+UNKNOWN  tty1         Sat Apr 18 13:01 - 13:01  (00:00)
+root     tty1         Sat Apr 18 13:01 - 13:01  (00:00)
+UNKNOWN  tty1         Sat Apr 18 13:00 - 13:00  (00:00)
+UNKNOWN  tty1         Sat Apr 18 13:00 - 13:00  (00:00)
+
+btmp begins Sat Apr 18 13:00:43 2026

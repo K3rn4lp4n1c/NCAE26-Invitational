@@ -1,0 +1,10 @@
+>>> sudo lsof -iTCP -sTCP:LISTEN -nP | egrep 'nginx|:80|:443|:444|:8443|:3000|:8000|:9090'
+sudo: unable to resolve host chatham-www-t9: Name or service not known
+systemd       1            root  235u  IPv6   7664      0t0  TCP *:9090 (LISTEN)
+uvicorn     948            root   13u  IPv4  10315      0t0  TCP *:8000 (LISTEN)
+nginx       992            root    5u  IPv4   9710      0t0  TCP *:80 (LISTEN)
+nginx       992            root    6u  IPv4   9711      0t0  TCP *:443 (LISTEN)
+nginx     62254        www-data    5u  IPv4   9710      0t0  TCP *:80 (LISTEN)
+nginx     62254        www-data    6u  IPv4   9711      0t0  TCP *:443 (LISTEN)
+nginx     62255        www-data    5u  IPv4   9710      0t0  TCP *:80 (LISTEN)
+nginx     62255        www-data    6u  IPv4   9711      0t0  TCP *:443 (LISTEN)

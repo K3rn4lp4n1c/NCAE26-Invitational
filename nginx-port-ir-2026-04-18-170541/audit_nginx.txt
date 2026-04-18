@@ -1,0 +1,1 @@
+>>> sudo ausearch -f /etc/nginx -i 2>/dev/null | tail -400

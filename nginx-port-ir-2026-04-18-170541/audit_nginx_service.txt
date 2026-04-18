@@ -1,0 +1,1 @@
+>>> sudo ausearch -f /usr/lib/systemd/system/nginx.service -i 2>/dev/null | tail -200

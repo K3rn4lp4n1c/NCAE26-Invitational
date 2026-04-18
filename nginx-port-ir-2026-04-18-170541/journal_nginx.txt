@@ -1,0 +1,257 @@
+>>> sudo journalctl -u nginx --no-pager | tail -400
+sudo: unable to resolve host chatham-www-t9: Name or service not known
+Apr 15 03:28:44 chatham-www systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Apr 15 03:28:44 chatham-www systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Apr 15 03:38:14 chatham-www systemd[1]: Reloading nginx.service - A high performance web server and a reverse proxy server...
+Apr 15 03:38:14 chatham-www nginx[11955]: 2026/04/15 03:38:14 [notice] 11955#11955: signal process started
+Apr 15 03:38:14 chatham-www systemd[1]: Reloaded nginx.service - A high performance web server and a reverse proxy server.
+Apr 15 03:42:11 chatham-www systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 15 03:42:13 chatham-www systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 15 03:42:13 chatham-www systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 15 03:42:13 chatham-www systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 15 03:42:13 chatham-www systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Apr 15 03:42:13 chatham-www systemd[1]: nginx.service: Deactivated successfully.
+Apr 15 03:42:13 chatham-www systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+Apr 15 03:42:13 chatham-www systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Apr 15 03:42:13 chatham-www systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Apr 15 03:42:28 chatham-www systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 15 03:42:40 chatham-www systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 15 03:50:06 chatham-www systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 15 04:10:13 chatham-www systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Apr 15 04:10:13 chatham-www systemd[1]: nginx.service: Deactivated successfully.
+Apr 15 04:10:13 chatham-www systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+-- Boot c5862ec6e684441392d18992d63eee76 --
+Apr 18 04:32:16 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 04:34:14 chatham-www-t9 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 04:34:14 chatham-www-t9 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Apr 18 04:40:50 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 04:42:44 chatham-www-t9 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 04:42:44 chatham-www-t9 systemd[1]: nginx.service: Deactivated successfully.
+Apr 18 04:42:44 chatham-www-t9 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+Apr 18 04:42:44 chatham-www-t9 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 04:42:44 chatham-www-t9 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Apr 18 04:47:47 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 04:48:15 chatham-www-t9 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 04:48:16 chatham-www-t9 systemd[1]: nginx.service: Deactivated successfully.
+Apr 18 04:48:16 chatham-www-t9 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+Apr 18 04:48:16 chatham-www-t9 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 04:48:16 chatham-www-t9 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Apr 18 13:21:07 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:21:07 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:21:07 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:21:08 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:21:08 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:21:08 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:21:09 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:22:04 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:22:35 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:32:03 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:32:03 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:32:03 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:32:04 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:32:04 chatham-www-t9 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 13:32:04 chatham-www-t9 systemd[1]: nginx.service: Deactivated successfully.
+Apr 18 13:32:04 chatham-www-t9 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+Apr 18 13:32:04 chatham-www-t9 systemd[1]: nginx.service: Consumed 7.165s CPU time, 9.0M memory peak, 0B memory swap peak.
+Apr 18 13:32:04 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:32:04 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:33:43 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:33:43 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:33:43 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:33:43 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:33:43 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:33:43 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:38:44 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:38:44 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:38:44 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:38:44 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:38:44 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:38:44 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:50:34 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:50:34 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:50:42 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:50:42 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 13:50:47 chatham-www-t9 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 13:50:47 chatham-www-t9 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Apr 18 14:10:31 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:14:58 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:14:59 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:14:59 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:14:59 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:00 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:00 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:01 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:01 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:01 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:02 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:02 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:03 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:03 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:03 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:04 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:04 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:05 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:05 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:06 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:06 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:06 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:07 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:07 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:08 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:08 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:09 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:09 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:10 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:10 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:11 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:11 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:11 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:12 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:12 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:12 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:13 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:23 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:24 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:30 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:30 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:31 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:31 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:32 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:32 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:33 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:33 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:33 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:34 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:34 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:35 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:35 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:35 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:36 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:36 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:36 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:37 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:37 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:37 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:38 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:38 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:39 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:39 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:39 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:40 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:40 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:40 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:41 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:41 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:41 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:42 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:42 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:42 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:43 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:43 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:43 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:44 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:44 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:44 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:45 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:45 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:45 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:46 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:46 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:46 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:47 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:47 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:48 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:48 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:48 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:49 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:49 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:49 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:50 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:50 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:50 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:51 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:51 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:51 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:52 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:52 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:53 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:53 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:53 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:54 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:54 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:54 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:55 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:55 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:55 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:56 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:56 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:56 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:57 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:57 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:57 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:58 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:58 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:59 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:59 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:15:59 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:16:00 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:16:00 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:16:00 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:16:01 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:16:01 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:16:01 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:16:02 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:16:02 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:16:02 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:16:03 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:16:03 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:16:03 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:16:04 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:16:04 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:23:29 chatham-www-t9 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 14:23:29 chatham-www-t9 systemd[1]: nginx.service: Deactivated successfully.
+Apr 18 14:23:29 chatham-www-t9 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+Apr 18 14:23:29 chatham-www-t9 systemd[1]: nginx.service: Consumed 3.216s CPU time, 10.3M memory peak, 0B memory swap peak.
+Apr 18 14:23:29 chatham-www-t9 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 14:23:29 chatham-www-t9 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Apr 18 14:23:36 chatham-www-t9 systemd[1]: /usr/lib/systemd/system/nginx.service:32: Unknown key name 'PrivateTmp' in section 'Install', ignoring.
+Apr 18 14:53:42 chatham-www-t9 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 14:53:42 chatham-www-t9 systemd[1]: nginx.service: Deactivated successfully.
+Apr 18 14:53:42 chatham-www-t9 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+Apr 18 14:53:42 chatham-www-t9 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 14:53:42 chatham-www-t9 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Apr 18 14:54:10 chatham-www-t9 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 14:54:10 chatham-www-t9 systemd[1]: nginx.service: Deactivated successfully.
+Apr 18 14:54:10 chatham-www-t9 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+Apr 18 14:54:10 chatham-www-t9 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 14:54:10 chatham-www-t9 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Apr 18 15:25:04 chatham-www-t9 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 15:25:04 chatham-www-t9 systemd[1]: nginx.service: Deactivated successfully.
+Apr 18 15:25:04 chatham-www-t9 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+Apr 18 15:25:04 chatham-www-t9 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 15:25:04 chatham-www-t9 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Apr 18 15:30:21 chatham-www-t9 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 15:30:21 chatham-www-t9 systemd[1]: nginx.service: Deactivated successfully.
+Apr 18 15:30:21 chatham-www-t9 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+Apr 18 15:30:21 chatham-www-t9 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 15:30:21 chatham-www-t9 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Apr 18 15:33:31 chatham-www-t9 systemd[1]: Reloading nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 15:33:31 chatham-www-t9 nginx[376491]: 2026/04/18 15:33:31 [notice] 376491#376491: signal process started
+Apr 18 15:33:31 chatham-www-t9 systemd[1]: Reloaded nginx.service - A high performance web server and a reverse proxy server.
+Apr 18 15:33:37 chatham-www-t9 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 15:33:38 chatham-www-t9 systemd[1]: nginx.service: Deactivated successfully.
+Apr 18 15:33:38 chatham-www-t9 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+Apr 18 15:33:38 chatham-www-t9 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 15:33:38 chatham-www-t9 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Apr 18 15:43:19 chatham-www-t9 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 15:43:19 chatham-www-t9 systemd[1]: nginx.service: Deactivated successfully.
+Apr 18 15:43:19 chatham-www-t9 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+-- Boot 2a688f7260f94c6383ccff3cb1d529bf --
+Apr 18 15:44:11 chatham-www-t9 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 15:44:11 chatham-www-t9 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.
+Apr 18 15:58:26 chatham-www-t9 systemd[1]: Stopping nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 15:58:26 chatham-www-t9 systemd[1]: nginx.service: Deactivated successfully.
+Apr 18 15:58:26 chatham-www-t9 systemd[1]: Stopped nginx.service - A high performance web server and a reverse proxy server.
+-- Boot e2b19f2990ba4e65b696a8bc414d7e9c --
+Apr 18 15:59:28 chatham-www-t9 systemd[1]: Starting nginx.service - A high performance web server and a reverse proxy server...
+Apr 18 15:59:28 chatham-www-t9 systemd[1]: Started nginx.service - A high performance web server and a reverse proxy server.

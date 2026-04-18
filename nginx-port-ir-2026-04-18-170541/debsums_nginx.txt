@@ -1,0 +1,1 @@
+>>> sudo debsums -c nginx-common nginx-core nginx-full nginx 2>/dev/null

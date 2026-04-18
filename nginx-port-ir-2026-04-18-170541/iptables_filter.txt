@@ -1,0 +1,1 @@
+>>> sudo iptables -S 2>/dev/null | egrep '443|444|8443'

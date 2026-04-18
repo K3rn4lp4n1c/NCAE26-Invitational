@@ -1,0 +1,12 @@
+>>> sudo find /etc/nginx -type l -exec ls -l {} \;
+sudo: unable to resolve host chatham-www-t9: Name or service not known
+lrwxrwxrwx 1 root root 57 Apr 15 03:38 /etc/nginx/modules-enabled/50-mod-http-auth-pam.conf -> /usr/share/nginx/modules-available/mod-http-auth-pam.conf
+lrwxrwxrwx 1 root root 50 Apr 15 03:38 /etc/nginx/modules-enabled/50-mod-stream.conf -> /usr/share/nginx/modules-available/mod-stream.conf
+lrwxrwxrwx 1 root root 62 Apr 15 03:38 /etc/nginx/modules-enabled/50-mod-http-upstream-fair.conf -> /usr/share/nginx/modules-available/mod-http-upstream-fair.conf
+lrwxrwxrwx 1 root root 57 Apr 15 03:38 /etc/nginx/modules-enabled/70-mod-stream-geoip2.conf -> /usr/share/nginx/modules-available/mod-stream-geoip2.conf
+lrwxrwxrwx 1 root root 53 Apr 15 03:42 /etc/nginx/modules-enabled/50-mod-advstatus.conf -> /usr/share/nginx/modules-available/mod-advstatus.conf
+lrwxrwxrwx 1 root root 53 Apr 15 03:38 /etc/nginx/modules-enabled/50-mod-http-echo.conf -> /usr/share/nginx/modules-available/mod-http-echo.conf
+lrwxrwxrwx 1 root root 55 Apr 15 03:38 /etc/nginx/modules-enabled/50-mod-http-geoip2.conf -> /usr/share/nginx/modules-available/mod-http-geoip2.conf
+lrwxrwxrwx 1 root root 56 Apr 15 03:38 /etc/nginx/modules-enabled/50-mod-http-dav-ext.conf -> /usr/share/nginx/modules-available/mod-http-dav-ext.conf
+lrwxrwxrwx 1 root root 60 Apr 15 03:38 /etc/nginx/modules-enabled/50-mod-http-subs-filter.conf -> /usr/share/nginx/modules-available/mod-http-subs-filter.conf
+lrwxrwxrwx 1 root root 34 Apr 15 03:28 /etc/nginx/sites-enabled/default -> /etc/nginx/sites-available/default

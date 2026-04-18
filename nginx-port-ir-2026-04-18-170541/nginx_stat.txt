@@ -1,0 +1,19 @@
+>>> sudo find /etc/nginx -type f -exec stat -c '%n | size=%s | perms=%a | owner=%U:%G | mtime=%y | ctime=%z' {} \; | sort
+sudo: unable to resolve host chatham-www-t9: Name or service not known
+/etc/nginx/conf.d/advstatus.conf | size=12 | perms=644 | owner=root:root | mtime=2026-03-06 16:00:54.000000000 +0000 | ctime=2026-04-15 04:09:44.199601668 +0000
+/etc/nginx/fastcgi.conf | size=1125 | perms=644 | owner=root:root | mtime=2023-11-30 22:32:47.000000000 +0000 | ctime=2026-04-15 03:28:42.097689175 +0000
+/etc/nginx/fastcgi_params | size=1055 | perms=644 | owner=root:root | mtime=2023-11-30 22:32:47.000000000 +0000 | ctime=2026-04-15 03:28:42.131689511 +0000
+/etc/nginx/koi-utf | size=2837 | perms=644 | owner=root:root | mtime=2023-11-30 22:32:47.000000000 +0000 | ctime=2026-04-15 03:28:42.177689968 +0000
+/etc/nginx/koi-win | size=2223 | perms=644 | owner=root:root | mtime=2023-11-30 22:32:47.000000000 +0000 | ctime=2026-04-15 03:28:42.214690335 +0000
+/etc/nginx/mime.types | size=5465 | perms=644 | owner=root:root | mtime=2023-11-30 22:32:47.000000000 +0000 | ctime=2026-04-15 03:28:42.256690751 +0000
+/etc/nginx/nginx.conf | size=1446 | perms=644 | owner=root:root | mtime=2023-11-30 22:32:47.000000000 +0000 | ctime=2026-04-15 03:28:42.296691147 +0000
+/etc/nginx/nginx/nginx.conf | size=1432 | perms=644 | owner=root:root | mtime=2026-04-18 15:29:56.606384101 +0000 | ctime=2026-04-18 15:29:56.606384101 +0000
+/etc/nginx/nginx/sites-available/default | size=1152 | perms=644 | owner=root:root | mtime=2026-04-18 15:29:56.607384151 +0000 | ctime=2026-04-18 15:29:56.607384151 +0000
+/etc/nginx/nginx/sites-enabled/default | size=1152 | perms=644 | owner=root:root | mtime=2026-04-18 15:29:56.607384151 +0000 | ctime=2026-04-18 15:29:56.607384151 +0000
+/etc/nginx/proxy_params | size=180 | perms=644 | owner=root:root | mtime=2023-11-30 22:32:47.000000000 +0000 | ctime=2026-04-15 03:28:42.338691564 +0000
+/etc/nginx/scgi_params | size=636 | perms=644 | owner=root:root | mtime=2023-11-30 22:32:47.000000000 +0000 | ctime=2026-04-15 03:28:42.375691931 +0000
+/etc/nginx/sites-available/default | size=1146 | perms=644 | owner=root:root | mtime=2026-04-18 15:33:19.266291423 +0000 | ctime=2026-04-18 15:33:19.266291423 +0000
+/etc/nginx/snippets/fastcgi-php.conf | size=423 | perms=644 | owner=root:root | mtime=2023-11-30 22:32:47.000000000 +0000 | ctime=2026-04-15 03:28:42.450692674 +0000
+/etc/nginx/snippets/snakeoil.conf | size=217 | perms=644 | owner=root:root | mtime=2023-11-30 22:32:47.000000000 +0000 | ctime=2026-04-15 03:28:42.490693071 +0000
+/etc/nginx/uwsgi_params | size=664 | perms=644 | owner=root:root | mtime=2023-11-30 22:32:47.000000000 +0000 | ctime=2026-04-15 03:28:42.532693488 +0000
+/etc/nginx/win-utf | size=3071 | perms=644 | owner=root:root | mtime=2023-11-30 22:32:47.000000000 +0000 | ctime=2026-04-15 03:28:42.577693933 +0000

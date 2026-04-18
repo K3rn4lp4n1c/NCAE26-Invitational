@@ -1,0 +1,2 @@
+>>> ps auxww | egrep '[n]ginx|[u]vicorn|[n]ext-server'
+-bash: /usr/bin/ps: Permission denied

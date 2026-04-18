@@ -1,0 +1,4 @@
+>>> sudo ss -ltnp | egrep ':80 |:443 |:444 |:8443 |:3000 |:8000 |:9090 '
+sudo: unable to resolve host chatham-www-t9: Name or service not known
+tcp        0      0 :::9090                 :::*                    LISTEN      1/init
+tcp        0      0 :::3000                 :::*                    LISTEN      1074/next-server (v

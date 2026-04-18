@@ -1,0 +1,35 @@
+>>> sudo grep -RniE 'nginx|443|444|8443|sites-enabled|sites-available|ssl' /etc/systemd /usr/lib/systemd/system 2>/dev/null
+/etc/systemd/user.conf:57:#DefaultSmackProcessLabel=
+/etc/systemd/system/multi-user.target.wants/nginx.service:1:# Stop dance for nginx
+/etc/systemd/system/multi-user.target.wants/nginx.service:4:# ExecStop sends SIGQUIT (graceful stop) to the nginx process.
+/etc/systemd/system/multi-user.target.wants/nginx.service:5:# If, after 5s (--retry QUIT/5) nginx is still running, systemd takes control
+/etc/systemd/system/multi-user.target.wants/nginx.service:7:# After another 5s (TimeoutStopSec=5), and if nginx is alive, systemd sends
+/etc/systemd/system/multi-user.target.wants/nginx.service:10:# nginx signals reference doc:
+/etc/systemd/system/multi-user.target.wants/nginx.service:11:# http://nginx.org/en/docs/control.html
+/etc/systemd/system/multi-user.target.wants/nginx.service:15:Documentation=man:nginx(8)
+/etc/systemd/system/multi-user.target.wants/nginx.service:18:ConditionFileIsExecutable=/usr/sbin/nginx
+/etc/systemd/system/multi-user.target.wants/nginx.service:22:PIDFile=/run/nginx.pid
+/etc/systemd/system/multi-user.target.wants/nginx.service:23:ExecStartPre=/usr/sbin/nginx -t -q -g 'daemon on; master_process on;'
+/etc/systemd/system/multi-user.target.wants/nginx.service:24:ExecStart=/usr/sbin/nginx -g 'daemon on; master_process on;'
+/etc/systemd/system/multi-user.target.wants/nginx.service:25:ExecReload=/usr/sbin/nginx -g 'daemon on; master_process on;' -s reload
+/etc/systemd/system/multi-user.target.wants/nginx.service:26:ExecStop=-/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /run/nginx.pid
+/etc/systemd/system/multi-user.target.wants/ssl-cert.service:2:Description=Generate snakeoil SSL keypair
+/etc/systemd/system/multi-user.target.wants/ssl-cert.service:3:ConditionPathExists=!/etc/ssl/private/ssl-cert-snakeoil.key
+/etc/systemd/system/multi-user.target.wants/ssl-cert.service:8:ExecStart=-/usr/sbin/make-ssl-cert generate-default-snakeoil --force-overwrite
+/etc/systemd/system.conf:81:#DefaultSmackProcessLabel=
+/usr/lib/systemd/system/nginx.service:1:# Stop dance for nginx
+/usr/lib/systemd/system/nginx.service:4:# ExecStop sends SIGQUIT (graceful stop) to the nginx process.
+/usr/lib/systemd/system/nginx.service:5:# If, after 5s (--retry QUIT/5) nginx is still running, systemd takes control
+/usr/lib/systemd/system/nginx.service:7:# After another 5s (TimeoutStopSec=5), and if nginx is alive, systemd sends
+/usr/lib/systemd/system/nginx.service:10:# nginx signals reference doc:
+/usr/lib/systemd/system/nginx.service:11:# http://nginx.org/en/docs/control.html
+/usr/lib/systemd/system/nginx.service:15:Documentation=man:nginx(8)
+/usr/lib/systemd/system/nginx.service:18:ConditionFileIsExecutable=/usr/sbin/nginx
+/usr/lib/systemd/system/nginx.service:22:PIDFile=/run/nginx.pid
+/usr/lib/systemd/system/nginx.service:23:ExecStartPre=/usr/sbin/nginx -t -q -g 'daemon on; master_process on;'
+/usr/lib/systemd/system/nginx.service:24:ExecStart=/usr/sbin/nginx -g 'daemon on; master_process on;'
+/usr/lib/systemd/system/nginx.service:25:ExecReload=/usr/sbin/nginx -g 'daemon on; master_process on;' -s reload
+/usr/lib/systemd/system/nginx.service:26:ExecStop=-/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /run/nginx.pid
+/usr/lib/systemd/system/ssl-cert.service:2:Description=Generate snakeoil SSL keypair
+/usr/lib/systemd/system/ssl-cert.service:3:ConditionPathExists=!/etc/ssl/private/ssl-cert-snakeoil.key
+/usr/lib/systemd/system/ssl-cert.service:8:ExecStart=-/usr/sbin/make-ssl-cert generate-default-snakeoil --force-overwrite

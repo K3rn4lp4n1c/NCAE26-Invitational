@@ -1,0 +1,1 @@
+>>> sudo find /var/spool/cron/atjobs /var/spool/cron/atspool -type f -maxdepth 2 -exec grep -HniE 'nginx|443|444|8443|sites-enabled|sites-available|ssl' {} \; 2>/dev/null

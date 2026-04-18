@@ -1,0 +1,19 @@
+>>> sudo find /etc/nginx -type f -printf '%TY-%Tm-%Td %TH:%TM:%TS %u:%g %m %p\n' | sort
+sudo: unable to resolve host chatham-www-t9: Name or service not known
+2023-11-30 22:32:47.0000000000 root:root 644 /etc/nginx/fastcgi.conf
+2023-11-30 22:32:47.0000000000 root:root 644 /etc/nginx/fastcgi_params
+2023-11-30 22:32:47.0000000000 root:root 644 /etc/nginx/koi-utf
+2023-11-30 22:32:47.0000000000 root:root 644 /etc/nginx/koi-win
+2023-11-30 22:32:47.0000000000 root:root 644 /etc/nginx/mime.types
+2023-11-30 22:32:47.0000000000 root:root 644 /etc/nginx/nginx.conf
+2023-11-30 22:32:47.0000000000 root:root 644 /etc/nginx/proxy_params
+2023-11-30 22:32:47.0000000000 root:root 644 /etc/nginx/scgi_params
+2023-11-30 22:32:47.0000000000 root:root 644 /etc/nginx/snippets/fastcgi-php.conf
+2023-11-30 22:32:47.0000000000 root:root 644 /etc/nginx/snippets/snakeoil.conf
+2023-11-30 22:32:47.0000000000 root:root 644 /etc/nginx/uwsgi_params
+2023-11-30 22:32:47.0000000000 root:root 644 /etc/nginx/win-utf
+2026-03-06 16:00:54.0000000000 root:root 644 /etc/nginx/conf.d/advstatus.conf
+2026-04-18 15:29:56.6063841010 root:root 644 /etc/nginx/nginx/nginx.conf
+2026-04-18 15:29:56.6073841510 root:root 644 /etc/nginx/nginx/sites-available/default
+2026-04-18 15:29:56.6073841510 root:root 644 /etc/nginx/nginx/sites-enabled/default
+2026-04-18 15:33:19.2662914230 root:root 644 /etc/nginx/sites-available/default

@@ -1,0 +1,3 @@
+>>> sudo ufw status verbose
+sudo: unable to resolve host chatham-www-t9: Name or service not known
+sudo: ufw: command not found

@@ -1,0 +1,3 @@
+>>> dpkg -S /usr/lib/systemd/system/nginx.service /etc/nginx 2>/dev/null
+nginx-common: /usr/lib/systemd/system/nginx.service
+nginx-common: /etc/nginx

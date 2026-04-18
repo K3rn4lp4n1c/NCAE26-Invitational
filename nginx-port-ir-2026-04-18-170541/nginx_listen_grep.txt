@@ -1,0 +1,14 @@
+>>> sudo nginx -T 2>/dev/null | egrep -n 'listen|server_name|ssl_certificate|ssl_certificate_key|proxy_pass|return 301|return 302|rewrite'
+24:	# server_names_hash_bucket_size 64;
+25:	# server_name_in_redirect off;
+74:#		listen     localhost:110;
+80:#		listen     localhost:143;
+221:    listen 80;
+222:    server_name _;
+230:        return 301 https://$host$request_uri;
+235:    listen 443 ssl;
+236:    server_name www.team9.ncaecybergames.org;
+239:    ssl_certificate /etc/letsencrypt/live/www.team9.ncaecybergames.org/fullchain.pem; # managed by Certbot
+240:    ssl_certificate_key /etc/letsencrypt/live/www.team9.ncaecybergames.org/privkey.pem; # managed by Certbot
+244:        proxy_pass http://localhost:3000/;
+254:        proxy_pass http://localhost:8000;

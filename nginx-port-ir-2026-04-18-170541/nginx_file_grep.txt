@@ -1,0 +1,43 @@
+>>> sudo grep -RniE 'listen .*443|listen .*444|listen .*8443|server_name|ssl_certificate|ssl_certificate_key|proxy_pass|return 301|return 302|rewrite' /etc/nginx 2>/dev/null
+/etc/nginx/snippets/snakeoil.conf:4:ssl_certificate /etc/ssl/certs/ssl-cert-snakeoil.pem;
+/etc/nginx/snippets/snakeoil.conf:5:ssl_certificate_key /etc/ssl/private/ssl-cert-snakeoil.key;
+/etc/nginx/nginx.conf:23:	# server_names_hash_bucket_size 64;
+/etc/nginx/nginx.conf:24:	# server_name_in_redirect off;
+/etc/nginx/fastcgi.conf:24:fastcgi_param  SERVER_NAME        $server_name;
+/etc/nginx/uwsgi_params:17:uwsgi_param  SERVER_NAME        $server_name;
+/etc/nginx/fastcgi_params:23:fastcgi_param  SERVER_NAME        $server_name;
+/etc/nginx/sites-enabled/default:3:    server_name _;
+/etc/nginx/sites-enabled/default:11:        return 301 https://$host$request_uri;
+/etc/nginx/sites-enabled/default:16:    listen 443 ssl;
+/etc/nginx/sites-enabled/default:17:    server_name www.team9.ncaecybergames.org;
+/etc/nginx/sites-enabled/default:20:    ssl_certificate /etc/letsencrypt/live/www.team9.ncaecybergames.org/fullchain.pem; # managed by Certbot
+/etc/nginx/sites-enabled/default:21:    ssl_certificate_key /etc/letsencrypt/live/www.team9.ncaecybergames.org/privkey.pem; # managed by Certbot
+/etc/nginx/sites-enabled/default:25:        proxy_pass http://localhost:3000/;
+/etc/nginx/sites-enabled/default:35:        proxy_pass http://localhost:8000;
+/etc/nginx/nginx/nginx.conf:23:	# server_names_hash_bucket_size 64;
+/etc/nginx/nginx/nginx.conf:24:	# server_name_in_redirect off;
+/etc/nginx/nginx/sites-enabled/default:3:    server_name _;
+/etc/nginx/nginx/sites-enabled/default:11:        return 301 https://$host$request_uri;
+/etc/nginx/nginx/sites-enabled/default:16:    listen 443 ssl;
+/etc/nginx/nginx/sites-enabled/default:17:    server_name www.team<T>.ncaecybergames.org;
+/etc/nginx/nginx/sites-enabled/default:20:    ssl_certificate /etc/letsencrypt/live/www.team<T>.ncaecybergames.org/fullchain.pem; # managed by Certbot
+/etc/nginx/nginx/sites-enabled/default:21:    ssl_certificate_key /etc/letsencrypt/live/www.team<T>.ncaecybergames.org/privkey.pem; # managed by Certbot
+/etc/nginx/nginx/sites-enabled/default:25:        proxy_pass http://127.0.0.1:3000/;
+/etc/nginx/nginx/sites-enabled/default:35:        proxy_pass http://127.0.0.1:8000;
+/etc/nginx/nginx/sites-available/default:3:    server_name _;
+/etc/nginx/nginx/sites-available/default:11:        return 301 https://$host$request_uri;
+/etc/nginx/nginx/sites-available/default:16:    listen 443 ssl;
+/etc/nginx/nginx/sites-available/default:17:    server_name www.team<T>.ncaecybergames.org;
+/etc/nginx/nginx/sites-available/default:20:    ssl_certificate /etc/letsencrypt/live/www.team<T>.ncaecybergames.org/fullchain.pem; # managed by Certbot
+/etc/nginx/nginx/sites-available/default:21:    ssl_certificate_key /etc/letsencrypt/live/www.team<T>.ncaecybergames.org/privkey.pem; # managed by Certbot
+/etc/nginx/nginx/sites-available/default:25:        proxy_pass http://127.0.0.1:3000/;
+/etc/nginx/nginx/sites-available/default:35:        proxy_pass http://127.0.0.1:8000;
+/etc/nginx/sites-available/default:3:    server_name _;
+/etc/nginx/sites-available/default:11:        return 301 https://$host$request_uri;
+/etc/nginx/sites-available/default:16:    listen 443 ssl;
+/etc/nginx/sites-available/default:17:    server_name www.team9.ncaecybergames.org;
+/etc/nginx/sites-available/default:20:    ssl_certificate /etc/letsencrypt/live/www.team9.ncaecybergames.org/fullchain.pem; # managed by Certbot
+/etc/nginx/sites-available/default:21:    ssl_certificate_key /etc/letsencrypt/live/www.team9.ncaecybergames.org/privkey.pem; # managed by Certbot
+/etc/nginx/sites-available/default:25:        proxy_pass http://localhost:3000/;
+/etc/nginx/sites-available/default:35:        proxy_pass http://localhost:8000;
+/etc/nginx/scgi_params:17:scgi_param  SERVER_NAME        $server_name;

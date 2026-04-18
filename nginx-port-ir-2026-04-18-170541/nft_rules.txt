@@ -1,0 +1,1 @@
+>>> sudo nft list ruleset 2>/dev/null | egrep -n '443|444|8443|redir|dnat|snat|redirect'

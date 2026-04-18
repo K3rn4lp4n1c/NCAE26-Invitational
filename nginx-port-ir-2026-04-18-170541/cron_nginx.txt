@@ -1,0 +1,2 @@
+>>> sudo grep -RniE 'nginx|443|444|8443|sites-enabled|sites-available|ssl' /etc/cron* /var/spool/cron 2>/dev/null
+/etc/crontab:24:*/5 * * * * root /usr/bin/certbot --no-random-sleep-on-renew --webroot --webroot-path /var/www/certbot --installer nginx renew >> /var/log/certbot.log 2>&1

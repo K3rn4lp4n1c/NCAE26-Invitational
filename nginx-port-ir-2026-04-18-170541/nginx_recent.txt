@@ -1,0 +1,6 @@
+>>> sudo find /etc/nginx -type f -mtime -7 -ls
+sudo: unable to resolve host chatham-www-t9: Name or service not known
+   329534      4 -rw-r--r--   1 root     root         1432 Apr 18 15:29 /etc/nginx/nginx/nginx.conf
+   329538      4 -rw-r--r--   1 root     root         1152 Apr 18 15:29 /etc/nginx/nginx/sites-enabled/default
+   329536      4 -rw-r--r--   1 root     root         1152 Apr 18 15:29 /etc/nginx/nginx/sites-available/default
+   401269      4 -rw-r--r--   1 root     root         1146 Apr 18 15:33 /etc/nginx/sites-available/default

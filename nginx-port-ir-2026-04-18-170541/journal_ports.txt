@@ -1,0 +1,502 @@
+>>> sudo journalctl --no-pager | egrep -i 'nginx|443|444|8443|listen|sites-enabled|sites-available|ssl' | tail -500
+sudo: unable to resolve host chatham-www-t9: Name or service not known
+Apr 18 16:55:18 chatham-www-t9 systemd[52825]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:55:18 chatham-www-t9 systemd[52825]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:55:18 chatham-www-t9 systemd[52825]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:55:18 chatham-www-t9 systemd[52825]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 16:55:18 chatham-www-t9 systemd[52888]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 16:55:18 chatham-www-t9 systemd[52888]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 16:55:18 chatham-www-t9 systemd[52888]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 16:55:18 chatham-www-t9 systemd[52888]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 16:55:18 chatham-www-t9 systemd[52888]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 16:55:18 chatham-www-t9 systemd[52888]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:55:18 chatham-www-t9 systemd[52888]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:55:18 chatham-www-t9 systemd[52888]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:55:18 chatham-www-t9 systemd[52888]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 16:55:19 chatham-www-t9 systemd[52951]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 16:55:19 chatham-www-t9 systemd[52951]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 16:55:19 chatham-www-t9 systemd[52951]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 16:55:19 chatham-www-t9 systemd[52951]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 16:55:19 chatham-www-t9 systemd[52951]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 16:55:19 chatham-www-t9 systemd[52951]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:55:19 chatham-www-t9 systemd[52951]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:55:19 chatham-www-t9 systemd[52951]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:55:19 chatham-www-t9 systemd[52951]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 16:55:19 chatham-www-t9 systemd[53014]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 16:55:19 chatham-www-t9 systemd[53014]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 16:55:19 chatham-www-t9 systemd[53014]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 16:55:19 chatham-www-t9 systemd[53014]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 16:55:19 chatham-www-t9 systemd[53014]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 16:55:19 chatham-www-t9 systemd[53014]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:55:19 chatham-www-t9 systemd[53014]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:55:19 chatham-www-t9 systemd[53014]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:55:19 chatham-www-t9 systemd[53014]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 16:55:27 chatham-www-t9 sshd[53329]: Accepted publickey for gloucester from 192.168.9.105 port 44376 ssh2: RSA SHA256:F9Kro1bi3USSBKmtuB8tAJoMN90as7rB0nTxMpuhN4s
+Apr 18 16:55:28 chatham-www-t9 sshd[53388]: Accepted publickey for scituate from 192.168.9.105 port 44392 ssh2: RSA SHA256:F9Kro1bi3USSBKmtuB8tAJoMN90as7rB0nTxMpuhN4s
+Apr 18 16:55:28 chatham-www-t9 sshd[53437]: Accepted publickey for leicester from 192.168.9.105 port 44396 ssh2: RSA SHA256:F9Kro1bi3USSBKmtuB8tAJoMN90as7rB0nTxMpuhN4s
+Apr 18 16:55:28 chatham-www-t9 sshd[53486]: Accepted publickey for leominster from 192.168.9.105 port 44404 ssh2: RSA SHA256:F9Kro1bi3USSBKmtuB8tAJoMN90as7rB0nTxMpuhN4s
+Apr 18 16:55:29 chatham-www-t9 sshd[53535]: Accepted publickey for tewksbury from 192.168.9.105 port 44412 ssh2: RSA SHA256:F9Kro1bi3USSBKmtuB8tAJoMN90as7rB0nTxMpuhN4s
+Apr 18 16:56:17 chatham-www-t9 systemd[53688]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 16:56:17 chatham-www-t9 systemd[53688]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 16:56:17 chatham-www-t9 systemd[53688]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 16:56:17 chatham-www-t9 systemd[53688]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 16:56:17 chatham-www-t9 systemd[53688]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 16:56:17 chatham-www-t9 systemd[53688]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:56:17 chatham-www-t9 systemd[53688]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:56:18 chatham-www-t9 systemd[53688]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:56:18 chatham-www-t9 systemd[53688]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 16:56:18 chatham-www-t9 systemd[53752]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 16:56:18 chatham-www-t9 systemd[53752]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 16:56:18 chatham-www-t9 systemd[53752]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 16:56:18 chatham-www-t9 systemd[53752]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 16:56:18 chatham-www-t9 systemd[53752]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 16:56:18 chatham-www-t9 systemd[53752]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:56:18 chatham-www-t9 systemd[53752]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:56:18 chatham-www-t9 systemd[53752]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:56:18 chatham-www-t9 systemd[53752]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 16:56:18 chatham-www-t9 systemd[53816]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 16:56:18 chatham-www-t9 systemd[53816]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 16:56:18 chatham-www-t9 systemd[53816]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 16:56:18 chatham-www-t9 systemd[53816]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 16:56:18 chatham-www-t9 systemd[53816]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 16:56:18 chatham-www-t9 systemd[53816]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:56:18 chatham-www-t9 systemd[53816]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:56:18 chatham-www-t9 systemd[53816]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:56:18 chatham-www-t9 systemd[53816]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 16:56:19 chatham-www-t9 systemd[53880]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 16:56:19 chatham-www-t9 systemd[53880]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 16:56:19 chatham-www-t9 systemd[53880]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 16:56:19 chatham-www-t9 systemd[53880]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 16:56:19 chatham-www-t9 systemd[53880]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 16:56:19 chatham-www-t9 systemd[53880]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:56:19 chatham-www-t9 systemd[53880]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:56:19 chatham-www-t9 systemd[53880]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:56:19 chatham-www-t9 systemd[53880]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 16:56:19 chatham-www-t9 systemd[53943]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 16:56:19 chatham-www-t9 systemd[53943]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 16:56:19 chatham-www-t9 systemd[53943]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 16:56:19 chatham-www-t9 systemd[53943]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 16:56:19 chatham-www-t9 systemd[53943]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 16:56:19 chatham-www-t9 systemd[53943]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:56:19 chatham-www-t9 systemd[53943]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:56:19 chatham-www-t9 systemd[53943]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:56:19 chatham-www-t9 systemd[53943]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 16:57:16 chatham-www-t9 systemd[54618]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 16:57:16 chatham-www-t9 systemd[54618]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 16:57:16 chatham-www-t9 systemd[54618]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 16:57:16 chatham-www-t9 systemd[54618]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 16:57:16 chatham-www-t9 systemd[54618]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 16:57:16 chatham-www-t9 systemd[54618]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:57:16 chatham-www-t9 systemd[54618]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:57:16 chatham-www-t9 systemd[54618]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:57:16 chatham-www-t9 systemd[54618]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 16:57:17 chatham-www-t9 systemd[54681]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 16:57:17 chatham-www-t9 systemd[54681]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 16:57:17 chatham-www-t9 systemd[54681]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 16:57:17 chatham-www-t9 systemd[54681]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 16:57:17 chatham-www-t9 systemd[54681]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 16:57:17 chatham-www-t9 systemd[54681]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:57:17 chatham-www-t9 systemd[54681]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:57:17 chatham-www-t9 systemd[54681]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:57:17 chatham-www-t9 systemd[54681]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 16:57:17 chatham-www-t9 systemd[54744]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 16:57:17 chatham-www-t9 systemd[54744]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 16:57:17 chatham-www-t9 systemd[54744]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 16:57:17 chatham-www-t9 systemd[54744]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 16:57:17 chatham-www-t9 systemd[54744]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 16:57:17 chatham-www-t9 systemd[54744]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:57:17 chatham-www-t9 systemd[54744]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:57:17 chatham-www-t9 systemd[54744]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:57:17 chatham-www-t9 systemd[54744]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 16:57:17 chatham-www-t9 systemd[54807]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 16:57:17 chatham-www-t9 systemd[54807]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 16:57:17 chatham-www-t9 systemd[54807]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 16:57:17 chatham-www-t9 systemd[54807]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 16:57:17 chatham-www-t9 systemd[54807]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 16:57:17 chatham-www-t9 systemd[54807]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:57:17 chatham-www-t9 systemd[54807]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:57:17 chatham-www-t9 systemd[54807]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:57:17 chatham-www-t9 systemd[54807]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 16:57:18 chatham-www-t9 systemd[54871]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 16:57:18 chatham-www-t9 systemd[54871]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 16:57:18 chatham-www-t9 systemd[54871]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 16:57:18 chatham-www-t9 systemd[54871]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 16:57:18 chatham-www-t9 systemd[54871]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 16:57:18 chatham-www-t9 systemd[54871]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:57:18 chatham-www-t9 systemd[54871]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:57:18 chatham-www-t9 systemd[54871]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:57:18 chatham-www-t9 systemd[54871]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 16:58:17 chatham-www-t9 systemd[55553]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 16:58:17 chatham-www-t9 systemd[55553]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 16:58:17 chatham-www-t9 systemd[55553]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 16:58:17 chatham-www-t9 systemd[55553]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 16:58:17 chatham-www-t9 systemd[55553]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 16:58:17 chatham-www-t9 systemd[55553]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:58:17 chatham-www-t9 systemd[55553]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:58:17 chatham-www-t9 systemd[55553]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:58:17 chatham-www-t9 systemd[55553]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 16:58:17 chatham-www-t9 systemd[55630]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 16:58:17 chatham-www-t9 systemd[55630]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 16:58:17 chatham-www-t9 systemd[55630]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 16:58:17 chatham-www-t9 systemd[55630]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 16:58:17 chatham-www-t9 systemd[55630]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 16:58:17 chatham-www-t9 systemd[55630]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:58:17 chatham-www-t9 systemd[55630]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:58:17 chatham-www-t9 systemd[55630]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:58:17 chatham-www-t9 systemd[55630]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 16:58:18 chatham-www-t9 systemd[55693]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 16:58:18 chatham-www-t9 systemd[55693]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 16:58:18 chatham-www-t9 systemd[55693]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 16:58:18 chatham-www-t9 systemd[55693]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 16:58:18 chatham-www-t9 systemd[55693]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 16:58:18 chatham-www-t9 systemd[55693]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:58:18 chatham-www-t9 systemd[55693]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:58:18 chatham-www-t9 systemd[55693]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:58:18 chatham-www-t9 systemd[55693]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 16:58:18 chatham-www-t9 systemd[55761]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 16:58:18 chatham-www-t9 systemd[55761]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 16:58:18 chatham-www-t9 systemd[55761]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 16:58:18 chatham-www-t9 systemd[55761]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 16:58:18 chatham-www-t9 systemd[55761]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 16:58:18 chatham-www-t9 systemd[55761]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:58:18 chatham-www-t9 systemd[55761]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:58:18 chatham-www-t9 systemd[55761]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:58:18 chatham-www-t9 systemd[55761]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 16:58:18 chatham-www-t9 systemd[55824]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 16:58:18 chatham-www-t9 systemd[55824]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 16:58:18 chatham-www-t9 systemd[55824]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 16:58:18 chatham-www-t9 systemd[55824]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 16:58:18 chatham-www-t9 systemd[55824]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 16:58:18 chatham-www-t9 systemd[55824]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:58:18 chatham-www-t9 systemd[55824]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:58:18 chatham-www-t9 systemd[55824]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:58:18 chatham-www-t9 systemd[55824]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 16:59:19 chatham-www-t9 systemd[56496]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 16:59:19 chatham-www-t9 systemd[56496]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 16:59:19 chatham-www-t9 systemd[56496]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 16:59:19 chatham-www-t9 systemd[56496]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 16:59:19 chatham-www-t9 systemd[56496]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 16:59:19 chatham-www-t9 systemd[56496]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:59:19 chatham-www-t9 systemd[56496]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:59:19 chatham-www-t9 systemd[56496]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:59:19 chatham-www-t9 systemd[56496]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 16:59:19 chatham-www-t9 systemd[56568]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 16:59:19 chatham-www-t9 systemd[56568]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 16:59:19 chatham-www-t9 systemd[56568]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 16:59:19 chatham-www-t9 systemd[56568]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 16:59:19 chatham-www-t9 systemd[56568]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 16:59:19 chatham-www-t9 systemd[56568]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:59:19 chatham-www-t9 systemd[56568]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:59:19 chatham-www-t9 systemd[56568]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:59:19 chatham-www-t9 systemd[56568]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 16:59:20 chatham-www-t9 systemd[56631]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 16:59:20 chatham-www-t9 systemd[56631]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 16:59:20 chatham-www-t9 systemd[56631]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 16:59:20 chatham-www-t9 systemd[56631]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 16:59:20 chatham-www-t9 systemd[56631]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 16:59:20 chatham-www-t9 systemd[56631]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:59:20 chatham-www-t9 systemd[56631]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:59:20 chatham-www-t9 systemd[56631]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:59:20 chatham-www-t9 systemd[56631]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 16:59:20 chatham-www-t9 systemd[56694]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 16:59:20 chatham-www-t9 systemd[56694]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 16:59:20 chatham-www-t9 systemd[56694]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 16:59:20 chatham-www-t9 systemd[56694]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 16:59:20 chatham-www-t9 systemd[56694]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 16:59:20 chatham-www-t9 systemd[56694]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:59:20 chatham-www-t9 systemd[56694]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:59:20 chatham-www-t9 systemd[56694]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:59:20 chatham-www-t9 systemd[56694]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 16:59:20 chatham-www-t9 systemd[56757]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 16:59:20 chatham-www-t9 systemd[56757]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 16:59:20 chatham-www-t9 systemd[56757]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 16:59:20 chatham-www-t9 systemd[56757]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 16:59:20 chatham-www-t9 systemd[56757]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 16:59:20 chatham-www-t9 systemd[56757]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 16:59:20 chatham-www-t9 systemd[56757]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 16:59:20 chatham-www-t9 systemd[56757]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 16:59:20 chatham-www-t9 systemd[56757]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:00:01 chatham-www-t9 CRON[57411]: (root) CMD (/usr/bin/certbot --no-random-sleep-on-renew --webroot --webroot-path /var/www/certbot --installer nginx renew >> /var/log/certbot.log 2>&1)
+Apr 18 17:00:17 chatham-www-t9 systemd[57445]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:00:17 chatham-www-t9 systemd[57445]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:00:17 chatham-www-t9 systemd[57445]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:00:17 chatham-www-t9 systemd[57445]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:00:17 chatham-www-t9 systemd[57445]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:00:17 chatham-www-t9 systemd[57445]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:00:17 chatham-www-t9 systemd[57445]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:00:17 chatham-www-t9 systemd[57445]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:00:17 chatham-www-t9 systemd[57445]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:00:17 chatham-www-t9 systemd[57550]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:00:17 chatham-www-t9 systemd[57550]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:00:17 chatham-www-t9 systemd[57550]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:00:17 chatham-www-t9 systemd[57550]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:00:17 chatham-www-t9 systemd[57550]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:00:17 chatham-www-t9 systemd[57550]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:00:17 chatham-www-t9 systemd[57550]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:00:17 chatham-www-t9 systemd[57550]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:00:17 chatham-www-t9 systemd[57550]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:00:18 chatham-www-t9 systemd[57613]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:00:18 chatham-www-t9 systemd[57613]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:00:18 chatham-www-t9 systemd[57613]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:00:18 chatham-www-t9 systemd[57613]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:00:18 chatham-www-t9 systemd[57613]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:00:18 chatham-www-t9 systemd[57613]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:00:18 chatham-www-t9 systemd[57613]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:00:18 chatham-www-t9 systemd[57613]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:00:18 chatham-www-t9 systemd[57613]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:00:18 chatham-www-t9 systemd[57676]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:00:18 chatham-www-t9 systemd[57676]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:00:18 chatham-www-t9 systemd[57676]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:00:18 chatham-www-t9 systemd[57676]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:00:18 chatham-www-t9 systemd[57676]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:00:18 chatham-www-t9 systemd[57676]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:00:18 chatham-www-t9 systemd[57676]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:00:18 chatham-www-t9 systemd[57676]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:00:18 chatham-www-t9 systemd[57676]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:00:18 chatham-www-t9 systemd[57740]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:00:18 chatham-www-t9 systemd[57740]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:00:18 chatham-www-t9 systemd[57740]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:00:18 chatham-www-t9 systemd[57740]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:00:18 chatham-www-t9 systemd[57740]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:00:18 chatham-www-t9 systemd[57740]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:00:18 chatham-www-t9 systemd[57740]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:00:18 chatham-www-t9 systemd[57740]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:00:18 chatham-www-t9 systemd[57740]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:01:17 chatham-www-t9 systemd[58467]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:01:17 chatham-www-t9 systemd[58467]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:01:17 chatham-www-t9 systemd[58467]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:01:17 chatham-www-t9 systemd[58467]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:01:17 chatham-www-t9 systemd[58467]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:01:17 chatham-www-t9 systemd[58467]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:01:17 chatham-www-t9 systemd[58467]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:01:18 chatham-www-t9 systemd[58467]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:01:18 chatham-www-t9 systemd[58467]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:01:18 chatham-www-t9 systemd[58531]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:01:18 chatham-www-t9 systemd[58531]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:01:18 chatham-www-t9 systemd[58531]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:01:18 chatham-www-t9 systemd[58531]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:01:18 chatham-www-t9 systemd[58531]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:01:18 chatham-www-t9 systemd[58531]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:01:18 chatham-www-t9 systemd[58531]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:01:18 chatham-www-t9 systemd[58531]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:01:18 chatham-www-t9 systemd[58531]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:01:18 chatham-www-t9 systemd[58598]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:01:18 chatham-www-t9 systemd[58598]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:01:18 chatham-www-t9 systemd[58598]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:01:18 chatham-www-t9 systemd[58598]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:01:18 chatham-www-t9 systemd[58598]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:01:18 chatham-www-t9 systemd[58598]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:01:18 chatham-www-t9 systemd[58598]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:01:18 chatham-www-t9 systemd[58598]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:01:18 chatham-www-t9 systemd[58598]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:01:19 chatham-www-t9 systemd[58661]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:01:19 chatham-www-t9 systemd[58661]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:01:19 chatham-www-t9 systemd[58661]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:01:19 chatham-www-t9 systemd[58661]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:01:19 chatham-www-t9 systemd[58661]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:01:19 chatham-www-t9 systemd[58661]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:01:19 chatham-www-t9 systemd[58661]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:01:19 chatham-www-t9 systemd[58661]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:01:19 chatham-www-t9 systemd[58661]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:01:19 chatham-www-t9 systemd[58725]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:01:19 chatham-www-t9 systemd[58725]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:01:19 chatham-www-t9 systemd[58725]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:01:19 chatham-www-t9 systemd[58725]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:01:19 chatham-www-t9 systemd[58725]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:01:19 chatham-www-t9 systemd[58725]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:01:19 chatham-www-t9 systemd[58725]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:01:19 chatham-www-t9 systemd[58725]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:01:19 chatham-www-t9 systemd[58725]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:02:16 chatham-www-t9 systemd[59446]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:02:16 chatham-www-t9 systemd[59446]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:02:16 chatham-www-t9 systemd[59446]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:02:16 chatham-www-t9 systemd[59446]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:02:16 chatham-www-t9 systemd[59446]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:02:16 chatham-www-t9 systemd[59446]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:02:16 chatham-www-t9 systemd[59446]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:02:16 chatham-www-t9 systemd[59446]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:02:16 chatham-www-t9 systemd[59446]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:02:17 chatham-www-t9 systemd[59509]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:02:17 chatham-www-t9 systemd[59509]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:02:17 chatham-www-t9 systemd[59509]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:02:17 chatham-www-t9 systemd[59509]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:02:17 chatham-www-t9 systemd[59509]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:02:17 chatham-www-t9 systemd[59509]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:02:17 chatham-www-t9 systemd[59509]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:02:17 chatham-www-t9 systemd[59509]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:02:17 chatham-www-t9 systemd[59509]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:02:17 chatham-www-t9 systemd[59572]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:02:17 chatham-www-t9 systemd[59572]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:02:17 chatham-www-t9 systemd[59572]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:02:17 chatham-www-t9 systemd[59572]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:02:17 chatham-www-t9 systemd[59572]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:02:17 chatham-www-t9 systemd[59572]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:02:17 chatham-www-t9 systemd[59572]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:02:17 chatham-www-t9 systemd[59572]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:02:17 chatham-www-t9 systemd[59572]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:02:17 chatham-www-t9 systemd[59635]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:02:17 chatham-www-t9 systemd[59635]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:02:17 chatham-www-t9 systemd[59635]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:02:17 chatham-www-t9 systemd[59635]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:02:17 chatham-www-t9 systemd[59635]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:02:17 chatham-www-t9 systemd[59635]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:02:17 chatham-www-t9 systemd[59635]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:02:17 chatham-www-t9 systemd[59635]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:02:17 chatham-www-t9 systemd[59635]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:02:18 chatham-www-t9 systemd[59753]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:02:18 chatham-www-t9 systemd[59753]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:02:18 chatham-www-t9 systemd[59753]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:02:18 chatham-www-t9 systemd[59753]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:02:18 chatham-www-t9 systemd[59753]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:02:18 chatham-www-t9 systemd[59753]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:02:18 chatham-www-t9 systemd[59753]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:02:18 chatham-www-t9 systemd[59753]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:02:18 chatham-www-t9 systemd[59753]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:03:21 chatham-www-t9 systemd[60385]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:03:21 chatham-www-t9 systemd[60385]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:03:21 chatham-www-t9 systemd[60385]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:03:21 chatham-www-t9 systemd[60385]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:03:21 chatham-www-t9 systemd[60385]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:03:21 chatham-www-t9 systemd[60385]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:03:21 chatham-www-t9 systemd[60385]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:03:21 chatham-www-t9 systemd[60385]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:03:21 chatham-www-t9 systemd[60385]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:03:21 chatham-www-t9 systemd[60515]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:03:21 chatham-www-t9 systemd[60515]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:03:21 chatham-www-t9 systemd[60515]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:03:21 chatham-www-t9 systemd[60515]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:03:21 chatham-www-t9 systemd[60515]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:03:21 chatham-www-t9 systemd[60515]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:03:21 chatham-www-t9 systemd[60515]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:03:21 chatham-www-t9 systemd[60515]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:03:21 chatham-www-t9 systemd[60515]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:03:22 chatham-www-t9 systemd[60627]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:03:22 chatham-www-t9 systemd[60627]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:03:22 chatham-www-t9 systemd[60627]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:03:22 chatham-www-t9 systemd[60627]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:03:22 chatham-www-t9 systemd[60627]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:03:22 chatham-www-t9 systemd[60627]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:03:22 chatham-www-t9 systemd[60627]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:03:22 chatham-www-t9 systemd[60627]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:03:22 chatham-www-t9 systemd[60627]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:03:22 chatham-www-t9 systemd[60739]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:03:22 chatham-www-t9 systemd[60739]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:03:22 chatham-www-t9 systemd[60739]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:03:22 chatham-www-t9 systemd[60739]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:03:22 chatham-www-t9 systemd[60739]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:03:22 chatham-www-t9 systemd[60739]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:03:22 chatham-www-t9 systemd[60739]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:03:22 chatham-www-t9 systemd[60739]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:03:22 chatham-www-t9 systemd[60739]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:03:22 chatham-www-t9 systemd[60851]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:03:22 chatham-www-t9 systemd[60851]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:03:22 chatham-www-t9 systemd[60851]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:03:22 chatham-www-t9 systemd[60851]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:03:22 chatham-www-t9 systemd[60851]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:03:22 chatham-www-t9 systemd[60851]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:03:22 chatham-www-t9 systemd[60851]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:03:22 chatham-www-t9 systemd[60851]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:03:22 chatham-www-t9 systemd[60851]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:04:16 chatham-www-t9 systemd[61330]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:04:16 chatham-www-t9 systemd[61330]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:04:16 chatham-www-t9 systemd[61330]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:04:16 chatham-www-t9 systemd[61330]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:04:16 chatham-www-t9 systemd[61330]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:04:16 chatham-www-t9 systemd[61330]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:04:16 chatham-www-t9 systemd[61330]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:04:16 chatham-www-t9 systemd[61330]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:04:16 chatham-www-t9 systemd[61330]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:04:16 chatham-www-t9 systemd[61398]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:04:16 chatham-www-t9 systemd[61398]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:04:16 chatham-www-t9 systemd[61398]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:04:16 chatham-www-t9 systemd[61398]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:04:16 chatham-www-t9 systemd[61398]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:04:16 chatham-www-t9 systemd[61398]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:04:16 chatham-www-t9 systemd[61398]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:04:16 chatham-www-t9 systemd[61398]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:04:16 chatham-www-t9 systemd[61398]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:04:16 chatham-www-t9 systemd[61466]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:04:16 chatham-www-t9 systemd[61466]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:04:16 chatham-www-t9 systemd[61466]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:04:16 chatham-www-t9 systemd[61466]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:04:16 chatham-www-t9 systemd[61466]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:04:16 chatham-www-t9 systemd[61466]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:04:16 chatham-www-t9 systemd[61466]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:04:16 chatham-www-t9 systemd[61466]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:04:16 chatham-www-t9 systemd[61466]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:04:17 chatham-www-t9 systemd[61529]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:04:17 chatham-www-t9 systemd[61529]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:04:17 chatham-www-t9 systemd[61529]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:04:17 chatham-www-t9 systemd[61529]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:04:17 chatham-www-t9 systemd[61529]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:04:17 chatham-www-t9 systemd[61529]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:04:17 chatham-www-t9 systemd[61529]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:04:17 chatham-www-t9 systemd[61529]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:04:17 chatham-www-t9 systemd[61529]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:04:17 chatham-www-t9 systemd[61592]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:04:17 chatham-www-t9 systemd[61592]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:04:17 chatham-www-t9 systemd[61592]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:04:17 chatham-www-t9 systemd[61592]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:04:17 chatham-www-t9 systemd[61592]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:04:17 chatham-www-t9 systemd[61592]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:04:17 chatham-www-t9 systemd[61592]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:04:17 chatham-www-t9 systemd[61592]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:04:17 chatham-www-t9 systemd[61592]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:05:01 chatham-www-t9 CRON[62242]: (root) CMD (/usr/bin/certbot --no-random-sleep-on-renew --webroot --webroot-path /var/www/certbot --installer nginx renew >> /var/log/certbot.log 2>&1)
+Apr 18 17:05:21 chatham-www-t9 systemd[62287]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:05:21 chatham-www-t9 systemd[62287]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:05:21 chatham-www-t9 systemd[62287]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:05:21 chatham-www-t9 systemd[62287]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:05:21 chatham-www-t9 systemd[62287]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:05:21 chatham-www-t9 systemd[62287]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:05:21 chatham-www-t9 systemd[62287]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:05:21 chatham-www-t9 systemd[62287]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:05:21 chatham-www-t9 systemd[62287]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:05:21 chatham-www-t9 systemd[62350]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:05:21 chatham-www-t9 systemd[62350]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:05:21 chatham-www-t9 systemd[62350]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:05:21 chatham-www-t9 systemd[62350]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:05:21 chatham-www-t9 systemd[62350]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:05:21 chatham-www-t9 systemd[62350]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:05:21 chatham-www-t9 systemd[62350]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:05:21 chatham-www-t9 systemd[62350]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:05:21 chatham-www-t9 systemd[62350]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:05:21 chatham-www-t9 systemd[62413]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:05:21 chatham-www-t9 systemd[62413]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:05:21 chatham-www-t9 systemd[62413]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:05:21 chatham-www-t9 systemd[62413]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:05:21 chatham-www-t9 systemd[62413]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:05:21 chatham-www-t9 systemd[62413]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:05:21 chatham-www-t9 systemd[62413]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:05:21 chatham-www-t9 systemd[62413]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:05:21 chatham-www-t9 systemd[62413]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:05:22 chatham-www-t9 systemd[62485]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:05:22 chatham-www-t9 systemd[62485]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:05:22 chatham-www-t9 systemd[62485]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:05:22 chatham-www-t9 systemd[62485]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:05:22 chatham-www-t9 systemd[62485]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:05:22 chatham-www-t9 systemd[62485]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:05:22 chatham-www-t9 systemd[62485]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:05:22 chatham-www-t9 systemd[62485]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:05:22 chatham-www-t9 systemd[62485]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:05:23 chatham-www-t9 systemd[62568]: Listening on dirmngr.socket - GnuPG network certificate management daemon.
+Apr 18 17:05:23 chatham-www-t9 systemd[62568]: Listening on gpg-agent-browser.socket - GnuPG cryptographic agent and passphrase cache (access for web browsers).
+Apr 18 17:05:23 chatham-www-t9 systemd[62568]: Listening on gpg-agent-extra.socket - GnuPG cryptographic agent and passphrase cache (restricted).
+Apr 18 17:05:23 chatham-www-t9 systemd[62568]: Listening on gpg-agent.socket - GnuPG cryptographic agent and passphrase cache.
+Apr 18 17:05:23 chatham-www-t9 systemd[62568]: Listening on keyboxd.socket - GnuPG public key management service.
+Apr 18 17:05:23 chatham-www-t9 systemd[62568]: Listening on pk-debconf-helper.socket - debconf communication socket.
+Apr 18 17:05:23 chatham-www-t9 systemd[62568]: Listening on snapd.session-agent.socket - REST API socket for snapd user session agent.
+Apr 18 17:05:23 chatham-www-t9 systemd[62568]: Listening on dbus.socket - D-Bus User Message Bus Socket.
+Apr 18 17:05:23 chatham-www-t9 systemd[62568]: Listening on gpg-agent-ssh.socket - GnuPG cryptographic agent (ssh-agent emulation).
+Apr 18 17:05:41 chatham-www-t9 sudo[63168]:     root : TTY=tty1 ; PWD=/opt/to_ai ; USER=root ; COMMAND=/usr/bin/lsof -iTCP -sTCP:LISTEN -nP
+Apr 18 17:05:41 chatham-www-t9 sudo[63182]:     root : TTY=tty1 ; PWD=/opt/to_ai ; USER=root ; COMMAND=/usr/sbin/nginx -t
+Apr 18 17:05:41 chatham-www-t9 sudo[63185]:     root : TTY=tty1 ; PWD=/opt/to_ai ; USER=root ; COMMAND=/usr/sbin/nginx -T
+Apr 18 17:05:41 chatham-www-t9 sudo[63188]:     root : TTY=tty1 ; PWD=/opt/to_ai ; USER=root ; COMMAND=/usr/sbin/nginx -T
+Apr 18 17:05:41 chatham-www-t9 sudo[63192]:     root : TTY=tty1 ; PWD=/opt/to_ai ; USER=root ; COMMAND=/usr/bin/grep -RniE 'listen .*443|listen .*444|listen .*8443|server_name|ssl_certificate|ssl_certificate_key|proxy_pass|return 301|return 302|rewrite' /etc/nginx
+Apr 18 17:05:41 chatham-www-t9 sudo[63195]:     root : TTY=tty1 ; PWD=/opt/to_ai ; USER=root ; COMMAND=/usr/bin/find /etc/nginx -type f -printf '%TY-%Tm-%Td %TH:%TM:%TS %u:%g %m %p\\n'
+Apr 18 17:05:41 chatham-www-t9 sudo[63199]:     root : TTY=tty1 ; PWD=/opt/to_ai ; USER=root ; COMMAND=/usr/bin/find /etc/nginx -type f -mtime -7 -ls
+Apr 18 17:05:41 chatham-www-t9 sudo[63202]:     root : TTY=tty1 ; PWD=/opt/to_ai ; USER=root ; COMMAND=/usr/bin/find /etc/nginx -type f -exec stat -c '%n | size=%s | perms=%a | owner=%U:%G | mtime=%y | ctime=%z' {} ;
+Apr 18 17:05:42 chatham-www-t9 sudo[63224]:     root : TTY=tty1 ; PWD=/opt/to_ai ; USER=root ; COMMAND=/usr/bin/debsums -c nginx-common nginx-core nginx-full nginx
+Apr 18 17:05:42 chatham-www-t9 sudo[63231]:     root : TTY=tty1 ; PWD=/opt/to_ai ; USER=root ; COMMAND=/usr/bin/systemctl cat nginx
+Apr 18 17:05:42 chatham-www-t9 sudo[63234]:     root : TTY=tty1 ; PWD=/opt/to_ai ; USER=root ; COMMAND=/usr/bin/sed -n 1,220p /usr/lib/systemd/system/nginx.service
+Apr 18 17:05:42 chatham-www-t9 sudo[63237]:     root : TTY=tty1 ; PWD=/opt/to_ai ; USER=root ; COMMAND=/usr/bin/journalctl -u nginx --no-pager

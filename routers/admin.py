@@ -10,9 +10,9 @@ router = APIRouter()
 
 class AddUserRequest(BaseModel):
     username: str
-    password: str
-    email: str
-    full_name: str
+    password: Optional[str] = None
+    email: Optional[str] = None
+    full_name: Optional[str] = None
     is_admin: bool = False
   
 class DiagnosticRequest(BaseModel):
@@ -32,17 +32,23 @@ def add_user(req: AddUserRequest, authorization: str = Header(...)):
     if not user.get("is_admin"):
         return {"error": "Unauthorized"}
 
+    username = req.username.strip()
+    password = req.password or "TempPass123!"
+    email = req.email or f"{username}@sentinel.local"
+    full_name = req.full_name or username
+    is_admin = False
+
     conn = get_conn()
     cur = conn.cursor()
 
     # Hash password with bcrypt
-    hashed = bcrypt.hashpw(req.password.encode(), bcrypt.gensalt()).decode()
+    hashed = bcrypt.hashpw(password.encode(), bcrypt.gensalt()).decode()
 
     try:
         cur.execute("""
             INSERT INTO users (username, password, email, full_name, is_admin)
             VALUES (%s, %s, %s, %s, %s) RETURNING id
-        """, (req.username, hashed, req.email, req.full_name, req.is_admin))
+        """, (username, hashed, email, full_name, is_admin))
         user_id = cur.fetchone()[0]
 
         import random
